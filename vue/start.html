@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui" />
+
+    <link rel="shortcut icon" href="/assets/favicon_kahrersoftware.png" />
+
+    <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900" rel="stylesheet" />
+    <link href="https://cdn.jsdelivr.net/npm/@mdi/font@4.x/css/materialdesignicons.min.css" rel="stylesheet" />
+    <link href="https://cdn.jsdelivr.net/npm/vuetify@2.x/dist/vuetify.min.css" rel="stylesheet" />
+    
+    <link rel="stylesheet" id="css-webapp" href="/assets/css/gkwebapp.css" type="text/css">
+
+    <!-- app JavaScript -->
+    <script src="/assets/js/gkwebapp.js" crossorigin="anonymous" type="text/javascript"></script>
+  
+    <!-- Import Vue.js -->
+    <script src="https://unpkg.com/vue@2.6.12/dist/vue.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vuetify@2.x/dist/vuetify.js"></script>
+    <script src="https://unpkg.com/vue-router@2.6.0/dist/vue-router.js"></script>
+    <script src="https://unpkg.com/vuex@3.6.2/dist/vuex.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/es6-promise@4/dist/es6-promise.auto.js"></script>
+    <script src="https://unpkg.com/axios@0.21.1/dist/axios.js"></script>
+    <script src="https://unpkg.com/vue-i18n@8"></script>
+
+    <title>Vue webskeleton</title>
+  </head>
+  <body>
+    <!-- Import EntityStore -->
+    <script src="./gkEntityStore.js"></script>
+
+    <!-- Import Layouts -->
+    <script src="./layouts/gekApp.js"></script>
+    <script src="./layouts/gekPageLayout.js"></script>
+
+    <!-- Import Pages -->
+    <script src="./pages/gekLogin.js"></script>
+    <script src="./pages/gekNotFound.js"></script>
+    <script src="./pages/gekHome.js"></script>
+    <script src="./pages/gekPage1.js"></script>
+    <!-- Import EntityPages -->
+    <script src="./pages/entities/gekUser.js"></script>
+    <script src="./pages/entities/gekContact.js"></script>
+
+    <!-- Import Components -->
+    <script src="./components/gekHeader.js"></script>
+    <script src="./components/gekNav.js"></script>
+    <script src="./components/gekErrorMessage.js"></script>
+    <!-- Import Components/Entities -->
+    <script src="./components/entities/gekEntityConfirmDelete.js"></script>
+    <script src="./components/entities/gekEntityEditDialog.js"></script>
+    <script src="./components/entities/gekEntityEditList.js"></script>
+    <script src="./components/entities/gekEntityListTableColAction.js"></script>
+
+    <!-- Import Components/Entities/User-->
+    <script src="./components/entities/editform/gekEntityEditFormUser.js"></script>
+    <script src="./components/entities/tableheader/gekEntityListTableHeaderUser.js"></script>
+    <script src="./components/entities/tablerow/gekEntityListTableRowUser.js"></script>
+    <!-- Contact-->
+    <script src="./components/entities/editform/gekEntityEditFormContact.js"></script>
+    <script src="./components/entities/tableheader/gekEntityListTableHeaderContact.js"></script>
+    <script src="./components/entities/tablerow/gekEntityListTableRowContact.js"></script>
+
+    <!-- Import Services-->
+    <script src="./services/EntityService.js"></script>
+ 
+    <!-- Import i18n messages -->
+    <script src="./messages-de.js"></script>
+
+    <!-- Import Store -->
+    <script src="./store.js"></script>
+
+    <!-- Import Router -->
+    <script src="./router.js"></script>
+
+    <div id="app">
+      <gek-app></gek-app>
+    </div>
+
+    <!-- Import App -->
+    <script src="./main.js"></script>
+
+  </body>
+</html>
