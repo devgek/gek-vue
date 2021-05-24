@@ -9,7 +9,7 @@ const gekUserView = Vue.component("gek-user", {
   <!-- entityEditDialog -->
   <gek-entity-edit-dialog entity="user" entityName="User" entityDesc="Benutzer" @entity-edit-save-user="saveEntity({entityName:'User', entityDesc:'Benutzer'})"/>
   <!-- confirmDelete Dialog-->
-  <gek-confirm-delete entity="user" entityDesc="Benutzer" @entity-delete-confirm-user="deleteEntity({entityName:'User', entityDesc:'Benutzer'})"/>
+  <gek-confirm-delete entity="user" entityName="User" entityDesc="Benutzer" @entity-delete-confirm-user="deleteEntity({entityName:'User', entityDesc:'Benutzer'})"/>
 </div>
 <!-- END Page Content -->
 `,

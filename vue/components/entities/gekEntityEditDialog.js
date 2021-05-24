@@ -16,33 +16,31 @@ Vue.component("gek-entity-edit-dialog", {
   template:
     /*html*/
   `<!-- Modal Dialog-->
-    <div class="modal fade" :id="editModalId" data-backdrop="static" tabindex="-1" role="dialog" aria-hidden="true">
-    <div class="modal-dialog" role="document">
-        <div class="modal-content">
-            <div class="block block-themed block-transparent mb-0">
-                <div class="block-header bg-primary">
-                    <h3 class="block-title">{{ entityStores[entityName].getEditHeader(entityDesc) }}</h3>
-                    <div class="block-options">
-                        <button type="button" class="btn-block-option" data-dismiss="modal" aria-label="Close">
-                            <i class="fa fa-fw fa-times"></i>
-                        </button>
-                    </div>
-                </div>
+  <v-dialog v-model="getEditDialogByEntityName(entityName)" max-width="600px" persistent>
+  <v-card>
+    <v-card-title class="gek-bg-page-header">{{ entityStores[entityName].getEditHeader(entityDesc) }}</v-card-title>
+    <v-card-text>
                 <!-- include the edit fields here -->
                 <component :is="editFormComponent"></component>
-
-                <div class="block-content block-content-full text-right border-top">
-                    <button type="button" class="btn btn-sm btn-light btn-back-app" @click="abort" 
-                        data-dismiss="modal">{{$t("form.all.btn.back")}}</button>
-                    <button type="button" class="btn btn-sm btn-primary btn-save-app" @click="save" data-dismiss="modal">
-                        <i class="fa fa-check mr-1"></i>{{$t("form.all.btn.save")}}
-                    </button>
-                </div>
-            </div>
-        </div>
-    </div>
-    </div>
-    <!-- END Modal Dialog -->
+    </v-card-text>
+    <v-card-actions>
+      <v-spacer></v-spacer>
+      <v-btn
+        outlined
+        @click="abort"
+      >
+      {{$t("form.all.btn.back")}}
+      </v-btn>
+      <v-btn
+        color="primary"
+        outlined
+        @click="save"
+      >
+      {{$t("form.all.btn.save")}}
+      </v-btn>
+    </v-card-actions>
+  </v-card>
+</v-dialog>
 `,
   data() {
     return {
@@ -52,15 +50,16 @@ Vue.component("gek-entity-edit-dialog", {
   methods: {
     abort() {
       this.$emit("entity-edit-abort-" + this.entity);
+      this.$store.commit("SET_EDIT_DIALOG", {entityName: this.entityName, editDialog: false})
     },
     save() {
       this.$emit("entity-edit-save-" + this.entity);
+      this.$store.commit("SET_EDIT_DIALOG", {entityName: this.entityName, editDialog: false})
     },
   },
   computed: {
-    ...Vuex.mapState([
-      'entityStores'
-    ]),
+    ...Vuex.mapState(['entityStores']),
+    ...Vuex.mapGetters(["getEditDialogByEntityName"]),
     editModalId() {
       return this.entity + "EditModal"
     }

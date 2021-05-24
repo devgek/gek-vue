@@ -4,6 +4,10 @@ Vue.component("gek-confirm-delete", {
       type: String,
       required: true,
     },
+    entityName: {
+      type: String,
+      required: true,
+    },
     entityDesc: {
       type: String,
       required: true,
@@ -12,48 +16,53 @@ Vue.component("gek-confirm-delete", {
   template:
     /*html*/
     `<!-- Modal Dialog-->
-<div class="modal fade" id="confirmDeleteModal" data-backdrop="static" tabindex="-1" role="dialog"
-aria-labelledby="confirmDeleteModalLabel" aria-hidden="true">
-<div class="modal-dialog" role="document">
-    <div class="modal-content">
-        <div class="block block-themed block-transparent mb-0">
-            <div class="block-header bg-primary">
-                <h3 class="block-title" id="confirmDeleteModalLabel">{{ title }}</h3>
-                <div class="block-options">
-                  <button type="button" class="btn-block-option" data-dismiss="modal" aria-label="Close">
-                      <i class="fa fa-fw fa-times"></i>
-                  </button>
-                </div>
-            </div>
-            <div class="block-content font-size-sm">
-                <div>{{ confirmationMessage }}</diV>
-            </div>
-
-            <div class="block-content block-content-full text-right border-top">
-                <button type="button" class="btn btn-sm btn-light btn-back-app"
-                    data-dismiss="modal" @click="abort">{{$t("form.all.btn.abort")}}</button>
-                <button type="button" class="btn btn-sm btn-primary btn-delete-app" data-dismiss="modal" @click="confirmDelete">
-                    <i class="fa fa-check mr-1"></i>{{$t("form.all.btn.delete")}}
-                </button>
-            </div>
-        </div>
-    </div>
-</div>
-</div>
+<v-dialog v-model="getConfirmDeleteDialogByEntityName(entityName)" max-width="600px">
+  <v-card>
+    <v-card-title class="gek-bg-page-header">{{ title }}</v-card-title>
+    <v-card-text>
+      {{ confirmationMessage }}
+    </v-card-text>
+    <v-card-actions>
+      <v-spacer></v-spacer>
+      <v-btn
+        color="primary darken-1"
+        text
+        @click="abort"
+      >
+      {{$t("form.all.btn.abort")}}
+      </v-btn>
+      <v-btn
+        color="primary darken-1"
+        outlined
+        @click="confirmDelete"
+      >
+      {{$t("form.all.btn.delete")}}
+      </v-btn>
+    </v-card-actions>
+  </v-card>
+</v-dialog>
 `,
   data() {
     return {
+      dialog: true,
     };
   },
   methods: {
+    ...Vuex.mapActions([
+      'dismissConfirmDeleteDialog',
+      'dismissEditDialog',
+    ]),
     abort() {
       this.$emit("entity-delete-abort-" + this.entity);
+      this.$store.commit("SET_CONFIRM_DELETE_DIALOG", {entityName: this.entityName, confirmDeleteDialog: false})
     },
     confirmDelete() {
       this.$emit("entity-delete-confirm-" + this.entity);
+      this.$store.commit("SET_CONFIRM_DELETE_DIALOG", {entityName: this.entityName, confirmDeleteDialog: false})
     },
   },
   computed: {
+    ...Vuex.mapGetters(["getConfirmDeleteDialogByEntityName"]),
     title() {
       return this.entityDesc + " löschen";
     },

@@ -8,7 +8,7 @@ const app = new Vue({
       light: true,
       themes: {
         light: {
-          primary: "#CDDC39",
+          // primary: "#CDDC39",
         },
       },
     },
@@ -19,6 +19,7 @@ const app = new Vue({
     isAdmin: false,
   },
   created() {
+    // this.$vuetify.dataTable.itemsPerPageText = "maxi";
     const userString = localStorage.getItem("user");
     if (userString) {
       const userData = JSON.parse(userString);

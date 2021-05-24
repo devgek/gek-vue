@@ -3,7 +3,9 @@ function EntityStore(entityName, newEntityObjectFn, vuex) {
     this.entityName = entityName;
     this.newEntityObjectFn = newEntityObjectFn;
     this.entityObject = this.newEntityObjectFn.call();
-    this.entityList = null;
+    this.confirmDeleteDialog = false;
+    this.editDialog = false;
+    this.entityList = [];
     this.vuex = vuex;
     this.editNew = false;
 

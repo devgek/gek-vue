@@ -2,15 +2,13 @@ Vue.component("gek-error-message", {
   props: {},
   template:
     /*html*/
-    `<div class="toast bg-warning" role="alert" aria-live="assertive" aria-atomic="true"
-    data-delay="3000" data-toastid="errorMessageToast" >
-    <div class="toast-header">
-        <span class="gk-toast-text" v-if="message">{{message.msg}}</span>
-        <button type="button" class="ml-2 mb-1 close" data-dismiss="toast" aria-label="Close">
-            <span aria-hidden="true">&times;</span>
-        </button>
-    </div>
-  </div>
+    `<v-alert v-if="message"
+    dense
+    outlined
+    :type="message.type"
+  >
+    {{message.msg}}
+  </v-alert>
 `,
   data() {
     return {};
@@ -19,8 +17,6 @@ Vue.component("gek-error-message", {
     this.unsubscribe = this.$store.subscribe((mutation, state) => {
       if (mutation.type === "SET_MESSAGE") {
         console.log(`catching message from store: ${state.message}`);
-
-        this.showMessage();
       }
     });
 

@@ -5,7 +5,7 @@ const store = new Vuex.Store({
       user: null,
       isAdmin: true,
       message: null,
-      entityStores: {"User": null, "Contact": null}
+      entityStores: {"User": [], "Contact": []}
     };
   },
   mutations: {
@@ -18,14 +18,26 @@ const store = new Vuex.Store({
     SET_ENTITY_NEW(state, payload) {
       state.entityStores[payload.entityName].entityObject = state.entityStores[payload.entityName].newEntityObjectFn();
       state.entityStores[payload.entityName].editNew = true;
+      state.entityStores[payload.entityName].editDialog = true;
     },
     SET_ENTITY_EDIT(state, payload) {
-      entityObjectRef = state.entityStores[payload.entityName].entityList[payload.entityIndex]
-      state.entityStores[payload.entityName].entityObject = JSON.parse(JSON.stringify(entityObjectRef));
+      state.entityStores[payload.entityName].entityObject = payload.entityObject;
       state.entityStores[payload.entityName].editNew = false;
+      state.entityStores[payload.entityName].editDialog = true;
+    },
+    SET_ENTITY_DELETE(state, payload) {
+      state.entityStores[payload.entityName].entityObject = payload.entityObject;
+      state.entityStores[payload.entityName].editNew = false;
+      state.entityStores[payload.entityName].confirmDeleteDialog = true;
     },
     SET_ENTITY_LIST(state, payload) {
       state.entityStores[payload.entityName].entityList = payload.entityList;
+    },
+    SET_EDIT_DIALOG(state, payload) {
+      state.entityStores[payload.entityName].editDialog = payload.editDialog;
+    },
+    SET_CONFIRM_DELETE_DIALOG(state, payload) {
+      state.entityStores[payload.entityName].confirmDeleteDialog = payload.confirmDeleteDialog;
     },
     SET_USER_DATA(state, userData) {
       localStorage.setItem("user", JSON.stringify(userData));
@@ -83,13 +95,24 @@ const store = new Vuex.Store({
       return state.isAdmin;
     },
     getEntityListByEntityName: (state) => (entityName) => {
-      return state.entityStores[entityName].entityList;
+      if (state.entityStores[entityName].entityList === null) {
+        return []
+      }
+      else {
+        return state.entityStores[entityName].entityList;
+      }
     },
     getEditEntityObjectByEntityName: (state) => (entityName) => {
       return state.entityStores[entityName].entityObject;
     },
     getEditNewByEntityName: (state) => (entityName) => {
       return state.entityStores[entityName].editNew;
+    },
+    getConfirmDeleteDialogByEntityName: (state) => (entityName) => {
+      return state.entityStores[entityName].confirmDeleteDialog;
+    },
+    getEditDialogByEntityName: (state) => (entityName) => {
+      return state.entityStores[entityName].editDialog;
     },
     getUser(state) {
       return state.user;
