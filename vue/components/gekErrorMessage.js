@@ -2,13 +2,18 @@ Vue.component("gek-error-message", {
   props: {},
   template:
     /*html*/
-    `<v-alert v-if="message"
-    dense
-    outlined
-    :type="message.type"
-  >
+ `
+ <v-snackbar v-if="message" 
+      dense 
+      :timeout="3000"
+      :value="true"
+      :color="message.type"
+      outlined 
+      right
+    >
     {{message.msg}}
-  </v-alert>
+    </v-snackbar>
+ 
 `,
   data() {
     return {};

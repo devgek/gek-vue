@@ -1,10 +1,16 @@
 //webskeleton-types
 //converting type values (int) to string representation of the type
 //used in javascript code on client side
-var gkwebapp_T_OrgTypes = [{text: "ORG", value: 0}, {text: "PER", value: 1}];
+var gkwebapp_T_OrgTypes = ["ORG", "PER"];
 var gkwebapp_T_MenuTypes = ["admin", "consumption"];
-var gkwebapp_T_RoleTypes = [{text: "Benutzer", value: 0}, {text: "Administrator", value: 1}];
-var gkwebapp_T_ContactTypes = [{text: "Kunde", value: 0}, {text: "Lieferant", value: 1}, {text: "Partner", value: 2}, {text: "Interessent", value: 3}, {text: "Werbung", value: 4}];
+var gkwebapp_T_RoleTypes = ["Benutzer", "Administrator"];
+var gkwebapp_T_ContactTypes = [
+  "Kunde",
+  "Lieferant",
+  "Partner",
+  "Interessent",
+  "Werbung",
+];
 
 function gkwebapp_prepareSelect(selectId, selectedValue) {
   var theSelect = $("#" + selectId);

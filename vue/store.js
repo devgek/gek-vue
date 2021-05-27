@@ -5,6 +5,7 @@ const store = new Vuex.Store({
       user: null,
       isAdmin: true,
       message: null,
+      navDrawer: true,
       entityStores: {"User": [], "Contact": []}
     };
   },

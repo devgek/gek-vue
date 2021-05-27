@@ -1,18 +1,23 @@
+const vuetify = new Vuetify({
+  theme: {
+    light: true,
+    themes: {
+      light: {
+        // primary: "#CDDC39",
+      },
+    },
+  },
+  lang: {
+    t: (key, ...params) => i18n.t(key, params),
+  },
+});
+
 const app = new Vue({
   i18n: i18n,
   store: store,
   router: router,
   el: "#app",
-  vuetify: new Vuetify({
-    theme: {
-      light: true,
-      themes: {
-        light: {
-          // primary: "#CDDC39",
-        },
-      },
-    },
-  }),
+  vuetify: vuetify,
   data: {
     user: "",
     token: "",

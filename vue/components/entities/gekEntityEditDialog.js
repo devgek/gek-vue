@@ -18,22 +18,21 @@ Vue.component("gek-entity-edit-dialog", {
   `<!-- Modal Dialog-->
   <v-dialog v-model="getEditDialogByEntityName(entityName)" max-width="600px" persistent>
   <v-card>
-    <v-card-title class="gek-bg-page-header">{{ entityStores[entityName].getEditHeader(entityDesc) }}</v-card-title>
-    <v-card-text>
+    <v-card-title class="primary white--text">{{ entityStores[entityName].getEditHeader(entityDesc) }}</v-card-title>
+    <v-card-text class="pt-4">
                 <!-- include the edit fields here -->
                 <component :is="editFormComponent"></component>
     </v-card-text>
     <v-card-actions>
       <v-spacer></v-spacer>
-      <v-btn
-        outlined
+      <v-btn small 
+      color="light"
         @click="abort"
       >
       {{$t("form.all.btn.back")}}
       </v-btn>
-      <v-btn
+      <v-btn small     
         color="primary"
-        outlined
         @click="save"
       >
       {{$t("form.all.btn.save")}}

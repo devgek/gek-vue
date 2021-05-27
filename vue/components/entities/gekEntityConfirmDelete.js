@@ -18,22 +18,20 @@ Vue.component("gek-confirm-delete", {
     `<!-- Modal Dialog-->
 <v-dialog v-model="getConfirmDeleteDialogByEntityName(entityName)" max-width="600px">
   <v-card>
-    <v-card-title class="gek-bg-page-header">{{ title }}</v-card-title>
-    <v-card-text>
+    <v-card-title class="primary white--text">{{ title }}</v-card-title>
+    <v-card-text class="pt-4">
       {{ confirmationMessage }}
     </v-card-text>
     <v-card-actions>
       <v-spacer></v-spacer>
       <v-btn
-        color="primary darken-1"
-        text
+        color="light"
         @click="abort"
       >
       {{$t("form.all.btn.abort")}}
       </v-btn>
       <v-btn
-        color="primary darken-1"
-        outlined
+        color="primary"
         @click="confirmDelete"
       >
       {{$t("form.all.btn.delete")}}

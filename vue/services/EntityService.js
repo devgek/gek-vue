@@ -21,7 +21,7 @@ const EntityService = {
       .catch((error) => {
         const message = {
           type: "error",
-          i18n: "msg.entity.error.create" + error.message,
+          i18n: "msg.entity.error.create",
           i18nArgs: {"entityDesc": payload.entityDesc}
         };
         dispatch("setMessage", message);
@@ -63,7 +63,7 @@ const EntityService = {
       .catch((error) => {
         const message = {
           type: "error",
-          i18n: "msg.entity.error.delete" + error.message,
+          i18n: "msg.entity.error.delete",
           i18nArgs: {"entityDesc": payload.entityDesc}
         };
         dispatch("setMessage", message);

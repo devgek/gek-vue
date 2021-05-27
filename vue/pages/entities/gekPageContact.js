@@ -1,11 +1,11 @@
-const gekContactView = Vue.component("gek-contact", {
+const gekPageContact = Vue.component("gek-page-contact", {
   template:
     /*html*/
 `
 <!-- Page Content -->
 <div class="content content-full">
   <!-- entityEditDialog -->
-  <gek-entity-edit-list entity="contact" entityName="Contact" />
+  <gek-entity-edit-list entity="contact" entityName="Contact" :tableHeaders="tableHeaders"/>
   <!-- entityEditDialog -->
   <gek-entity-edit-dialog entity="contact" entityName="Contact" entityDesc="Kontakt" @entity-edit-save-contact="saveEntity({entityName:'Contact', entityDesc:'Kontakt'})"/>
   <!-- confirmDelete Dialog-->
@@ -35,5 +35,21 @@ const gekContactView = Vue.component("gek-contact", {
       };
     },
   },
-  computed: {},
+  computed: {
+    tableHeaders() {
+      var h = [
+        {
+          text: "Typ",
+          align: "start",
+          sortable: true,
+          value: "OrgType",
+        },
+        { text: "Name", value: "Name", sortable: true },
+        { text: "Namenszusatz", value: "NameExt" , sortable: false},
+        { text: "Kontakttyp", value: "ContactType", sortable: true},
+        { text: "Aktionen", value: "actions", sortable: false, class: "w-5"},
+      ];
+      return h;
+    },
+  },
 });

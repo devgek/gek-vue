@@ -3,43 +3,44 @@ const routes = [
   {
     path: "/login",
     alias: "",
-    component: gekLoginView,
-    name: "Login",
-    props: { mainHeader: "Bitte anmelden", startPage: "Page1" },
-  },
-  {
-    path: "/",
-    component: gekLayoutView,
+    component: gekLayoutPlain,
     children: [
       {
-        path: "home",
-        component: gekHomeView,
-        name: "Home",
-        meta: { description: "show home" },
-      },
-      {
-        path: "page1",
-        component: gekPage1View,
-        name: "Page1",
-        meta: { description: "show page1" },
+        path: "",
+        name: "Login",
+        component: gekPageLogin,
+        props: { mainHeader: "Bitte anmelden", startPage: "Page1" },
+        meta: { description: "show login" },
       },
     ],
   },
   {
     path: "/admin",
-    component: gekLayoutView,
+    component: gekLayoutPage,
     children: [
       {
         path: "user",
-        component: gekUserView,
+        component: gekPageUser,
         name: "User",
         meta: { description: "show user" },
       },
       {
         path: "contact",
-        component: gekContactView,
+        component: gekPageContact,
         name: "Contact",
         meta: { description: "show contact" },
+      },
+    ],
+  },
+  {
+    path: "/",
+    component: gekLayoutPage,
+    children: [
+      {
+        path: "page1",
+        component: gekPage1,
+        name: "Page1",
+        meta: { description: "show page1" },
       },
     ],
   },
@@ -62,7 +63,7 @@ router.beforeEach((to, from, next) => {
 
   if (authRequired && !loggedIn) {
     console.log("route to Login from " + to.path);
-    return next({ name: "Login" });
+    return next({ to: "/login" });
   }
   next();
 });

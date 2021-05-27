@@ -1,8 +1,18 @@
 // Ready translated locale messages
 const messages = {
   de: {
+    $vuetify: {
+      noDataText: 'Keine Daten vorhanden',
+      dataTable: {
+        itemsPerPageText: 'Zeilen pro Seite:',
+      },
+      dataFooter: {
+        pageText: '{0}-{1} von {2}',
+        itemsPerPageAll: 'Alle',
+      }
+    },
     app: {
-      title: "Webskeleton Vue"
+      title: "GekVue Scaffold App"
     },
     entity: {
       desc: {
@@ -34,6 +44,7 @@ const messages = {
         user: "Benutzer",
         contact: "Kontakt",
       },
+      logout: "Abmelden",
     },
     form: {
       all: {

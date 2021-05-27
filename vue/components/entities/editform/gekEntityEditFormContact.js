@@ -4,38 +4,18 @@ Vue.component("gek-entity-edit-form-contact", {
   template:
     /*html*/
     `<!-- EntityEditFormContact -->
-  <div class="block-content font-size-sm">
-    <div class="form-group">
-        <label for="contactEditOrgType"
-            class="col-form-label">{{$t("form.contact.edit.label.orgtype")}}</label>
-        <select name="contactEditOrgType" class="form-control" id="contactEditOrgType" v-model="entityStores['Contact'].entityObject.OrgType">
-          <option v-for="(option, key) in getOrgTypes" :value="key">{{ option }}</option>  
-        </select>
-    </div>
-    <div class="form-group">
-        <label for="contactEditName"
-            class="col-form-label">{{$t("form.contact.edit.label.name")}}</label>
-        <input name="contactEditName" class="form-control" id="contactEditName" v-model="entityStores['Contact'].entityObject.Name"
-            autocomplete="new-password" />
-    </div>
-    <div class="form-group">
-        <label for="contactEditNameExt"
-            class="col-form-label">{{$t("form.contact.edit.label.nameext")}}</label>
-        <input name="contactEditNameExt" class="form-control" id="contactEditNameExt" v-model="entityStores['Contact'].entityObject.NameExt"
-            autocomplete="new-password" />
-    </div>
-    <div class="form-group">
-        <label for="contactEditContactType"
-            class="col-form-label">{{$t("form.contact.edit.label.contacttype")}}</label>
-        <select name="contactEditContactType" class="form-control" id="contactEditContactType" v-model="entityStores['Contact'].entityObject.ContactType">
-          <option v-for="(option, key) in getContactTypes" :value="key">{{ option }}</option>  
-        </select>
-    </div>
-</div>
+<v-form ref="formUser" v-model="valid" lazy-validation>
+  <v-select v-model="entityStores['Contact'].entityObject.OrgType" :label="$t('form.contact.edit.label.orgtype')" required :items="getOrgTypes" outlined dense></v-select>
+  <v-text-field v-model="entityStores['Contact'].entityObject.Name" :label="$t('form.contact.edit.label.name')" required :readonly="!entityStores['Contact'].editNew" outlined dense></v-text-field>
+  <v-text-field v-model="entityStores['Contact'].entityObject.NameExt" :label="$t('form.contact.edit.label.nameext')" outlined dense></v-text-field>
+  <v-select v-model="entityStores['Contact'].entityObject.ContactType" :label="$t('form.contact.edit.label.contacttype')" required :items="getContactTypes" outlined dense></v-select>
+</v-form>
 <!-- END EntityEditFormContact -->
 `,
   data() {
-    return {};
+    return {
+      valid: false,
+    };
   },
   methods: {},
   computed: {

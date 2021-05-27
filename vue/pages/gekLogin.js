@@ -1,4 +1,4 @@
-const gekLoginView = Vue.component("gek-login-view", {
+const gekPageLogin = Vue.component("gek-page-login", {
   props: {
     mainHeader: {
       type: String,
@@ -11,60 +11,47 @@ const gekLoginView = Vue.component("gek-login-view", {
   },
   template:
     /*html*/
-    `    <div id="page-container">
-      <main id="main-container">
-          <div class="hero-static bg-white-95">
-              <div class="content">
-                  <div class="row justify-content-center">
-                      <div class="col-md-8 col-lg-6 col-xl-4">
-                          <div class="block block-themed block-fx-shadow mb-0">
-                              <div class="block-header">
-                                  <h3 class="block-title">{{$t("app.title")}}</h3>
-                              </div>
-                              <div class="block-content">
-                                  <div class="p-sm-3 px-lg-4 py-lg-5">
-                                      <p><span
-                                              class="font-w700 font-size-h5">{{ $t("form.login.header") }}</span>
-                                      </p>
-                                      <form class="" @submit.prevent="onSubmit">
-                                          <div class="py-3">
-                                              <div class="form-group">
-                                                  <label for="login-username">{{ $t("form.login.label.user") }}</label>
-                                                  <input type="text" v-model="user" 
-                                                      class="form-control form-control-alt form-control-lg"
-                                                      id="login-username" name="userid">
-                                              </div>
-                                              <div class="form-group">
-                                                  <label for="login-password">{{ $t("form.login.label.password") }}</label>
-                                                  <input type="password" v-model="pass" 
-                                                      class="form-control form-control-alt form-control-lg"
-                                                      id="login-password" name="password">
-                                              </div>
-                                          </div>
-                                          <div class="form-group row">
-                                              <div class="col-md-6 col-xl-5">
-                                                  <button type="submit" class="btn btn-block btn-primary">
-                                                      <i class="fa fa-fw fa-sign-in-alt mr-1"></i>
-                                                      {{ $t("form.login.button.login") }}
-                                                  </button>
-                                              </div>
-                                          </div>
-                                          <div v-if="errorMessage" class="card-footer text-danger">
-                                              {{ errorMessage }}
-                                          </div>
-                                      </form>
-                                  </div>
-                              </div>
-                          </div>
-                      </div>
-                  </div>
-              </div>
-
-          </div>
-      </main>
-  </div>
-
-      `,
+    `
+  <v-container fluid fill-height>
+    <v-layout align-center justify-center>
+      <v-flex md3>
+          <v-card class="elevation-12">
+            <form @submit.prevent="onSubmit">
+              <v-toolbar dark color="primary">
+                <v-toolbar-title>{{$t("app.title")}}</v-toolbar-title>
+              </v-toolbar>
+              <v-card-text>
+                <v-card-subtitle>{{ mainHeader }}</v-card-subtitle>
+                    <v-text-field
+                      prepend-icon="mdi-account"
+                      v-model="user"
+                      :label="$t('form.login.label.user')"
+                      type="text"
+                    ></v-text-field>
+                    <v-text-field
+                      id="password"
+                      prepend-icon="mdi-lock"
+                      v-model="pass"
+                      :label="$t('form.login.label.password')"
+                      type="password"
+                    ></v-text-field>
+                <div v-if="errorMessage" class="error--text">
+                {{ errorMessage }}
+                </div>
+              </v-card-text>
+              <v-card-actions>
+                <v-spacer></v-spacer>
+                <v-btn color="primary" type="submit">
+                  <v-icon>mdi-login</v-icon>
+                  {{ $t("form.login.button.login") }}
+                </v-btn>
+              </v-card-actions>
+            </form>
+          </v-card>
+        </v-flex>
+    </v-layout>
+  </v-container>
+`,
   data() {
     return {
       user: "",

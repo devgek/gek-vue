@@ -63,5 +63,15 @@ tr.gk-row-section>td {
 }
 
 .gek-bg-page-header {
-  background-color: #F0F4C3;
+  /* background-color: #F0F4C3; */
+  background-color: #ECEFF1; /*blue-grey-lighten-5*/
+}
+
+.gek-bg-dialog-header {
+  /* background-color: #F0F4C3; */
+  background-color: #E3F2FD;
+}
+
+.gek-v-alert {
+  margin-bottom: 0px;
 }

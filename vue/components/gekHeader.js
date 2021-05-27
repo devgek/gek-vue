@@ -8,27 +8,30 @@ Vue.component("gek-header", {
   template:
     /*html*/
     `
-    <v-toolbar dense>
-    <v-app-bar-nav-icon></v-app-bar-nav-icon>
+    <v-app-bar app color="primary">
+      <v-toolbar dense>
+      <v-app-bar-nav-icon @click.stop="switchDrawer"></v-app-bar-nav-icon>
 
-    <v-toolbar-title>{{ mainHeader }}</v-toolbar-title>
+      <v-toolbar-title>{{ mainHeader }}</v-toolbar-title>
 
-    <v-spacer></v-spacer>
-    <v-menu open-on-hover bottom left offset-y>
-      <template v-slot:activator="{ on, attrs }">
-        <v-btn text outlined color="primary" v-bind="attrs" v-on="on">
-          <v-icon>mdi-account-outline</v-icon>
-          {{ user.name }}
-        </v-btn>
-      </template>
+      <v-spacer></v-spacer>
+      <v-menu open-on-hover bottom left offset-y>
+        <template v-slot:activator="{ on, attrs }">
+          <v-btn text color="primary" v-bind="attrs" v-on="on">
+            <v-icon>mdi-account-outline</v-icon>
+            <span v-if="user">{{ user.name }}</span>
+          </v-btn>
+        </template>
 
-      <v-list>
-        <v-list-item link>
-          <v-list-item-title @click="logout">Logout</v-list-item-title>
-        </v-list-item>
-      </v-list>
-    </v-menu>
-    </v-toolbar>
+        <v-list nav dense>
+          <v-list-item link>
+            <v-list-item-title @click="logout">{{$t("nav.logout")}}</v-list-item-title>
+            <v-icon>mdi-logout</v-icon>
+          </v-list-item>
+        </v-list>
+      </v-menu>
+      </v-toolbar>
+    </v-app-bar>
 `,
   data() {
     return {};
@@ -37,6 +40,9 @@ Vue.component("gek-header", {
     logout() {
       this.$store.dispatch("logout");
     },
+    switchDrawer() {
+      this.$store.state.navDrawer = !this.$store.state.navDrawer;
+    }
   },
   computed: {
     user() {
