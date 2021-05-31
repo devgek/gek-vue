@@ -59,8 +59,5 @@ Vue.component("gek-entity-edit-dialog", {
   computed: {
     ...Vuex.mapState(['entityStores']),
     ...Vuex.mapGetters(["getEditDialogByEntityName"]),
-    editModalId() {
-      return this.entity + "EditModal"
-    }
   },
 });

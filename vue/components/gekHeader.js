@@ -8,20 +8,26 @@ Vue.component("gek-header", {
   template:
     /*html*/
     `
-    <v-app-bar app color="primary">
-      <v-toolbar dense>
+    <v-app-bar app >
       <v-app-bar-nav-icon @click.stop="switchDrawer"></v-app-bar-nav-icon>
 
       <v-toolbar-title>{{ mainHeader }}</v-toolbar-title>
 
       <v-spacer></v-spacer>
       <v-menu open-on-hover bottom left offset-y>
-        <template v-slot:activator="{ on, attrs }">
-          <v-btn text color="primary" v-bind="attrs" v-on="on">
+        <template v-slot:activator="{ on, attrs, value }">
+          <v-btn text color="primary" v-bind="attrs" v-on="on" value="value">
             <v-icon>mdi-account-outline</v-icon>
             <span v-if="user">{{ user.name }}</span>
           </v-btn>
         </template>
+        <v-list-item >
+          <v-list-item-content>
+              <v-list-item-title class="title">
+              {{$t("app.user.menuHeader")}} 
+              </v-list-item-title>
+          </v-list-item-content>
+        </v-list-item>
 
         <v-list nav dense>
           <v-list-item link>
@@ -30,7 +36,6 @@ Vue.component("gek-header", {
           </v-list-item>
         </v-list>
       </v-menu>
-      </v-toolbar>
     </v-app-bar>
 `,
   data() {

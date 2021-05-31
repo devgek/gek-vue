@@ -3,7 +3,7 @@ Vue.component("gek-nav", {
     /*html*/
     `            <!-- Navigation -->
 <v-navigation-drawer app :value="theDrawer">
-    <v-list-item color="lime">
+    <v-list-item >
         <v-list-item-content>
             <v-list-item-title class="title">
                 GekVue 

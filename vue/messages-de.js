@@ -12,7 +12,10 @@ const messages = {
       }
     },
     app: {
-      title: "GekVue Scaffold App"
+      title: "GekVue Scaffold App",
+      user: {
+        menuHeader: "Aktionen"
+      }
     },
     entity: {
       desc: {

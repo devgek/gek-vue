@@ -5,7 +5,14 @@ const gekPageContact = Vue.component("gek-page-contact", {
 <!-- Page Content -->
 <div class="content content-full">
   <!-- entityEditDialog -->
-  <gek-entity-edit-list entity="contact" entityName="Contact" :tableHeaders="tableHeaders"/>
+  <gek-entity-edit-list entity="contact" entityName="Contact" :tableHeaders="tableHeaders">
+    <template v-slot:item.OrgType="{ item }">
+      {{ orgDesc(item.OrgType) }}
+    </template>
+    <template v-slot:item.ContactType="{ item }">
+      {{ contactDesc(item.ContactType) }}
+    </template>
+  </gek-entity-edit-list>
   <!-- entityEditDialog -->
   <gek-entity-edit-dialog entity="contact" entityName="Contact" entityDesc="Kontakt" @entity-edit-save-contact="saveEntity({entityName:'Contact', entityDesc:'Kontakt'})"/>
   <!-- confirmDelete Dialog-->
@@ -34,6 +41,13 @@ const gekPageContact = Vue.component("gek-page-contact", {
         ContactType: 0,
       };
     },
+    orgDesc(org)  {
+      return gkwebapp_T_OrgTypes[org].text;
+    },
+    contactDesc(contact)  {
+      return gkwebapp_T_ContactTypes[contact].text;
+    },
+
   },
   computed: {
     tableHeaders() {
@@ -47,7 +61,7 @@ const gekPageContact = Vue.component("gek-page-contact", {
         { text: "Name", value: "Name", sortable: true },
         { text: "Namenszusatz", value: "NameExt" , sortable: false},
         { text: "Kontakttyp", value: "ContactType", sortable: true},
-        { text: "Aktionen", value: "actions", sortable: false, class: "w-5"},
+        { text: "Aktionen", value: "actions", sortable: false, class: "w-8"},
       ];
       return h;
     },
