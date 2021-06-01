@@ -2,40 +2,61 @@
 const messages = {
   de: {
     $vuetify: {
-      noDataText: 'Keine Daten vorhanden',
       dataTable: {
-        itemsPerPageText: 'Zeilen pro Seite:',
+        itemsPerPageText: "Zeilen pro Seite:",
+        ariaLabel: {
+          sortDescending: "Absteigend sortiert.",
+          sortAscending: "Aufsteigend sortiert.",
+          sortNone: "Nicht sortiert.",
+          activateNone: "Aktivieren um Sortierung zu entfernen.",
+          activateDescending: "Aktivieren um absteigend zu sortieren.",
+          activateAscending: "Aktivieren um aufsteigend zu sortieren.",
+        },
+        sortBy: "Sortiere nach",
       },
       dataFooter: {
-        pageText: '{0}-{1} von {2}',
-        itemsPerPageAll: 'Alle',
-      }
+        itemsPerPageText: "Elemente pro Seite:",
+        itemsPerPageAll: "Alle",
+        nextPage: "Nächste Seite",
+        prevPage: "Vorherige Seite",
+        firstPage: "Erste Seite",
+        lastPage: "Letzte Seite",
+        pageText: "{0}-{1} von {2}",
+      },
+      datePicker: {
+        itemsSelected: "{0} ausgewählt",
+        nextMonthAriaLabel: "Nächsten Monat",
+        nextYearAriaLabel: "Nächstes Jahr",
+        prevMonthAriaLabel: "Vorheriger Monat",
+        prevYearAriaLabel: "Vorheriges Jahr",
+      },
+      noDataText: "Keine Daten vorhanden",
     },
     app: {
       title: "GekVue Scaffold App",
       user: {
-        menuHeader: "Aktionen"
-      }
+        menuHeader: "Aktionen",
+      },
     },
     entity: {
       desc: {
         user: "Benutzer",
-        contact: "Kontakt"
-      }
+        contact: "Kontakt",
+      },
     },
     msg: {
       entity: {
         success: {
           create: "{entityDesc} wurde angelegt",
           update: "{entityDesc} wurde geändert",
-          delete: "{entityDesc} wurde gelöscht"
+          delete: "{entityDesc} wurde gelöscht",
         },
         error: {
           create: "{entityDesc} konnte nicht angelegt werden",
           update: "{entityDesc} konnte nicht geändert werden",
-          delete: "{entityDesc} konnte nicht gelöscht werden"
-        }
-      }
+          delete: "{entityDesc} konnte nicht gelöscht werden",
+        },
+      },
     },
     nav: {
       pages: {
@@ -68,11 +89,11 @@ const messages = {
           password: "Passwort",
         },
         button: {
-          login: "Anmelden"
+          login: "Anmelden",
         },
         msg: {
-          inputrequired: "Username und Passwort müssen angegeben werden."
-        }
+          inputrequired: "Username und Passwort müssen angegeben werden.",
+        },
       },
       page1: {
         header: "Seite 1",
@@ -107,19 +128,19 @@ const messages = {
           id: "Id",
         },
         edit: {
-        header: "Kontakt bearbeiten",
-        headernew: "Kontakt neu anlegen",
-        label: {
-          orgtype: "Organisationstyp:",
-          name: "Name:",
-          nameext: "Namenszusatz:",
-          contacttype: "Kontakttyp:",
-          id: "Id:",
-        }
+          header: "Kontakt bearbeiten",
+          headernew: "Kontakt neu anlegen",
+          label: {
+            orgtype: "Organisationstyp:",
+            name: "Name:",
+            nameext: "Namenszusatz:",
+            contacttype: "Kontakttyp:",
+            id: "Id:",
+          },
+        },
       },
     },
   },
-}
 };
 
 // Create VueI18n instance with options
