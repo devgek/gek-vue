@@ -25,9 +25,9 @@ const app = new Vue({
   },
   created() {
     // this.$vuetify.dataTable.itemsPerPageText = "maxi";
-    const userString = localStorage.getItem("user");
-    if (userString) {
-      const userData = JSON.parse(userString);
+    const userDataString = localStorage.getItem("userData");
+    if (userDataString) {
+      const userData = JSON.parse(userDataString);
       this.$store.commit("SET_USER_DATA", userData);
     }
     axios.interceptors.response.use(

@@ -2,19 +2,15 @@
 const store = new Vuex.Store({
   state() {
     return {
-      user: null,
-      isAdmin: true,
+      userData: null,
       message: null,
       navDrawer: true,
-      entityStores: {"User": [], "Contact": []}
+      entityStores: {"User": new EntityStore("User", newEntityObjectUser, this), "Contact": new EntityStore("Contact", newEntityObjectContact, this)}
     };
   },
   mutations: {
     SET_MESSAGE(state, message) {
       state.message = message;
-    },
-    NEW_ENTITY_STORE(state, payload) {
-      state.entityStores[payload.entityName] = new EntityStore(payload.entityName, payload.newEntityObjectFn, this);
     },
     SET_ENTITY_NEW(state, payload) {
       state.entityStores[payload.entityName].entityObject = state.entityStores[payload.entityName].newEntityObjectFn();
@@ -22,7 +18,8 @@ const store = new Vuex.Store({
       state.entityStores[payload.entityName].editDialog = true;
     },
     SET_ENTITY_EDIT(state, payload) {
-      state.entityStores[payload.entityName].entityObject = payload.entityObject;
+      // create new object with JSON.parse
+      state.entityStores[payload.entityName].entityObject = JSON.parse(JSON.stringify(payload.entityObject));
       state.entityStores[payload.entityName].editNew = false;
       state.entityStores[payload.entityName].editDialog = true;
     },
@@ -34,6 +31,9 @@ const store = new Vuex.Store({
     SET_ENTITY_LIST(state, payload) {
       state.entityStores[payload.entityName].entityList = payload.entityList;
     },
+    SET_OPTION_LIST(state, payload) {
+      state.entityStores[payload.entityName].optionList = payload.optionList;
+    },
     SET_EDIT_DIALOG(state, payload) {
       state.entityStores[payload.entityName].editDialog = payload.editDialog;
     },
@@ -41,18 +41,14 @@ const store = new Vuex.Store({
       state.entityStores[payload.entityName].confirmDeleteDialog = payload.confirmDeleteDialog;
     },
     SET_USER_DATA(state, userData) {
-      localStorage.setItem("user", JSON.stringify(userData));
+      localStorage.setItem("userData", JSON.stringify(userData));
       axios.defaults.headers.common[
         "Authorization"
       ] = `Bearer ${userData.token}`;
-      state.user = userData;
-    },
-    SET_ADMIN(state, isAdmin) {
-      state.isAdmin = isAdmin;
+      state.userData = userData;
     },
     LOGOUT(state) {
-      localStorage.removeItem("user");
-      // location.reload();
+      localStorage.removeItem("userData");
     },
   },
   actions: {
@@ -69,13 +65,12 @@ const store = new Vuex.Store({
     logout({ commit }) {
       commit("LOGOUT");
     },
-    startEntityStore({ commit, dispatch }, payload) {
-      commit("NEW_ENTITY_STORE", payload)
-
-      dispatch("loadEntities", payload)
-    },
     loadEntities({ commit }, payload) {
       EntityService.getEntities(commit, payload);
+    },
+    loadEntityOptions({ commit }, payload) {
+      console.log("loadEntityOptions:" + payload.entityName);
+      EntityService.getEntityOptions(commit, payload);
     },
     saveEntity({ dispatch, getters }, payload) {
       payload.entityObject = getters.getEditEntityObjectByEntityName(payload.entityName);
@@ -93,7 +88,7 @@ const store = new Vuex.Store({
   },
   getters: {
     isAdminUser(state) {
-      return state.isAdmin;
+      return state.userData.admin;
     },
     getEntityListByEntityName: (state) => (entityName) => {
       if (state.entityStores[entityName].entityList === null) {
@@ -102,6 +97,9 @@ const store = new Vuex.Store({
       else {
         return state.entityStores[entityName].entityList;
       }
+    },
+    getOptionListByEntityName: (state) => (entityName) => {
+        return state.entityStores[entityName].optionList;
     },
     getEditEntityObjectByEntityName: (state) => (entityName) => {
       return state.entityStores[entityName].entityObject;
@@ -116,7 +114,7 @@ const store = new Vuex.Store({
       return state.entityStores[entityName].editDialog;
     },
     getUser(state) {
-      return state.user;
+      return state.userData.name;
     }
   },
 });

@@ -18,7 +18,7 @@ Vue.component("gek-header", {
         <template v-slot:activator="{ on, attrs, value }">
           <v-btn text color="primary" v-bind="attrs" v-on="on" value="value">
             <v-icon>mdi-account-outline</v-icon>
-            <span v-if="user">{{ user.name }}</span>
+            <span v-if="user">{{ user }}</span>
           </v-btn>
         </template>
         <v-list-item >

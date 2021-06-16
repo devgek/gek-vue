@@ -25,23 +25,10 @@ const gekPageUser = Vue.component("gek-page-user", {
     return {};
   },
   created() {
-    this.startEntityStore({
-      entityName: "User",
-      newEntityObjectFn: this.newEntityObject,
-    });
+    this.$store.dispatch("loadEntities", {entityName: "User"});
   },
   methods: {
-    ...Vuex.mapActions(["startEntityStore", "deleteEntity", "saveEntity"]),
-    newEntityObject() {
-      console.log("newEntityObject user called");
-      return {
-        ID: 0,
-        Name: "",
-        Pass: "",
-        Email: "",
-        Role: 0,
-      };
-    },
+    ...Vuex.mapActions(["loadEntities", "deleteEntity", "saveEntity"]),
     roleDesc(role)  {
       return gkwebapp_T_RoleTypes[role].text;
     },

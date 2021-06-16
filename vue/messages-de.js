@@ -99,6 +99,7 @@ const messages = {
         header: "Seite 1",
         content: "Das ist der Inhalt von Seite 1",
         labelContacttype: "Kontakttyp:",
+        labelUser: "Benutzer:",
       },
       user: {
         list: {
@@ -130,6 +131,28 @@ const messages = {
         edit: {
           header: "Kontakt bearbeiten",
           headernew: "Kontakt neu anlegen",
+          label: {
+            orgtype: "Organisationstyp:",
+            name: "Name:",
+            nameext: "Namenszusatz:",
+            contacttype: "Kontakttyp:",
+            id: "Id:",
+          },
+        },
+      },
+      contactaddress: {
+        list: {
+          header: "Kontaktadresse",
+          buttonnew: "Neue Kontaktadresse",
+          street: "Straße",
+          streetnr: "Nr",
+          steetext: "Zusatz",
+          plz: "Plz",
+          city: "Ort",
+        },
+        edit: {
+          header: "Kontaktadresse bearbeiten",
+          headernew: "Kontaktadresse neu anlegen",
           label: {
             orgtype: "Organisationstyp:",
             name: "Name:",

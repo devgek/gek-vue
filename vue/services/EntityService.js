@@ -1,4 +1,11 @@
 const EntityService = {
+  getEntityOptions(commit, payload) {
+    return axios
+      .post("//localhost:8080/api/optionlist" + payload.entityName)
+      .then(({ data }) => {
+        commit("SET_OPTION_LIST", {entityName: payload.entityName, optionList: data.EntityOptions});
+      });
+  },
   getEntities(commit, payload) {
     return axios
       .post("//localhost:8080/api/entitylist" + payload.entityName)

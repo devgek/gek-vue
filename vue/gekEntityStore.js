@@ -6,6 +6,7 @@ function EntityStore(entityName, newEntityObjectFn, vuex) {
     this.confirmDeleteDialog = false;
     this.editDialog = false;
     this.entityList = [];
+    this.optionList = [];
     this.vuex = vuex;
     this.editNew = false;
 

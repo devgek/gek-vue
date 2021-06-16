@@ -29,14 +29,14 @@ Vue.component("gek-entity-edit-list", {
             <div class="pb-3">&nbsp;</div>
           </v-col>
         </v-row>
-        <v-data-table :items="getEntityListByEntityName(entityName)" :headers="tableHeaders" :items-per-page="15">
+        <v-data-table :items="getEntityListByEntityName(entityName)" :headers="tableHeaders" :items-per-page="15" show-expand :expanded.sync="expanded" :single-expand="singleExpand" item-key="Name">
             <!-- pass through scoped slots -->
             <template v-for="(_, scopedSlotName) in $scopedSlots" v-slot:[scopedSlotName]="slotData">
               <slot :name="scopedSlotName" v-bind="slotData"></slot>
             </template>
       
 
-            <template v-slot:item.actions="{ item }">
+            <template v-slot:item.actions="{ item }" v-if="isAdminUser">
               <v-btn 
                 small
                 color="primary" 
@@ -62,6 +62,8 @@ Vue.component("gek-entity-edit-list", {
 `,
   data() {
     return {
+      expanded: [],
+      singleExpand: true,
     };
   },
   methods: {
