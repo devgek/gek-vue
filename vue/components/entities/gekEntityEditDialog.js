@@ -20,8 +20,11 @@ Vue.component("gek-entity-edit-dialog", {
   <v-card>
     <v-card-title class="primary white--text">{{ entityStores[entityName].getEditHeader(entityDesc) }}</v-card-title>
     <v-card-text class="pt-4">
-                <!-- include the edit fields here -->
-                <component :is="editFormComponent"></component>
+      <v-form>
+        <slot name="entity.fields">
+          <div> default content of entity.fields </div>
+        </slot>
+      </v-form>
     </v-card-text>
     <v-card-actions>
       <v-spacer></v-spacer>
@@ -43,7 +46,7 @@ Vue.component("gek-entity-edit-dialog", {
 `,
   data() {
     return {
-      editFormComponent: "gek-entity-edit-form-" + this.entity,
+      formName: this.entity + "Form",
     };
   },
   methods: {

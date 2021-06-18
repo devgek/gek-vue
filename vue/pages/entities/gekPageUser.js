@@ -15,7 +15,14 @@ const gekPageUser = Vue.component("gek-page-user", {
     </template>
   </gek-entity-edit-list>
   <!-- entityEditDialog -->
-  <gek-entity-edit-dialog entity="user" entityName="User" entityDesc="Benutzer" @entity-edit-save-user="saveEntity({entityName:'User', entityDesc:'Benutzer'})"/>
+  <gek-entity-edit-dialog entity="user" entityName="User" entityDesc="Benutzer" @entity-edit-save-user="saveEntity({entityName:'User', entityDesc:'Benutzer'})">
+    <template v-slot:entity.fields>
+      <v-text-field v-model="entityStores['User'].entityObject.Name" :label="$t('form.user.edit.label.name')" required :readonly="!entityStores['User'].editNew" outlined dense></v-text-field>
+      <v-text-field v-model="entityStores['User'].entityObject.Pass" :label="$t('form.user.edit.label.pass')" type="password" required :readonly="!entityStores['User'].editNew" outlined dense></v-text-field>
+      <v-text-field v-model="entityStores['User'].entityObject.Email" :label="$t('form.user.edit.label.email')" required outlined dense></v-text-field>
+      <v-select v-model="entityStores['User'].entityObject.Role" :label="$t('form.user.edit.label.role')" required :items="getRoleTypes()" outlined dense></v-select>
+    </template>
+  </gek-entity-edit-dialog>
   <!-- confirmDelete Dialog-->
   <gek-confirm-delete entity="user" entityName="User" entityDesc="Benutzer" @entity-delete-confirm-user="deleteEntity({entityName:'User', entityDesc:'Benutzer'})"/>
 </div>
@@ -32,9 +39,12 @@ const gekPageUser = Vue.component("gek-page-user", {
     roleDesc(role)  {
       return gkwebapp_T_RoleTypes[role].text;
     },
-
+    getRoleTypes() {
+      return gkwebapp_T_RoleTypes;
+    }
   },
   computed: {
+    ...Vuex.mapState(['entityStores']),
     tableHeaders() {
       var h = [
         {
@@ -49,19 +59,6 @@ const gekPageUser = Vue.component("gek-page-user", {
         { text: "Aktionen", value: "actions", sortable: false, class: "w-8" },
       ];
       return h;
-    },
-    fields() {
-      var f = [
-        {
-          name: "item.Pass",
-          content: "********"
-        },
-        {
-          name: "item.Role",
-          action: "this.roleDesc(item.Role)"
-        }
-      ];
-      return f;
     }
   },
 });

@@ -13,15 +13,15 @@ function EntityStore(entityName, newEntityObjectFn, vuex) {
     this.doSave = function () {
       console.log("doSave", this)
       if (this.editNew) {
-        this.vue.$store.dispatch("create" + this.entityName, this.entityObject);
+        this.vuex.dispatch("create" + this.entityName, this.entityObject);
       } else {
-        this.vue.$store.dispatch("update" + this.entityName, this.entityObject);
+        this.vuex.dispatch("update" + this.entityName, this.entityObject);
       }
     };
 
     this.doDelete = function (confirmed) {
       if (confirmed) {
-        this.vue.$store.dispatch("delete" + this.entityName, this.entityObject);
+        this.vuex.dispatch("delete" + this.entityName, this.entityObject);
       }
     };
 

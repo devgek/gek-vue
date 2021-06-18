@@ -55,7 +55,15 @@ const gekPageContact = Vue.component("gek-page-contact", {
     </template>
   </gek-entity-edit-list>
   <!-- entityEditDialog -->
-  <gek-entity-edit-dialog entity="contact" entityName="Contact" entityDesc="Kontakt" @entity-edit-save-contact="saveEntity({entityName:'Contact', entityDesc:'Kontakt'})"/>
+  <gek-entity-edit-dialog entity="contact" entityName="Contact" entityDesc="Kontakt" @entity-edit-save-contact="saveEntity({entityName:'Contact', entityDesc:'Kontakt'})">
+    <template v-slot:entity.fields>
+      <v-select v-model="entityStores['Contact'].entityObject.OrgType" :label="$t('form.contact.edit.label.orgtype')" required :items="getOrgTypes()" outlined dense></v-select>
+      <v-text-field v-model="entityStores['Contact'].entityObject.Name" :label="$t('form.contact.edit.label.name')" required :readonly="!entityStores['Contact'].editNew" outlined dense></v-text-field>
+      <v-text-field v-model="entityStores['Contact'].entityObject.NameExt" :label="$t('form.contact.edit.label.nameext')" outlined dense></v-text-field>
+      <v-select v-model="entityStores['Contact'].entityObject.ContactType" :label="$t('form.contact.edit.label.contacttype')" required :items="getContactTypes()" outlined dense></v-select>
+    </template>
+  </gek-entity-edit-dialog>
+  <gek-entity-edit-dialog entity="contactaddress" entityName="ContactAddress" entityDesc="Kontaktadresse" @entity-edit-save-contactaddress="saveEntity({entityName:'ContactAddress', entityDesc:'Kontaktadresse'})"/>
   <!-- confirmDelete Dialog-->
   <gek-confirm-delete entity="contact" entityName="Contact" entityDesc="Kontakt" @entity-delete-confirm-contact="deleteEntity({entityName:'Contact', entityDesc:'Kontakt'})"/>
 </div>
@@ -87,12 +95,17 @@ const gekPageContact = Vue.component("gek-page-contact", {
     hasEmbeddedEntities(embeddedEntities) {
       return (embeddedEntities && Object.keys(embeddedEntities).length > 0)
     },
-    expand(item) {
-      alert(item.Name);
-    }
+    getOrgTypes() {
+      return gkwebapp_T_OrgTypes;
+    },
+    getContactTypes() {
+      return gkwebapp_T_ContactTypes;
+    },
+
   },
   computed: {
     ...Vuex.mapGetters(["isAdminUser"]),
+    ...Vuex.mapState(["entityStores"]),
     tableHeaders() {
       var h = [
         { text: "", sortable: false, value: "data-table-expand"},

@@ -5,7 +5,7 @@ const store = new Vuex.Store({
       userData: null,
       message: null,
       navDrawer: true,
-      entityStores: {"User": new EntityStore("User", newEntityObjectUser, this), "Contact": new EntityStore("Contact", newEntityObjectContact, this)}
+      entityStores: {"User": new EntityStore("User", newEntityObjectUser, this), "Contact": new EntityStore("Contact", newEntityObjectContact, this), "ContactAddress": new EntityStore("ContactAddress", newEntityObjectContactAddress, this)}
     };
   },
   mutations: {
