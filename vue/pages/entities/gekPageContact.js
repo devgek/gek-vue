@@ -5,7 +5,7 @@ const gekPageContact = Vue.component("gek-page-contact", {
 <!-- Page Content -->
 <div class="content content-full">
   <!-- entityEditDialog -->
-  <gek-entity-edit-list entity="contact" entityName="Contact" :tableHeaders="tableHeaders">
+  <gek-entity-edit-list entity="contact" entityName="Contact" :tableHeaders="tableHeaders" :showExpand="true">
     <template v-slot:item.OrgType="{ item }">
       {{ orgDesc(item.OrgType) }}
     </template>

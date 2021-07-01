@@ -11,6 +11,10 @@ Vue.component("gek-entity-edit-list", {
     tableHeaders: {
       type: Array,
       required: true,
+    },
+    showExpand: {
+      type: Boolean,
+      default: false
     }
   },
   template:
@@ -29,7 +33,7 @@ Vue.component("gek-entity-edit-list", {
             <div class="pb-3">&nbsp;</div>
           </v-col>
         </v-row>
-        <v-data-table :items="getEntityListByEntityName(entityName)" :headers="tableHeaders" :items-per-page="15" show-expand :expanded.sync="expanded" :single-expand="singleExpand" item-key="Name">
+        <v-data-table :items="getEntityListByEntityName(entityName)" :headers="tableHeaders" :items-per-page="5" :show-expand="showExpand" :expanded.sync="expanded" :single-expand="singleExpand" item-key="Name">
             <!-- pass through scoped slots -->
             <template v-for="(_, scopedSlotName) in $scopedSlots" v-slot:[scopedSlotName]="slotData">
               <slot :name="scopedSlotName" v-bind="slotData"></slot>

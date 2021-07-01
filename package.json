@@ -1,0 +1,22 @@
+{
+  "name": "gek-vue",
+  "version": "0.0.1",
+  "description": "vue.js scaffolding app",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/devgek/gek-vue.git"
+  },
+  "author": "Gerald Kahrer",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/devgek/gek-vue/issues"
+  },
+  "homepage": "https://github.com/devgek/gek-vue#readme",
+  "devDependencies": {
+    "webpack": "^5.41.1"
+  }
+}
