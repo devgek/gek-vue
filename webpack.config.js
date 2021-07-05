@@ -5,12 +5,12 @@ const webpack = require("webpack"),
 
 let config = {
   mode: "development",
-  entry: { gekvue: "./src/index.js" },
+  entry: { gekvueentity: "./src/main.js" },
 
   output: {
     path: path.resolve(__dirname, "./dist"),
 
-    filename: "gekvue-bundle.js",
+    filename: "gekvueentity-bundle.js",
   },
 };
 
