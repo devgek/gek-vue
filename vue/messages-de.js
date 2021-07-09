@@ -1,5 +1,5 @@
 // Ready translated locale messages
-const messages = {
+const myMessages = {
   de: {
     $vuetify: {
       dataTable: {
@@ -166,8 +166,4 @@ const messages = {
   },
 };
 
-// Create VueI18n instance with options
-const i18n = new VueI18n({
-  locale: "de", // set locale
-  messages, // set locale messages
-});
+export default myMessages

@@ -1,21 +1,21 @@
 const EntityService = {
   getEntityOptions(commit, payload) {
     return axios
-      .post("//localhost:8080/api/optionlist" + payload.entityName)
+      .post("/api/optionlist" + payload.entityName)
       .then(({ data }) => {
         commit("SET_OPTION_LIST", {entityName: payload.entityName, optionList: data.EntityOptions});
       });
   },
   getEntities(commit, payload) {
     return axios
-      .post("//localhost:8080/api/entitylist" + payload.entityName)
+      .post("/api/entitylist" + payload.entityName)
       .then(({ data }) => {
         commit("SET_ENTITY_LIST", {entityName: payload.entityName, entityList: data.EntityObject});
       });
   },
   createEntity(dispatch, payload) {
     return axios
-      .post("//localhost:8080/api/entitynew" + payload.entityName, payload.entityObject)
+      .post("/api/entitynew" + payload.entityName, payload.entityObject)
       .then(({ data }) => {
         const message = {
           type: "success",
@@ -36,7 +36,7 @@ const EntityService = {
   },
   updateEntity(dispatch, payload) {
     return axios
-      .post("//localhost:8080/api/entityedit" + payload.entityName, payload.entityObject)
+      .post("/api/entityedit" + payload.entityName, payload.entityObject)
       .then(({ data }) => {
         const message = {
           type: "success",
@@ -57,7 +57,7 @@ const EntityService = {
   },
   deleteEntity(dispatch, payload) {
     return axios
-      .post("//localhost:8080/api/entitydelete" + payload.entityName + "/" + payload.entityObject.ID)
+      .post("/api/entitydelete" + payload.entityName + "/" + payload.entityObject.ID)
       .then(({ data }) => {
         const message = {
           type: "success",

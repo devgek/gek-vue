@@ -1,5 +1,5 @@
-function EntityStore(entityName, newEntityObjectFn, vuex) {
-    var entityStore = this;
+class EntityStore {
+  constructor(entityName, newEntityObjectFn, vuex) {
     this.entityName = entityName;
     this.newEntityObjectFn = newEntityObjectFn;
     this.entityObject = this.newEntityObjectFn.call();
@@ -11,7 +11,7 @@ function EntityStore(entityName, newEntityObjectFn, vuex) {
     this.editNew = false;
 
     this.doSave = function () {
-      console.log("doSave", this)
+      console.log("doSave", this);
       if (this.editNew) {
         this.vuex.dispatch("create" + this.entityName, this.entityObject);
       } else {
@@ -25,14 +25,16 @@ function EntityStore(entityName, newEntityObjectFn, vuex) {
       }
     };
 
-    
+
+  }
+  getEditHeader(entityDesc) {
+    if (this.editNew) {
+      return entityDesc + " neu anlegen";
+    }
+    else {
+      return entityDesc + " ändern";
+    }
+  }
 };
 
-EntityStore.prototype.getEditHeader = function getEditHeader(entityDesc) {
-  if (this.editNew) {
-    return entityDesc + " neu anlegen"
-  }
-  else {
-    return entityDesc + " ändern"
-  }
-}
+export default EntityStore

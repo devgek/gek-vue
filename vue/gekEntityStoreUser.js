@@ -7,3 +7,5 @@ function newEntityObjectUser() {
     Role: 0,
   }
 }
+
+export default newEntityObjectUser

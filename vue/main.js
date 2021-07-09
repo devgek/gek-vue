@@ -1,29 +1,32 @@
-const vuetify = new Vuetify({
-  theme: {
-    light: true,
-    themes: {
-      light: {
-        // primary: "#CDDC39",
-      },
-    },
-  },
-  lang: {
-    t: (key, ...params) => i18n.t(key, params),
-  },
-});
+import '../src/assets/css/gkwebapp.css'
+import '../src/assets/js/gkwebapp.js'
 
-const app = new Vue({
-  i18n: i18n,
-  store: store,
-  router: router,
-  el: "#app",
-  vuetify: vuetify,
+import Vue from 'vue'
+import axios from 'axios'
+
+import myRouter from './router.js'
+import myStore from './store.js'
+import myVuetify from './vuetify.js'
+import myI18n from './i18n.js'
+
+window.axios = axios
+axios.defaults.baseURL = 'http://localhost:8080'
+
+import MyApp from './gekApp.vue'
+
+const myVueInstance = new Vue({
+  ...MyApp,
+  store: myStore,
+  router: myRouter,
+  vuetify: myVuetify,
+  i18n: myI18n,
   data: {
     user: "",
     token: "",
     isAdmin: false,
   },
   created() {
+    console.log("myVueInstance created");
     // this.$vuetify.dataTable.itemsPerPageText = "maxi";
     const userDataString = localStorage.getItem("userData");
     if (userDataString) {
@@ -43,4 +46,4 @@ const app = new Vue({
       }
     );
   },
-});
+}).$mount("#myApp");

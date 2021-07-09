@@ -7,3 +7,5 @@ function newEntityObjectContactAddress() {
     ContactType: 0,
   };
 }
+
+export default newEntityObjectContactAddress

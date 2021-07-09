@@ -1,5 +1,14 @@
-// Create a new store instance.
-const store = new Vuex.Store({
+import Vue from 'vue'
+import Vuex from 'vuex'
+import './services/gekEntityService.js'
+import EntityStore from './gekEntityStore.js'
+import newEntityObjectUser from './gekEntityStoreUser.js'
+import newEntityObjectContact from './gekEntityStoreContact.js'
+import newEntityObjectContactAddress from './gekEntityStoreContactAddress.js'
+
+Vue.use(Vuex)
+
+export default new Vuex.Store({
   state() {
     return {
       userData: null,

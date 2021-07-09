@@ -17,6 +17,24 @@
   },
   "homepage": "https://github.com/devgek/gek-vue#readme",
   "devDependencies": {
-    "webpack": "^5.41.1"
+    "css-loader": "^5.2.6",
+    "deepmerge": "^4.2.2",
+    "sass": "~1.32",
+    "sass-loader": "^12.1.0",
+    "style-loader": "^3.0.0",
+    "vue-loader": "^15.9.2",
+    "vue-template-compiler": "^2.6.14",
+    "webpack": "^5.41.1",
+    "webpack-cli": "^4.7.2"
+  },
+  "dependencies": {
+    "axios": "^0.21.1",
+    "es6-promise": "^4.2.8",
+    "vue": "^2.6.14",
+    "vue-i18n": "^8.24.5",
+    "vue-router": "^3.5.2",
+    "vuetify": "^2.5.6",
+    "vuetify-loader": "^1.7.2",
+    "vuex": "^3.6.2"
   }
 }
