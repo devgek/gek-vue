@@ -2,7 +2,7 @@
   <!-- Page Content -->
   <div>
     <!-- entityEditDialog -->
-    <gek-entity-edit-list
+    <GekEntityEditList
       entity="user"
       entityName="User"
       :tableHeaders="tableHeaders"
@@ -12,9 +12,9 @@
       <template v-slot:item.Role="{ item }">
         {{ roleDesc(item.Role) }}
       </template>
-    </gek-entity-edit-list>
+    </GekEntityEditList>
     <!-- entityEditDialog -->
-    <gek-entity-edit-dialog
+    <GekEntityEditDialog
       entity="user"
       entityName="User"
       entityDesc="Benutzer"
@@ -56,9 +56,9 @@
           dense
         ></v-select>
       </template>
-    </gek-entity-edit-dialog>
+    </GekEntityEditDialog>
     <!-- confirmDelete Dialog-->
-    <gek-confirm-delete
+    <GekEntityConfirmDelete
       entity="user"
       entityName="User"
       entityDesc="Benutzer"
@@ -71,9 +71,16 @@
 </template>
 <script>
 import Vuex from 'vuex'
+import GekEntityEditDialog from "/vue/components/entities/gekEntityEditDialog.vue"
+import GekEntityEditList from "/vue/components/entities/gekEntityEditList.vue"
+import GekEntityConfirmDelete from "/vue/components/entities/gekEntityConfirmDelete.vue"
+import {gkwebapp_T_RoleTypes} from "/src/assets/js/gkwebapp.js"
+
 
 export default {
-
+components: {
+  GekEntityEditDialog, GekEntityEditList, GekEntityConfirmDelete
+},
 data() {
     return {};
   },

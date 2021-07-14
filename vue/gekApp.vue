@@ -17,6 +17,9 @@ export default {
       }
     });
   },
+  mounted() {
+    console.log("gekApp mounted");
+  },
   beforeDestroy() {
     console.log("gek-app destroyed");
     this.unsubscribe();

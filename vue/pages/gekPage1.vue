@@ -1,6 +1,6 @@
 <template>
 <v-sheet>
-  <gek-page-header headerKey="form.page1.header"/>
+  <GekPageHeader headerKey="form.page1.header"/>
  <v-card class="mt-5">
   <v-card-text class="">
       <v-row align="start" dense>
@@ -15,8 +15,8 @@
             dense
           ></v-select>
         </v-col>
-        <gek-entity-options-select entityName="User" labelKey="entity.desc.user" @entity-options-select-User="onChangeUser"/>
-        <gek-entity-options-select entityName="Contact" labelKey="entity.desc.contact" @entity-options-select-Contact="onChangeContact"/>
+        <GekEntityOptionsSelect entityName="User" labelKey="entity.desc.user" @entity-options-select-User="onChangeUser"/>
+        <GekEntityOptionsSelect entityName="Contact" labelKey="entity.desc.contact" @entity-options-select-Contact="onChangeContact"/>
       </v-row>
       <v-row>
         <v-col class="d-flex flex-row">
@@ -38,8 +38,14 @@
 </template>
 <script>
 import Vuex from 'vuex'
+import {gkwebapp_T_ContactTypes} from "/src/assets/js/gkwebapp.js"
+import GekPageHeader from "/vue/components/gekPageHeader.vue"
+import GekEntityOptionsSelect from "/vue/components/entities/gekEntityOptionsSelect.vue"
 
 export default {
+  components: {
+    GekPageHeader, GekEntityOptionsSelect
+  },
   data() {
     return {
       selectedContactType: 1,

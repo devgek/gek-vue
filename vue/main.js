@@ -1,14 +1,19 @@
+console.log("main.js");
+
 import '../src/assets/css/gkwebapp.css'
 import '../src/assets/js/gkwebapp.js'
 
 import Vue from 'vue'
 import axios from 'axios'
 
+import myVuetify from './vuetify.js'
 import myRouter from './router.js'
 import myStore from './store.js'
-import myVuetify from './vuetify.js'
 import myI18n from './i18n.js'
 
+window.onerror = function(message, source, line, column, error) {
+  console.log("Error catched:", message, "source:", source, "line:", line, "theError:", error);
+}
 window.axios = axios
 axios.defaults.baseURL = 'http://localhost:8080'
 
@@ -24,6 +29,9 @@ const myVueInstance = new Vue({
     user: "",
     token: "",
     isAdmin: false,
+  },
+  render(h) {
+    return h(MyApp);
   },
   created() {
     console.log("myVueInstance created");
@@ -46,4 +54,13 @@ const myVueInstance = new Vue({
       }
     );
   },
+  beforeMount() {
+    console.log("myVueInstance beforeMount");
+  },
+  mounted() {
+    console.log("myVueInstance mounted");
+  },
+  errorCaptured(err,vm,info) {
+    console.log(`errorCaptured: ${err.toString()}\ninfo: ${info}`); 
+  }
 }).$mount("#myApp");

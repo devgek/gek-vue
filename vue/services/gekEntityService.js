@@ -77,3 +77,5 @@ const EntityService = {
       });
   },
 };
+
+export {EntityService};

@@ -1,6 +1,6 @@
 import Vue from 'vue'
 import Vuex from 'vuex'
-import './services/gekEntityService.js'
+import {EntityService} from './services/gekEntityService.js'
 import EntityStore from './gekEntityStore.js'
 import newEntityObjectUser from './gekEntityStoreUser.js'
 import newEntityObjectContact from './gekEntityStoreContact.js'
@@ -123,7 +123,10 @@ export default new Vuex.Store({
       return state.entityStores[entityName].editDialog;
     },
     getUser(state) {
-      return state.userData.name;
+      if (state.userData) {
+        return state.userData.name
+      }
+      return "notLoggedIn";
     }
   },
 });

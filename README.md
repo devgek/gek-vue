@@ -9,7 +9,9 @@ vue.js scaffolding project
 
 `npm install vue`
 
-`npm install -D vue-loader vue-template-compiler`
+`npm install -D vue-template-compiler`
+
+`npm install -D vue-loader@15.9.7`
 
 `npm install vuetify`
 
@@ -22,3 +24,15 @@ vue.js scaffolding project
 `npm install es6-promise --save`
 
 `npm install vue-i18n`
+
+`npm install axios`
+
+`npm i @vue/compiler-sfc --force`
+
+`npm install sass@~1.32 sass-loader deepmerge -D`
+
+`npm install -D vue-style-loader`
+
+`npm install -D css-loader`
+
+`npm install -D style-loader`

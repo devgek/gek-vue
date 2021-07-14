@@ -52,3 +52,5 @@ function gkwebapp_format_all_curr() {
     $(element).text(vf);
   });
 }
+
+export {gkwebapp_T_ContactTypes, gkwebapp_T_OrgTypes, gkwebapp_T_RoleTypes};

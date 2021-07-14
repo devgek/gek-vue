@@ -8,6 +8,7 @@ const webpack = require("webpack"),
 
 let config = {
   mode: "development",
+  devtool: "source-map",
   entry: { gekvueentity: "./vue/main.js" },
 
   output: {
@@ -55,7 +56,6 @@ let config = {
     new VueLoaderPlugin(),
     new VuetifyLoaderPlugin(),
   ],
-  devtool: "eval-cheap-source-map",
   resolve: {
     alias: {
         vue: 'vue/dist/vue.js'

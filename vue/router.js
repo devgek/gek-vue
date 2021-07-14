@@ -1,3 +1,5 @@
+console.log("router.js");
+
 import Vue from "vue";
 import VueRouter from "vue-router";
 import GekLayoutPlain from "./layouts/gekLayoutPlain.vue";
@@ -25,13 +27,6 @@ const myRoutes = [
         meta: { description: "show login" },
       },
     ],
-  },
-  {
-    path: "/xxx",
-    name: "xxx",
-    component: GekPageLogin,
-    props: { mainHeader: "Bitte anmelden", startPage: "Page1" },
-    meta: { description: "show login" },
   },
   {
     path: "/admin",
@@ -71,7 +66,7 @@ const myRoutes = [
 ];
 
 const myRouter = new VueRouter({
-  myRoutes,
+  routes: myRoutes,
 });
 
 myRouter.beforeEach((to, from, next) => {
@@ -79,11 +74,11 @@ myRouter.beforeEach((to, from, next) => {
   // redirect to login page if user is not logged in and trying to access a restricted page
   const publicPages = ["/page2", "/login"];
   const authRequired = !publicPages.includes(to.path);
-  const loggedIn = localStorage.getItem("user");
+  const loggedIn = localStorage.getItem("userData");
 
   if (authRequired && !loggedIn) {
-    console.log("route to xxx from " + to.path);
-    next({ to: "/xxx" });
+    console.log("route to login from " + to.path, "authRequired:", authRequired, "loggedIn:", loggedIn);
+    next({ path: "/login" });
   } else {
     next();
   }
