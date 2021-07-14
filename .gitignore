@@ -3,3 +3,4 @@ webskeleton
 webskeleton.exe
 *.db
 node_modules
+xnode_modules
