@@ -45,7 +45,7 @@ const myVueInstance = new Vue({
       (response) => response,
       (error) => {
         console.log(
-          "axios error: " + error.response.status + error.response.data
+          "axios-response-interceptor:: api error: " + error.response.status + " " + error.response.data
         );
         if (error.response.status === 401) {
           this.$store.dispatch("logout");

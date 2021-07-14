@@ -1,8 +1,5 @@
 <template>
-  <v-dialog
-    v-model="dialog"
-    max-width="600px"
-  >
+  <v-dialog v-model="dialog" max-width="600px">
     <v-card>
       <v-card-title class="primary white--text">{{ title }}</v-card-title>
       <v-card-text class="pt-4">
@@ -21,7 +18,7 @@
   </v-dialog>
 </template>
 <script>
-import Vuex from 'vuex'
+import Vuex from "vuex";
 
 export default {
   props: {
@@ -39,9 +36,7 @@ export default {
     },
   },
   data() {
-    return {
-      dialog: false,
-    };
+    return {};
   },
   methods: {
     ...Vuex.mapActions(["dismissConfirmDeleteDialog", "dismissEditDialog"]),
@@ -68,6 +63,14 @@ export default {
     confirmationMessage() {
       return this.entityDesc + " wirklich löschen?";
     },
+    dialog: {
+      get() {
+        return this.getConfirmDeleteDialogByEntityName(this.entityName);
+      },
+      set(value) {
+        //do nothing here
+      },
+    },
   },
-}
+};
 </script>

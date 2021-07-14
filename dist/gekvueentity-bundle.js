@@ -5863,9 +5863,6 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-//
-//
-//
 
 
 
@@ -5885,9 +5882,7 @@ __webpack_require__.r(__webpack_exports__);
     },
   },
   data() {
-    return {
-      dialog: false,
-    };
+    return {};
   },
   methods: {
     ...vuex__WEBPACK_IMPORTED_MODULE_0__.default.mapActions(["dismissConfirmDeleteDialog", "dismissEditDialog"]),
@@ -5913,6 +5908,14 @@ __webpack_require__.r(__webpack_exports__);
     },
     confirmationMessage() {
       return this.entityDesc + " wirklich löschen?";
+    },
+    dialog: {
+      get() {
+        return this.getConfirmDeleteDialogByEntityName(this.entityName);
+      },
+      set(value) {
+        //do nothing here
+      },
     },
   },
 });
@@ -5977,7 +5980,6 @@ __webpack_require__.r(__webpack_exports__);
   },
   data() {
     return {
-      dialog: false,
       formName: this.entity + "Form",
     };
   },
@@ -6000,6 +6002,14 @@ __webpack_require__.r(__webpack_exports__);
   computed: {
     ...vuex__WEBPACK_IMPORTED_MODULE_0__.default.mapState(["entityStores"]),
     ...vuex__WEBPACK_IMPORTED_MODULE_0__.default.mapGetters(["getEditDialogByEntityName"]),
+    dialog: {
+      get() {
+        return this.getEditDialogByEntityName(this.entityName);
+      },
+      set(value) {
+        //do nothing here
+      },
+    },
   },
 });
 
@@ -6238,41 +6248,42 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-//
 
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
   data() {
-    return {};
+    return {
+      showMessage: false,
+    };
   },
   created() {
     this.unsubscribe = this.$store.subscribe((mutation, state) => {
       if (mutation.type === "SET_MESSAGE") {
-        console.log(`catching message from store: ${state.message}`);
+        console.log(`catching SET_MESSAGE mutation: ${state.message.type}, ${state.message.i18n},`);
+        this.showMessage = true;
       }
     });
-
-    if (this.$store.state.message) {
-      this.showMessage();
-    }
   },
   beforeDestroy() {
     this.unsubscribe();
   },
   methods: {
-    showMessage() {
-      const $toast = $(".toast[data-toastid='errorMessageToast']");
-      $toast.toast("show");
-    },
   },
   computed: {
-    message() {
+    messageText() {
       var msg = this.$store.state.message;
       if (msg && msg.i18n) {
-        msg.msg = this.$t(msg.i18n, msg.i18nArgs);
+        return this.$t(msg.i18n, msg.i18nArgs);
       }
 
-      return msg;
+      return "";
     },
+    messageColor() {
+      if (this.$store.state.message) {
+        return this.$store.state.message.type;
+      }
+
+      return "";
+    }
   },
 });
 
@@ -8160,22 +8171,26 @@ var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _vm.message
-    ? _c(
-        "v-snackbar",
-        {
-          attrs: {
-            dense: "",
-            timeout: 3000,
-            value: true,
-            color: _vm.message.type,
-            outlined: "",
-            right: ""
-          }
+  return _c(
+    "v-snackbar",
+    {
+      attrs: {
+        dense: "",
+        timeout: 3000,
+        color: _vm.messageColor,
+        outlined: "",
+        right: ""
+      },
+      model: {
+        value: _vm.showMessage,
+        callback: function($$v) {
+          _vm.showMessage = $$v
         },
-        [_vm._v("\n  " + _vm._s(_vm.message.msg) + "\n")]
-      )
-    : _vm._e()
+        expression: "showMessage"
+      }
+    },
+    [_vm._v("\n  " + _vm._s(_vm.messageText) + "\n")]
+  )
 }
 var staticRenderFns = []
 render._withStripped = true
@@ -46945,7 +46960,7 @@ const myVueInstance = new (vue__WEBPACK_IMPORTED_MODULE_8___default())({
       (response) => response,
       (error) => {
         console.log(
-          "axios error: " + error.response.status + error.response.data
+          "axios-response-interceptor:: api error: " + error.response.status + " " + error.response.data
         );
         if (error.response.status === 401) {
           this.$store.dispatch("logout");

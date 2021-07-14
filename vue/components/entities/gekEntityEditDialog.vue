@@ -24,7 +24,7 @@
   </v-dialog>
 </template>
 <script>
-import Vuex from 'vuex'
+import Vuex from "vuex";
 
 export default {
   props: {
@@ -43,7 +43,6 @@ export default {
   },
   data() {
     return {
-      dialog: false,
       formName: this.entity + "Form",
     };
   },
@@ -66,6 +65,14 @@ export default {
   computed: {
     ...Vuex.mapState(["entityStores"]),
     ...Vuex.mapGetters(["getEditDialogByEntityName"]),
+    dialog: {
+      get() {
+        return this.getEditDialogByEntityName(this.entityName);
+      },
+      set(value) {
+        //do nothing here
+      },
+    },
   },
 };
 </script>
