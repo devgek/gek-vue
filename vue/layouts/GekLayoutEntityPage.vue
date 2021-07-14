@@ -1,6 +1,5 @@
 <template>
   <v-app>
-    <div>GekLayoutPage</div>
     <GekNav></GekNav>
     <GekHeader mainHeader="Entity Frontend mit Vuetify"></GekHeader>
     <v-main>

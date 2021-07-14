@@ -2,21 +2,8 @@
 //converting type values (int) to string representation of the type
 //used in javascript code on client side
 var gkwebapp_T_OrgTypes = [{text: "ORG", value: 0}, {text: "PER", value: 1}];
-var gkwebapp_T_MenuTypes = ["admin", "consumption"];
 var gkwebapp_T_RoleTypes = [{text: "Benutzer", value: 0}, {text: "Administrator", value: 1}];
 var gkwebapp_T_ContactTypes = [{text: "Kunde", value: 0}, {text: "Lieferant", value: 1}, {text: "Partner", value: 2}, {text: "Interessent", value: 3}, {text: "Werbung", value: 4}];
-
-function gkwebapp_prepareSelect(selectId, selectedValue) {
-  var theSelect = $("#" + selectId);
-
-  theSelect.val(selectedValue);
-}
-
-function gkwebapp_modalShowMessage(modalId, msg) {
-  const $toast = $("#" + modalId + " .toast");
-  $toast.find("span.gk-toast-text").text(msg);
-  $toast.toast("show");
-}
 
 function gkwebapp_format_curr(num) {
   var str = num.toString().replace("$", ""),
@@ -45,12 +32,4 @@ function gkwebapp_format_curr(num) {
   return formatted + (parts ? "," + parts[1].substr(0, 2) : "");
 }
 
-function gkwebapp_format_all_curr() {
-  const $cols = $(".gk-format-curr");
-  $cols.each(function (index, element) {
-    var vf = gkwebapp_format_curr($(element).text());
-    $(element).text(vf);
-  });
-}
-
-export {gkwebapp_T_ContactTypes, gkwebapp_T_OrgTypes, gkwebapp_T_RoleTypes};
+export {gkwebapp_T_ContactTypes, gkwebapp_T_OrgTypes, gkwebapp_T_RoleTypes, gkwebapp_format_curr};

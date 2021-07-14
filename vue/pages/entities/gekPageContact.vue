@@ -156,7 +156,7 @@ import Vuex from "vuex";
 import GekEntityEditDialog from "/vue/components/entities/gekEntityEditDialog.vue";
 import GekEntityEditList from "/vue/components/entities/gekEntityEditList.vue";
 import GekEntityConfirmDelete from "/vue/components/entities/gekEntityConfirmDelete.vue";
-import {gkwebapp_T_ContactTypes, gkwebapp_T_OrgTypes} from "/src/assets/js/gkwebapp.js"
+import {gkwebapp_T_ContactTypes, gkwebapp_T_OrgTypes} from "/src/assets/js/gekvue.js"
 
 export default {
   components: {

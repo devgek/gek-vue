@@ -49,6 +49,10 @@ let config = {
           },
         ],
       },
+      {
+        test: /\.(woff|woff2|eot|ttf|otf|eot|svg|png)$/i,
+        type: 'asset/resource',
+      },
     ],
   },
   plugins: [

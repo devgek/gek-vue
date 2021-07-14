@@ -2,8 +2,8 @@ console.log("router.js");
 
 import Vue from "vue";
 import VueRouter from "vue-router";
-import GekLayoutPlain from "./layouts/gekLayoutPlain.vue";
-import GekLayoutPage from "./layouts/gekLayoutPage.vue";
+import GekLayoutPlain from "./layouts/GekLayoutPlain.vue";
+import GekLayoutEntityPage from "./layouts/GekLayoutEntityPage.vue";
 import GekPageNotFound from "./pages/gekNotFound.vue";
 import GekPageLogin from "./pages/gekPageLogin.vue";
 import GekPageUser from "./pages/entities/gekPageUser.vue";
@@ -30,7 +30,7 @@ const myRoutes = [
   },
   {
     path: "/admin",
-    component: GekLayoutPage,
+    component: GekLayoutEntityPage,
     children: [
       {
         path: "user",
@@ -48,7 +48,7 @@ const myRoutes = [
   },
   {
     path: "/",
-    component: GekLayoutPage,
+    component: GekLayoutEntityPage,
     children: [
       {
         path: "page1",

@@ -1,7 +1,7 @@
 console.log("main.js");
 
-import '../src/assets/css/gkwebapp.css'
-import '../src/assets/js/gkwebapp.js'
+import '../src/assets/css/gekvue.css'
+import '../src/assets/js/gekvue.js'
 
 import Vue from 'vue'
 import axios from 'axios'
