@@ -4,11 +4,11 @@ import Vue from "vue";
 import VueRouter from "vue-router";
 import GekLayoutPlain from "./layouts/GekLayoutPlain.vue";
 import GekLayoutEntityPage from "./layouts/GekLayoutEntityPage.vue";
-import GekPageNotFound from "./pages/gekNotFound.vue";
-import GekPageLogin from "./pages/gekPageLogin.vue";
+import GekPageNotFound from "./pages/GekNotFound.vue";
+import GekPageLogin from "./pages/GekPageLogin.vue";
 import GekPageUser from "./pages/entities/gekPageUser.vue";
 import GekPageContact from "./pages/entities/gekPageContact.vue";
-import GekPage1 from "./pages/gekPage1.vue";
+import GekPage1 from "./pages/GekPage1.vue";
 
 Vue.use(VueRouter);
 

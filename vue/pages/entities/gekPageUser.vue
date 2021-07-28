@@ -8,7 +8,7 @@
       :tableHeaders="tableHeaders"
     >
       <!-- scoped slots from v-data-table -->
-      <template v-slot:item.Pass="{ item }"> ******** </template>
+      <template v-slot:item.Pass="{}"> ******** </template>
       <template v-slot:item.Role="{ item }">
         {{ roleDesc(item.Role) }}
       </template>
@@ -71,9 +71,9 @@
 </template>
 <script>
 import Vuex from 'vuex'
-import GekEntityEditDialog from "/vue/components/entities/gekEntityEditDialog.vue"
-import GekEntityEditList from "/vue/components/entities/gekEntityEditList.vue"
-import GekEntityConfirmDelete from "/vue/components/entities/gekEntityConfirmDelete.vue"
+import GekEntityEditDialog from "/vue/components/entities/GekEntityEditDialog.vue"
+import GekEntityEditList from "/vue/components/entities/GekEntityEditList.vue"
+import GekEntityConfirmDelete from "/vue/components/entities/GekEntityConfirmDelete.vue"
 import {gkwebapp_T_RoleTypes} from "/src/assets/js/gekvue.js"
 
 

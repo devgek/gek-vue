@@ -1,6 +1,8 @@
+/*global axios*/
+
 import Vue from 'vue'
 import Vuex from 'vuex'
-import {EntityService} from './services/gekEntityService.js'
+import {EntityService} from './services/GekEntityService.js'
 import EntityStore from './gekEntityStore.js'
 import newEntityObjectUser from './gekEntityStoreUser.js'
 import newEntityObjectContact from './gekEntityStoreContact.js'
@@ -56,6 +58,7 @@ export default new Vuex.Store({
       ] = `Bearer ${userData.token}`;
       state.userData = userData;
     },
+    // eslint-disable-next-line no-unused-vars
     LOGOUT(state) {
       localStorage.removeItem("userData");
     },

@@ -4,6 +4,7 @@ import '../src/assets/css/gekvue.css'
 import '../src/assets/js/gekvue.js'
 
 import Vue from 'vue'
+
 import axios from 'axios'
 
 import myVuetify from './vuetify.js'
@@ -11,14 +12,18 @@ import myRouter from './router.js'
 import myStore from './store.js'
 import myI18n from './i18n.js'
 
+import GekEntitiesPlugin from "../src/plugin/gekentities-vue.js"
+Vue.use(GekEntitiesPlugin);
+
 window.onerror = function(message, source, line, column, error) {
   console.log("Error catched:", message, "source:", source, "line:", line, "theError:", error);
 }
 window.axios = axios
 axios.defaults.baseURL = 'http://localhost:8080'
 
-import MyApp from './gekApp.vue'
+import MyApp from './GekApp.vue'
 
+// eslint-disable-next-line no-unused-vars
 const myVueInstance = new Vue({
   ...MyApp,
   store: myStore,
@@ -59,6 +64,7 @@ const myVueInstance = new Vue({
   },
   mounted() {
     console.log("myVueInstance mounted");
+    console.log("thePlugin:", this.$store.state.myPlugin);
   },
   errorCaptured(err,vm,info) {
     console.log(`errorCaptured: ${err.toString()}\ninfo: ${info}`); 

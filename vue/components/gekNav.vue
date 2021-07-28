@@ -2,8 +2,8 @@
   <v-navigation-drawer app :value="theDrawer">
     <v-list-item>
       <v-list-item-content>
-        <v-list-item-title class="title"> GekVue </v-list-item-title>
-        <v-list-item-subtitle> Scaffold App </v-list-item-subtitle>
+        <v-list-item-title class="title"> {{ $t("app.title") }} </v-list-item-title>
+        <v-list-item-subtitle> {{ $t("app.subtitle") }} </v-list-item-subtitle>
       </v-list-item-content>
     </v-list-item>
 
@@ -12,9 +12,7 @@
     <v-list dense nav>
       <v-list-group :value="false" prepend-icon="mdi-gauge">
         <template v-slot:activator>
-          <v-list-item-title dense>{{
-            $t("nav.pages.header")
-          }}</v-list-item-title>
+          <v-list-item-title dense>{{ $t("nav.pages.header") }}</v-list-item-title>
         </template>
 
         <v-list-item link dense to="/page1">
@@ -24,9 +22,7 @@
 
       <v-list-group :value="false" prepend-icon="mdi-account-cog-outline">
         <template v-slot:activator>
-          <v-list-item-title dense>{{
-            $t("nav.admin.header")
-          }}</v-list-item-title>
+          <v-list-item-title dense>{{ $t("nav.admin.header") }}</v-list-item-title>
         </template>
 
         <v-list-item link dense to="/admin/user">

@@ -33,7 +33,8 @@ const myMessages = {
       noDataText: "Keine Daten vorhanden",
     },
     app: {
-      title: "GekVue Scaffold App",
+      title: "GekVue",
+      subtitle: "Scaffold App",
       user: {
         menuHeader: "Aktionen",
       },

@@ -1,3 +1,4 @@
+/*global axios*/
 const EntityService = {
   getEntityOptions(commit, payload) {
     return axios
@@ -16,6 +17,7 @@ const EntityService = {
   createEntity(dispatch, payload) {
     return axios
       .post("/api/entitynew" + payload.entityName, payload.entityObject)
+      // eslint-disable-next-line no-unused-vars
       .then(({ data }) => {
         const message = {
           type: "success",
@@ -25,6 +27,7 @@ const EntityService = {
         dispatch("setMessage", message);
         dispatch("loadEntities", {entityName: payload.entityName});
       })
+      // eslint-disable-next-line no-unused-vars
       .catch((error) => {
         const message = {
           type: "error",
@@ -37,6 +40,7 @@ const EntityService = {
   updateEntity(dispatch, payload) {
     return axios
       .post("/api/entityedit" + payload.entityName, payload.entityObject)
+      // eslint-disable-next-line no-unused-vars
       .then(({ data }) => {
         const message = {
           type: "success",
@@ -46,6 +50,7 @@ const EntityService = {
         dispatch("setMessage", message);
         dispatch("loadEntities", {entityName: payload.entityName});
       })
+      // eslint-disable-next-line no-unused-vars
       .catch((error) => {
         const message = {
           type: "error",
@@ -58,6 +63,7 @@ const EntityService = {
   deleteEntity(dispatch, payload) {
     return axios
       .post("/api/entitydelete" + payload.entityName + "/" + payload.entityObject.ID)
+      // eslint-disable-next-line no-unused-vars
       .then(({ data }) => {
         const message = {
           type: "success",
@@ -67,6 +73,7 @@ const EntityService = {
         dispatch("setMessage", message);
         dispatch("loadEntities", {entityName: payload.entityName});
       })
+      // eslint-disable-next-line no-unused-vars
       .catch((error) => {
         const message = {
           type: "error",

@@ -10,6 +10,7 @@ export default {
   methods: {},
   created() {
     console.log("gekApp created");
+    // eslint-disable-next-line no-unused-vars
     this.unsubscribe = this.$store.subscribe((mutation, state) => {
       if (mutation.type === "LOGOUT") {
         console.log("logout catched in gek-app");
