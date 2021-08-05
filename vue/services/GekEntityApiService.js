@@ -1,5 +1,18 @@
 /*global axios*/
-const EntityService = {
+const EntityApiService = {
+  login(commit, credentials) {
+    return axios
+      .post("/api/login", credentials)
+      .then(({ data }) => {
+        commit("LOGGED_IN", data);
+        axios.defaults.headers.common[
+          "Authorization"
+        ] = `Bearer ${data.token}`;
+        });
+  },
+  logout(commit) {
+    commit("LOGOUT");
+  },
   getEntityOptions(commit, payload) {
     return axios
       .post("/api/optionlist" + payload.entityName)
@@ -85,4 +98,4 @@ const EntityService = {
   },
 };
 
-export {EntityService};
+export {EntityApiService};

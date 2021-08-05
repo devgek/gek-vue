@@ -67,6 +67,7 @@ export default {
       get() {
         return this.getConfirmDeleteDialogByEntityName(this.entityName);
       },
+      // eslint-disable-next-line no-unused-vars
       set(value) {
         //do nothing here
       },

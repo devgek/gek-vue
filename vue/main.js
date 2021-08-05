@@ -9,11 +9,11 @@ import axios from 'axios'
 
 import myVuetify from './vuetify.js'
 import myRouter from './router.js'
-import myStore from './store.js'
+import gekEntityStore from './gekEntityStore.js'
 import myI18n from './i18n.js'
 
-import GekEntitiesPlugin from "../src/plugin/gekentities-vue.js"
-Vue.use(GekEntitiesPlugin);
+import GekEntitiesPlugin from "../src/plugin/gekentities-vueplugin.js/index.js"
+Vue.use(GekEntitiesPlugin, {caller: "main.js"});
 
 window.onerror = function(message, source, line, column, error) {
   console.log("Error catched:", message, "source:", source, "line:", line, "theError:", error);
@@ -26,7 +26,7 @@ import MyApp from './GekApp.vue'
 // eslint-disable-next-line no-unused-vars
 const myVueInstance = new Vue({
   ...MyApp,
-  store: myStore,
+  store: gekEntityStore,
   router: myRouter,
   vuetify: myVuetify,
   i18n: myI18n,
@@ -40,11 +40,13 @@ const myVueInstance = new Vue({
   },
   created() {
     console.log("myVueInstance created");
+    console.log("myPlugin is", Vue.myPlugin);
+    console.log("gekEntityPlugin is ", this.$options.gekEntityPlugin);
     // this.$vuetify.dataTable.itemsPerPageText = "maxi";
     const userDataString = localStorage.getItem("userData");
     if (userDataString) {
       const userData = JSON.parse(userDataString);
-      this.$store.commit("SET_USER_DATA", userData);
+      this.$store.commit("LOGGED_IN", userData);
     }
     axios.interceptors.response.use(
       (response) => response,
@@ -64,7 +66,7 @@ const myVueInstance = new Vue({
   },
   mounted() {
     console.log("myVueInstance mounted");
-    console.log("thePlugin:", this.$store.state.myPlugin);
+    console.log("thePlugin:", Vue.myPlugin);
   },
   errorCaptured(err,vm,info) {
     console.log(`errorCaptured: ${err.toString()}\ninfo: ${info}`); 

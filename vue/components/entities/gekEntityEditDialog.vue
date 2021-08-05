@@ -2,7 +2,7 @@
   <v-dialog v-model="dialog" max-width="600px" persistent>
     <v-card>
       <v-card-title class="primary white--text">{{
-        entityStores[entityName].getEditHeader(entityDesc)
+        gekEntityObjects[entityName].getEditHeader(entityDesc)
       }}</v-card-title>
       <v-card-text class="pt-4">
         <v-form>
@@ -63,7 +63,7 @@ export default {
     },
   },
   computed: {
-    ...Vuex.mapState(["entityStores"]),
+    ...Vuex.mapState(["gekEntityObjects"]),
     ...Vuex.mapGetters(["getEditDialogByEntityName"]),
     dialog: {
       get() {

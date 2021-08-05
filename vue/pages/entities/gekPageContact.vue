@@ -97,7 +97,7 @@
     >
       <template v-slot:entity.fields>
         <v-select
-          v-model="entityStores['Contact'].entityObject.OrgType"
+          v-model="gekEntityObjects['Contact'].entityObject.OrgType"
           :label="$t('form.contact.edit.label.orgtype')"
           required
           :items="getOrgTypes()"
@@ -105,21 +105,21 @@
           dense
         ></v-select>
         <v-text-field
-          v-model="entityStores['Contact'].entityObject.Name"
+          v-model="gekEntityObjects['Contact'].entityObject.Name"
           :label="$t('form.contact.edit.label.name')"
           required
-          :readonly="!entityStores['Contact'].editNew"
+          :readonly="!gekEntityObjects['Contact'].editNew"
           outlined
           dense
         ></v-text-field>
         <v-text-field
-          v-model="entityStores['Contact'].entityObject.NameExt"
+          v-model="gekEntityObjects['Contact'].entityObject.NameExt"
           :label="$t('form.contact.edit.label.nameext')"
           outlined
           dense
         ></v-text-field>
         <v-select
-          v-model="entityStores['Contact'].entityObject.ContactType"
+          v-model="gekEntityObjects['Contact'].entityObject.ContactType"
           :label="$t('form.contact.edit.label.contacttype')"
           required
           :items="getContactTypes()"
@@ -202,7 +202,7 @@ export default {
   },
   computed: {
     ...Vuex.mapGetters(["isAdminUser"]),
-    ...Vuex.mapState(["entityStores"]),
+    ...Vuex.mapState(["gekEntityObjects"]),
     tableHeaders() {
       var h = [
         { text: "", sortable: false, value: "data-table-expand" },

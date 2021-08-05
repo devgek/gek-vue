@@ -24,31 +24,31 @@
     >
       <template v-slot:entity.fields>
         <v-text-field
-          v-model="entityStores['User'].entityObject.Name"
+          v-model="gekEntityObjects['User'].entityObject.Name"
           :label="$t('form.user.edit.label.name')"
           required
-          :readonly="!entityStores['User'].editNew"
+          :readonly="!gekEntityObjects['User'].editNew"
           outlined
           dense
         ></v-text-field>
         <v-text-field
-          v-model="entityStores['User'].entityObject.Pass"
+          v-model="gekEntityObjects['User'].entityObject.Pass"
           :label="$t('form.user.edit.label.pass')"
           type="password"
           required
-          :readonly="!entityStores['User'].editNew"
+          :readonly="!gekEntityObjects['User'].editNew"
           outlined
           dense
         ></v-text-field>
         <v-text-field
-          v-model="entityStores['User'].entityObject.Email"
+          v-model="gekEntityObjects['User'].entityObject.Email"
           :label="$t('form.user.edit.label.email')"
           required
           outlined
           dense
         ></v-text-field>
         <v-select
-          v-model="entityStores['User'].entityObject.Role"
+          v-model="gekEntityObjects['User'].entityObject.Role"
           :label="$t('form.user.edit.label.role')"
           required
           :items="getRoleTypes()"
@@ -97,7 +97,7 @@ data() {
     }
   },
   computed: {
-    ...Vuex.mapState(['entityStores']),
+    ...Vuex.mapState(['gekEntityObjects']),
     tableHeaders() {
       var h = [
         {
