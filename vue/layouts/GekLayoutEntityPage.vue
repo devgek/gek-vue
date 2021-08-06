@@ -15,9 +15,9 @@
 </template>
 
 <script>
-import GekNav from '../components/gekNav.vue';
+import GekNav from '../components/GekNav.vue';
 import GekAppBar from '../components/GekAppBar.vue'
-import GekErrorMessage from '../components/gekErrorMessage.vue'
+import GekErrorMessage from '../components/GekErrorMessage.vue'
 
 export default {
   components: {

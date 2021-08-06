@@ -14,7 +14,9 @@ export default {
     this.unsubscribe = this.$store.subscribe((mutation, state) => {
       if (mutation.type === "LOGOUT") {
         console.log("logout catched in gek-app");
-        this.$router.push({ name: "Login" });
+        this.$router.push({ name: "Login"})
+        .then(() => console.log('Navigated to Login after Logout!'))
+        .catch(() => {})
       }
     });
   },

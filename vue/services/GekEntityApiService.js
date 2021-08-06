@@ -4,10 +4,15 @@ const EntityApiService = {
     return axios
       .post("/api/login", credentials)
       .then(({ data }) => {
+        console.log("login data:", data);
         commit("LOGGED_IN", data);
         axios.defaults.headers.common[
           "Authorization"
         ] = `Bearer ${data.token}`;
+        })
+        .catch((error) => {
+          console.log("axios error login ApiService", error);
+          return Promise.reject(error);
         });
   },
   logout(commit) {
@@ -17,6 +22,7 @@ const EntityApiService = {
     return axios
       .post("/api/optionlist" + payload.entityName)
       .then(({ data }) => {
+        console.log("save option list", data);
         commit("SET_OPTION_LIST", {entityName: payload.entityName, optionList: data.EntityOptions});
       });
   },

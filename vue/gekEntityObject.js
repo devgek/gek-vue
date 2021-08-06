@@ -10,15 +10,6 @@ class EntityObject {
     this.editNew = false;
 
   }
-  
-  getEditHeader(entityDesc) {
-    if (this.editNew) {
-      return entityDesc + " neu anlegen";
-    }
-    else {
-      return entityDesc + " ändern";
-    }
-  }
 }
 
 export default EntityObject

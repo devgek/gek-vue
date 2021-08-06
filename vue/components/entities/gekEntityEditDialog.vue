@@ -1,9 +1,7 @@
 <template>
   <v-dialog v-model="dialog" max-width="600px" persistent>
     <v-card>
-      <v-card-title class="primary white--text">{{
-        gekEntityObjects[entityName].getEditHeader(entityDesc)
-      }}</v-card-title>
+      <v-card-title class="primary white--text">{{ title }}</v-card-title>
       <v-card-text class="pt-4">
         <v-form>
           <slot name="entity.fields">
@@ -64,10 +62,27 @@ export default {
   },
   computed: {
     ...Vuex.mapState(["gekEntityObjects"]),
-    ...Vuex.mapGetters(["getEditDialogByEntityName"]),
+    ...Vuex.mapGetters(["getEditDialogByEntityName", "getEditNewByEntityName"]),
     dialog: {
       get() {
+        console.log(
+          "in getter dialog",
+          this.getEditDialogByEntityName(this.entityName)
+        );
         return this.getEditDialogByEntityName(this.entityName);
+      },
+      // eslint-disable-next-line no-unused-vars
+      set(value) {
+        //do nothing here
+      },
+    },
+    title: {
+      get() {
+        if (this.getEditNewByEntityName(this.entityName)) {
+          return this.entityDesc + " neu anlegen";
+        } else {
+          return this.entityDesc + " ändern";
+        }
       },
       // eslint-disable-next-line no-unused-vars
       set(value) {

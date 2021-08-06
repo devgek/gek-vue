@@ -53,11 +53,7 @@ export default {
       selectedContactID: 0,
     };
   },
-  created() {
-    this.loadEntityOptions({entityName: "User"})
-  },
   methods: {
-    ...Vuex.mapActions(["loadEntityOptions"]),
     onChangeContactType() {
       console.log("contacttype selected:" + this.selectedContactType);
     },

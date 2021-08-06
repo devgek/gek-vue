@@ -1,17 +1,14 @@
 // eslint-disable-next-line no-unused-vars
 /*global axios*/
 
-import Vue from 'vue'
-import Vuex from 'vuex'
 import {EntityApiService} from './services/GekEntityApiService.js'
 import EntityObject from './gekEntityObject.js'
 import newEntityObjectUser from './gekEntityStoreUser.js'
 import newEntityObjectContact from './gekEntityStoreContact.js'
 import newEntityObjectContactAddress from './gekEntityStoreContactAddress.js'
 
-Vue.use(Vuex)
-
-var GekEntityStore = new Vuex.Store({
+const GekEntityStoreModule = {
+  namespaced: false,
   state() {
     return {
       userData: null,
@@ -66,30 +63,30 @@ var GekEntityStore = new Vuex.Store({
       commit("SET_MESSAGE", message);
     },
     login({ commit }, credentials) {
-      EntityApiService.login(commit, credentials);
+      return EntityApiService.login(commit, credentials);
     },
     logout({ commit }) {
-      EntityApiService.logout(commit);
+      return EntityApiService.logout(commit);
     },
     loadEntities({ commit }, payload) {
-      EntityApiService.getEntities(commit, payload);
+      return EntityApiService.getEntities(commit, payload);
     },
     loadEntityOptions({ commit }, payload) {
       console.log("loadEntityOptions:" + payload.entityName);
-      EntityApiService.getEntityOptions(commit, payload);
+      return EntityApiService.getEntityOptions(commit, payload);
     },
     saveEntity({ dispatch, getters }, payload) {
       payload.entityObject = getters.getEditEntityObjectByEntityName(payload.entityName);
       if (getters.getEditNewByEntityName(payload.entityName)) {
-        EntityApiService.createEntity(dispatch, payload);
+        return EntityApiService.createEntity(dispatch, payload);
       }
       else {
-        EntityApiService.updateEntity(dispatch, payload);
+        return EntityApiService.updateEntity(dispatch, payload);
       }
     },
     deleteEntity({ dispatch, getters }, payload) {
       payload.entityObject = getters.getEditEntityObjectByEntityName(payload.entityName);
-      EntityApiService.deleteEntity(dispatch, payload);
+      return EntityApiService.deleteEntity(dispatch, payload);
     }
   },
   getters: {
@@ -126,6 +123,6 @@ var GekEntityStore = new Vuex.Store({
       return "notLoggedIn";
     }
   },
-});
+};
 
-export default GekEntityStore;
+export {GekEntityStoreModule};

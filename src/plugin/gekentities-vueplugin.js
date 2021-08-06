@@ -6,7 +6,6 @@ export default {
 
         Vue.mixin({
             beforeCreate() {
-              console.log("beforeCreateMixin:", this);
               this.$options.gekEntityPlugin = "loaded";
             }
           });

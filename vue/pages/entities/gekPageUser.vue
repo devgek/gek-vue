@@ -24,31 +24,31 @@
     >
       <template v-slot:entity.fields>
         <v-text-field
-          v-model="gekEntityObjects['User'].entityObject.Name"
+          v-model="getEditEntityObjectByEntityName('User').Name"
           :label="$t('form.user.edit.label.name')"
           required
-          :readonly="!gekEntityObjects['User'].editNew"
+          :readonly="!getEditNewByEntityName('User')"
           outlined
           dense
         ></v-text-field>
         <v-text-field
-          v-model="gekEntityObjects['User'].entityObject.Pass"
+          v-model="getEditEntityObjectByEntityName('User').Pass"
           :label="$t('form.user.edit.label.pass')"
           type="password"
           required
-          :readonly="!gekEntityObjects['User'].editNew"
+          :readonly="!getEditNewByEntityName('User')"
           outlined
           dense
         ></v-text-field>
         <v-text-field
-          v-model="gekEntityObjects['User'].entityObject.Email"
+          v-model="getEditEntityObjectByEntityName('User').Email"
           :label="$t('form.user.edit.label.email')"
           required
           outlined
           dense
         ></v-text-field>
         <v-select
-          v-model="gekEntityObjects['User'].entityObject.Role"
+          v-model="getEditEntityObjectByEntityName('User').Role"
           :label="$t('form.user.edit.label.role')"
           required
           :items="getRoleTypes()"
@@ -97,7 +97,8 @@ data() {
     }
   },
   computed: {
-    ...Vuex.mapState(['gekEntityObjects']),
+    ...Vuex.mapState("es", ['gekEntityObjects']),
+    ...Vuex.mapGetters(["getEditNewByEntityName", "getEditEntityObjectByEntityName"]),
     tableHeaders() {
       var h = [
         {
