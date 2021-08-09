@@ -22,7 +22,7 @@
 
       <v-list nav dense>
         <v-list-item link>
-          <v-list-item-title @click="logout">{{
+          <v-list-item-title @click="doLogout">{{
             $t("nav.logout")
           }}</v-list-item-title>
           <v-icon>mdi-logout</v-icon>
@@ -32,6 +32,9 @@
   </v-app-bar>
 </template>
 <script>
+
+import Vuex from "vuex";
+
 export default {
   props: {
     mainHeader: {
@@ -43,16 +46,18 @@ export default {
     return {};
   },
   methods: {
-    logout() {
-      this.$store.dispatch("logout");
+    ...Vuex.mapActions(["logout", "setNavDrawer"]),
+    doLogout() {
+      this.logout();
     },
     switchDrawer() {
-      this.$store.state.navDrawer = !this.$store.state.navDrawer;
+      this.setNavDrawer(!this.getNavDrawer);
     },
   },
   computed: {
+    ...Vuex.mapGetters(["getUser", "getNavDrawer"]),
     user() {
-      return this.$store.getters.getUser;
+      return this.getUser;
     },
   },
 };

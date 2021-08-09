@@ -6,8 +6,6 @@ import '../src/assets/js/gekvue.js'
 import Vue from 'vue'
 import Vuex from 'vuex'
 
-import axios from 'axios'
-
 import myVuetify from './vuetify.js'
 import myRouter from './router.js'
 import {GekEntityStoreModule} from './gekEntityStoreModule.js'
@@ -19,8 +17,6 @@ Vue.use(GekEntitiesPlugin, {caller: "main.js"});
 window.onerror = function(message, source, line, column, error) {
   console.log("Error catched in browser window:", message, "source:", source, "line:", line, "theError:", error);
 }
-window.axios = axios
-axios.defaults.baseURL = 'http://localhost:8080'
 
 import MyApp from './GekApp.vue'
 
@@ -68,20 +64,9 @@ const myVueInstance = new Vue({
     const userDataString = localStorage.getItem("userData");
     if (userDataString) {
       const userData = JSON.parse(userDataString);
+      console.log("userData found for logged_in", userData);
       this.$store.commit("LOGGED_IN", userData);
     }
-    axios.interceptors.response.use(
-      (response) => response,
-      (error) => {
-        console.log(
-          "axios-response-interceptor:: api error: " + error.response.status + " " + error.response.data
-        );
-        // if (error.response.status === 401) {
-        //   this.$store.dispatch("logout");
-        // }
-        return Promise.reject(error);
-      }
-    );
   },
   beforeMount() {
     console.log("myVueInstance beforeMount");

@@ -108,7 +108,7 @@ export default {
   },
   computed: {
     ...Vuex.mapState(["gekEntityObjects"]),
-    ...Vuex.mapGetters(["isAdminUser", "getEntityListByEntityName", "getUser"]),
+    ...Vuex.mapGetters(["isAdminUser", "getEntityListByEntityName"]),
   },
 }
 </script>

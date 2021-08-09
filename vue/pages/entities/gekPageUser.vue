@@ -97,7 +97,6 @@ data() {
     }
   },
   computed: {
-    ...Vuex.mapState("es", ['gekEntityObjects']),
     ...Vuex.mapGetters(["getEditNewByEntityName", "getEditEntityObjectByEntityName"]),
     tableHeaders() {
       var h = [

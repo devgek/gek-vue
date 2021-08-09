@@ -1,11 +1,16 @@
 // eslint-disable-next-line no-unused-vars
 /*global axios*/
 
-import {EntityApiService} from './services/GekEntityApiService.js'
 import EntityObject from './gekEntityObject.js'
 import newEntityObjectUser from './gekEntityStoreUser.js'
 import newEntityObjectContact from './gekEntityStoreContact.js'
 import newEntityObjectContactAddress from './gekEntityStoreContactAddress.js'
+
+import {GekEntityApiService} from './services/gekEntityApiService.js'
+
+const apiBaseUrl = "http://localhost:8080";
+const logConsole = true;
+GekEntityApiService.init(apiBaseUrl, logConsole);
 
 const GekEntityStoreModule = {
   namespaced: false,
@@ -20,6 +25,9 @@ const GekEntityStoreModule = {
   mutations: {
     SET_MESSAGE(state, message) {
       state.message = message;
+    },
+    SET_NAV_DRAWER(state, drawer) {
+      state.navDrawer = drawer;
     },
     SET_ENTITY_NEW(state, payload) {
       state.gekEntityObjects[payload.entityName].entityObject = state.gekEntityObjects[payload.entityName].newEntityObjectFn();
@@ -50,6 +58,9 @@ const GekEntityStoreModule = {
       state.gekEntityObjects[payload.entityName].confirmDeleteDialog = payload.confirmDeleteDialog;
     },
     LOGGED_IN(state, userData) {
+      axios.defaults.headers.common[
+        "Authorization"
+      ] = `Bearer ${userData.token}`;
       localStorage.setItem("userData", JSON.stringify(userData));
       state.userData = userData;
     },
@@ -62,31 +73,34 @@ const GekEntityStoreModule = {
     setMessage({ commit }, message) {
       commit("SET_MESSAGE", message);
     },
+    setNavDrawer({ commit }, drawer) {
+      commit("SET_NAV_DRAWER", drawer);
+    },
     login({ commit }, credentials) {
-      return EntityApiService.login(commit, credentials);
+      return GekEntityApiService.login(commit, credentials);
     },
     logout({ commit }) {
-      return EntityApiService.logout(commit);
+      return GekEntityApiService.logout(commit);
     },
     loadEntities({ commit }, payload) {
-      return EntityApiService.getEntities(commit, payload);
+      return GekEntityApiService.getEntities(commit, payload);
     },
     loadEntityOptions({ commit }, payload) {
       console.log("loadEntityOptions:" + payload.entityName);
-      return EntityApiService.getEntityOptions(commit, payload);
+      return GekEntityApiService.getEntityOptions(commit, payload);
     },
     saveEntity({ dispatch, getters }, payload) {
       payload.entityObject = getters.getEditEntityObjectByEntityName(payload.entityName);
       if (getters.getEditNewByEntityName(payload.entityName)) {
-        return EntityApiService.createEntity(dispatch, payload);
+        return GekEntityApiService.createEntity(dispatch, payload);
       }
       else {
-        return EntityApiService.updateEntity(dispatch, payload);
+        return GekEntityApiService.updateEntity(dispatch, payload);
       }
     },
     deleteEntity({ dispatch, getters }, payload) {
       payload.entityObject = getters.getEditEntityObjectByEntityName(payload.entityName);
-      return EntityApiService.deleteEntity(dispatch, payload);
+      return GekEntityApiService.deleteEntity(dispatch, payload);
     }
   },
   getters: {
@@ -121,7 +135,13 @@ const GekEntityStoreModule = {
         return state.userData.name
       }
       return "notLoggedIn";
-    }
+    },
+    getMessage(state) {
+      return state.message;
+    },
+    getNavDrawer(state) {
+      return state.navDrawer;
+    },
   },
 };
 

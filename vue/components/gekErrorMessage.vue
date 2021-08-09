@@ -11,6 +11,9 @@
   </v-snackbar>
 </template>
 <script>
+
+import Vuex from "vuex";
+
 export default {
   data() {
     return {
@@ -20,7 +23,8 @@ export default {
   created() {
     this.unsubscribe = this.$store.subscribe((mutation, state) => {
       if (mutation.type === "SET_MESSAGE") {
-        console.log(`catching SET_MESSAGE mutation: ${state.message.type}, ${state.message.i18n},`);
+        // console.log(`catching SET_MESSAGE mutation: ${state.message.type}, ${state.message.i18n},`);
+        console.log(`catching SET_MESSAGE mutation: ${state.es.message.type}, ${state.es.message.i18n},`);
         this.showMessage = true;
       }
     });
@@ -31,8 +35,9 @@ export default {
   methods: {
   },
   computed: {
+    ...Vuex.mapGetters(["getMessage"]),
     messageText() {
-      var msg = this.$store.state.message;
+      var msg = this.getMessage;
       if (msg && msg.i18n) {
         return this.$t(msg.i18n, msg.i18nArgs);
       }
@@ -40,8 +45,8 @@ export default {
       return "";
     },
     messageColor() {
-      if (this.$store.state.message) {
-        return this.$store.state.message.type;
+      if (this.getMessage) {
+        return this.getMessage.type;
       }
 
       return "";

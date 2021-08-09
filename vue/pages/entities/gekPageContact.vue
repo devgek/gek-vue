@@ -97,7 +97,7 @@
     >
       <template v-slot:entity.fields>
         <v-select
-          v-model="gekEntityObjects['Contact'].entityObject.OrgType"
+          v-model="getEditEntityObjectByEntityName('Contact').OrgType"
           :label="$t('form.contact.edit.label.orgtype')"
           required
           :items="getOrgTypes()"
@@ -105,21 +105,21 @@
           dense
         ></v-select>
         <v-text-field
-          v-model="gekEntityObjects['Contact'].entityObject.Name"
+          v-model="getEditEntityObjectByEntityName('Contact').Name"
           :label="$t('form.contact.edit.label.name')"
           required
-          :readonly="!gekEntityObjects['Contact'].editNew"
+          :readonly="!getEditNewByEntityName('Contact')"
           outlined
           dense
         ></v-text-field>
         <v-text-field
-          v-model="gekEntityObjects['Contact'].entityObject.NameExt"
+          v-model="getEditEntityObjectByEntityName('Contact').NameExt"
           :label="$t('form.contact.edit.label.nameext')"
           outlined
           dense
         ></v-text-field>
         <v-select
-          v-model="gekEntityObjects['Contact'].entityObject.ContactType"
+          v-model="getEditEntityObjectByEntityName('Contact').ContactType"
           :label="$t('form.contact.edit.label.contacttype')"
           required
           :items="getContactTypes()"
@@ -201,7 +201,7 @@ export default {
     },
   },
   computed: {
-    ...Vuex.mapGetters(["isAdminUser"]),
+    ...Vuex.mapGetters(["isAdminUser", "getEditNewByEntityName", "getEditEntityObjectByEntityName"]),
     ...Vuex.mapState(["gekEntityObjects"]),
     tableHeaders() {
       var h = [
