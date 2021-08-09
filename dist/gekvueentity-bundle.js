@@ -6809,6 +6809,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
+/* harmony import */ var vuex__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! vuex */ "./node_modules/vuex/dist/vuex.esm.js");
 //
 //
 //
@@ -6850,6 +6851,9 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+
+
+
 
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
   props: {
@@ -6862,12 +6866,6 @@ __webpack_require__.r(__webpack_exports__);
       default: "/noStartPage",
     },
   },
-  created() {
-    console.log("GekPageLogin created");
-  },
-  mounted() {
-    console.log("GekPageLogin mounted");
-  },
   data() {
     return {
       user: "",
@@ -6876,26 +6874,18 @@ __webpack_require__.r(__webpack_exports__);
     };
   },
   methods: {
+    ...vuex__WEBPACK_IMPORTED_MODULE_0__.default.mapActions(["login"]),
     onSubmit() {
       if (this.user === "" || this.pass === "") {
         this.errorMessage = this.$t("form.login.msg.inputrequired");
         return;
       }
 
-      this.errorMessage = "vor login senden";
-      console.log("vor login senden");
-      this.$store
-        .dispatch("login", {
-          user: this.user,
-          pass: this.pass,
-        })
+      this.login({user: this.user, pass: this.pass})
         .then(() => {
-          console.log("login senden vor router.push");
           this.$router.push({ name: this.startPage });
-          console.log("login senden nach router.push");
         })
         .catch((err) => {
-          console.log("login senden error", err);
           this.errorMessage = err.response.data;
         });
     },

@@ -40,6 +40,9 @@
   </v-container>
 </template>
 <script>
+
+import Vuex from 'vuex';
+
 export default {
   props: {
     mainHeader: {
@@ -51,12 +54,6 @@ export default {
       default: "/noStartPage",
     },
   },
-  created() {
-    console.log("GekPageLogin created");
-  },
-  mounted() {
-    console.log("GekPageLogin mounted");
-  },
   data() {
     return {
       user: "",
@@ -65,26 +62,18 @@ export default {
     };
   },
   methods: {
+    ...Vuex.mapActions(["login"]),
     onSubmit() {
       if (this.user === "" || this.pass === "") {
         this.errorMessage = this.$t("form.login.msg.inputrequired");
         return;
       }
 
-      this.errorMessage = "vor login senden";
-      console.log("vor login senden");
-      this.$store
-        .dispatch("login", {
-          user: this.user,
-          pass: this.pass,
-        })
+      this.login({user: this.user, pass: this.pass})
         .then(() => {
-          console.log("login senden vor router.push");
           this.$router.push({ name: this.startPage });
-          console.log("login senden nach router.push");
         })
         .catch((err) => {
-          console.log("login senden error", err);
           this.errorMessage = err.response.data;
         });
     },
