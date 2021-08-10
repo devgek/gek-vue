@@ -36,3 +36,5 @@ vue.js scaffolding project
 `npm install -D css-loader`
 
 `npm install -D style-loader`
+
+`npm install @mdi/font -D`

@@ -20,25 +20,25 @@ window.onerror = function(message, source, line, column, error) {
 
 import MyApp from './GekApp.vue'
 
+import {playerModule} from './modules/player/playerModule.js'
+
 const myStoreOptions = {
   state() {
     return {
-      player: "Tsitsipas",
+      myXX: "Mister XX",
     };
   },
 };
 Vue.use(Vuex);
 const myStore = new Vuex.Store(myStoreOptions);
 
-myStore.registerModule("es", GekEntityStoreModule);
-console.log("after registerModule es");
+myStore.registerModule("player", playerModule);
+myStore.registerModule("gekentities", GekEntityStoreModule);
+console.log("after registerModule gekentities and player");
 
 // eslint-disable-next-line no-unused-vars
 const myVueInstance = new Vue({
   computed: {
-    ...Vuex.mapState({
-      es: state => state.es,
-    }),
     },
   ...MyApp,
   store: myStore,
@@ -53,9 +53,6 @@ const myVueInstance = new Vue({
   render(h) {
     return h(MyApp);
   },
-  beforeCreate() {
-    console.log("myVueInstance beforeCreate");
-  },
   created() {
     console.log("myVueInstance created");
     console.log("myPlugin is", Vue.myPlugin);
@@ -68,16 +65,9 @@ const myVueInstance = new Vue({
       this.$store.commit("LOGGED_IN", userData);
     }
   },
-  beforeMount() {
-    console.log("myVueInstance beforeMount");
-  },
-  mounted() {
-    console.log("myVueInstance mounted");
-    console.log("thePlugin:", Vue.myPlugin);
-  },
   errorCaptured(err,vm,info) {
     console.log(`errorCaptured: ${err.toString()}\ninfo: ${info} vm: ${vm}`); 
   }
 }).$mount("#myApp");
 
-console.log("myVueInstance after new", myVueInstance);
+console.log("myVueRootInstance after new", myVueInstance);

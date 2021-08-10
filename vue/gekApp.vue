@@ -1,13 +1,23 @@
 <template>
   <div id="GekApp">
     <div>before app router-view</div>
+    <div>{{ player }}</div>
     <router-view></router-view>
     <div>after app router-view</div>
   </div>
 </template>
 <script>
+
+import Vuex from 'vuex';
+
 export default {
   methods: {},
+  computed: {
+    ...Vuex.mapGetters("player", ["getPlayer"]),
+    player() {
+      return this.getPlayer + " and " + this.$store.state.myXX;
+    }
+  },
   created() {
     console.log("gekApp created");
     // eslint-disable-next-line no-unused-vars
@@ -16,7 +26,7 @@ export default {
         console.log("logout catched in gek-app");
         this.$router.push({ name: "Login"})
         .then(() => console.log('Navigated to Login after Logout!'))
-        .catch(() => {})
+        .catch(() => console.log('Catched router push'))
       }
     });
   },

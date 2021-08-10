@@ -13,7 +13,7 @@ const logConsole = true;
 GekEntityApiService.init(apiBaseUrl, logConsole);
 
 const GekEntityStoreModule = {
-  namespaced: false,
+  namespaced: true,
   state() {
     return {
       userData: null,

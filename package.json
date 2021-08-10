@@ -17,6 +17,7 @@
   },
   "homepage": "https://github.com/devgek/gek-vue#readme",
   "devDependencies": {
+    "@mdi/font": "^5.9.55",
     "css-loader": "^5.2.6",
     "deepmerge": "^4.2.2",
     "eslint": "^7.30.0",

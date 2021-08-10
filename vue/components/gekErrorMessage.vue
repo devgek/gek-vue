@@ -24,7 +24,7 @@ export default {
     this.unsubscribe = this.$store.subscribe((mutation, state) => {
       if (mutation.type === "SET_MESSAGE") {
         // console.log(`catching SET_MESSAGE mutation: ${state.message.type}, ${state.message.i18n},`);
-        console.log(`catching SET_MESSAGE mutation: ${state.es.message.type}, ${state.es.message.i18n},`);
+        console.log(`catching SET_MESSAGE mutation: ${state.gekentities.message.type}, ${state.gekentities.message.i18n},`);
         this.showMessage = true;
       }
     });
