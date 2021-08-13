@@ -65,23 +65,22 @@ const myRoutes = [
   },
 ];
 
-const myRouter = new VueRouter({
+const GekEntityRouter = new VueRouter({
   routes: myRoutes,
 });
 
-myRouter.beforeEach((to, from, next) => {
-  console.log("myRouter::beforeEach", to.path);
+GekEntityRouter.beforeEach((to, from, next) => {
   // redirect to login page if user is not logged in and trying to access a restricted page
   const publicPages = ["/page2", "/login"];
   const authRequired = !publicPages.includes(to.path);
   const loggedIn = localStorage.getItem("userData");
 
   if (authRequired && !loggedIn) {
-    console.log("route to login from " + to.path, "authRequired:", authRequired, "loggedIn:", loggedIn);
+    // console.log("route to login from " + to.path, "authRequired:", authRequired, "loggedIn:", loggedIn);
     next({ path: "/login" });
   } else {
     next();
   }
 });
 
-export default myRouter;
+export {GekEntityRouter};

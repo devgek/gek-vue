@@ -54,9 +54,6 @@ export default {
     };
   },
   methods: {
-    onChangeContactType() {
-      console.log("contacttype selected:" + this.selectedContactType);
-    },
     onChangeContact(entityID) {
       this.selectedContactID = entityID;
     },

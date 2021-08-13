@@ -39,17 +39,21 @@ export default {
     return {};
   },
   methods: {
-    ...Vuex.mapActions(["dismissConfirmDeleteDialog", "dismissEditDialog"]),
+    ...Vuex.mapMutations(["SET_CONFIRM_DELETE_DIALOG"]),
+    ...Vuex.mapActions(["deleteEntity"]),
     abort() {
+      // maybe calling component wants to react
       this.$emit("entity-delete-abort-" + this.entity);
-      this.$store.commit("SET_CONFIRM_DELETE_DIALOG", {
+      this.SET_CONFIRM_DELETE_DIALOG({
         entityName: this.entityName,
         confirmDeleteDialog: false,
       });
     },
     confirmDelete() {
+      this.deleteEntity({ entityName: this.entityName, entityDesc: this.entityDesc });
+      // maybe calling component wants to react
       this.$emit("entity-delete-confirm-" + this.entity);
-      this.$store.commit("SET_CONFIRM_DELETE_DIALOG", {
+      this.SET_CONFIRM_DELETE_DIALOG({
         entityName: this.entityName,
         confirmDeleteDialog: false,
       });

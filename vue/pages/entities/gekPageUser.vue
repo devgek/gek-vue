@@ -2,11 +2,7 @@
   <!-- Page Content -->
   <div>
     <!-- entityEditDialog -->
-    <GekEntityEditList
-      entity="user"
-      entityName="User"
-      :tableHeaders="tableHeaders"
-    >
+    <GekEntityEditList entity="user" entityName="User" :tableHeaders="tableHeaders">
       <!-- scoped slots from v-data-table -->
       <template v-slot:item.Pass="{}"> ******** </template>
       <template v-slot:item.Role="{ item }">
@@ -14,14 +10,7 @@
       </template>
     </GekEntityEditList>
     <!-- entityEditDialog -->
-    <GekEntityEditDialog
-      entity="user"
-      entityName="User"
-      entityDesc="Benutzer"
-      @entity-edit-save-user="
-        saveEntity({ entityName: 'User', entityDesc: 'Benutzer' })
-      "
-    >
+    <GekEntityEditDialog entity="user" entityName="User" entityDesc="Benutzer">
       <template v-slot:entity.fields>
         <v-text-field
           v-model="getEditEntityObjectByEntityName('User').Name"
@@ -58,43 +47,37 @@
       </template>
     </GekEntityEditDialog>
     <!-- confirmDelete Dialog-->
-    <GekEntityConfirmDelete
-      entity="user"
-      entityName="User"
-      entityDesc="Benutzer"
-      @entity-delete-confirm-user="
-        deleteEntity({ entityName: 'User', entityDesc: 'Benutzer' })
-      "
-    />
+    <GekEntityConfirmDelete entity="user" entityName="User" entityDesc="Benutzer" />
   </div>
   <!-- END Page Content -->
 </template>
 <script>
-import Vuex from 'vuex'
-import GekEntityEditDialog from "/vue/components/entities/GekEntityEditDialog.vue"
-import GekEntityEditList from "/vue/components/entities/GekEntityEditList.vue"
-import GekEntityConfirmDelete from "/vue/components/entities/GekEntityConfirmDelete.vue"
-import {gkwebapp_T_RoleTypes} from "/src/assets/js/gekvue.js"
-
+import Vuex from "vuex";
+import GekEntityEditDialog from "/vue/components/entities/GekEntityEditDialog.vue";
+import GekEntityEditList from "/vue/components/entities/GekEntityEditList.vue";
+import GekEntityConfirmDelete from "/vue/components/entities/GekEntityConfirmDelete.vue";
+import { gkwebapp_T_RoleTypes } from "/src/assets/js/gekvue.js";
 
 export default {
-components: {
-  GekEntityEditDialog, GekEntityEditList, GekEntityConfirmDelete
-},
-data() {
+  components: {
+    GekEntityEditDialog,
+    GekEntityEditList,
+    GekEntityConfirmDelete,
+  },
+  data() {
     return {};
   },
   created() {
-    this.$store.dispatch("loadEntities", {entityName: "User"});
+    this.$store.dispatch("loadEntities", { entityName: "User" });
   },
   methods: {
-    ...Vuex.mapActions(["loadEntities", "deleteEntity", "saveEntity"]),
-    roleDesc(role)  {
+    ...Vuex.mapActions(["loadEntities"]),
+    roleDesc(role) {
       return gkwebapp_T_RoleTypes[role].text;
     },
     getRoleTypes() {
       return gkwebapp_T_RoleTypes;
-    }
+    },
   },
   computed: {
     ...Vuex.mapGetters(["getEditNewByEntityName", "getEditEntityObjectByEntityName"]),
@@ -112,7 +95,7 @@ data() {
         { text: "Aktionen", value: "actions", sortable: false, class: "w-8" },
       ];
       return h;
-    }
+    },
   },
-}
+};
 </script>

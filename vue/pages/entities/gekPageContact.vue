@@ -27,10 +27,7 @@
       </template>
       <!-- embedded entity ContactAddress -->
       <template v-slot:expanded-item="{ headers, item }">
-        <td
-          :colspan="headers.length"
-          v-if="hasEmbeddedEntities(item.ContactAddresses)"
-        >
+        <td :colspan="headers.length" v-if="hasEmbeddedEntities(item.ContactAddresses)">
           <v-row align="start" dense>
             <v-col cols="12" align="end">
               <div class="float-right mb-2">
@@ -87,14 +84,7 @@
         </td>
       </template>
     </GekEntityEditList>
-   <GekEntityEditDialog
-      entity="contact"
-      entityName="Contact"
-      entityDesc="Kontakt"
-      @entity-edit-save-contact="
-        saveEntity({ entityName: 'Contact', entityDesc: 'Kontakt' })
-      "
-    >
+    <GekEntityEditDialog entity="contact" entityName="Contact" entityDesc="Kontakt">
       <template v-slot:entity.fields>
         <v-select
           v-model="getEditEntityObjectByEntityName('Contact').OrgType"
@@ -132,22 +122,9 @@
       entity="contactaddress"
       entityName="ContactAddress"
       entityDesc="Kontaktadresse"
-      @entity-edit-save-contactaddress="
-        saveEntity({
-          entityName: 'ContactAddress',
-          entityDesc: 'Kontaktadresse',
-        })
-      "
     />
     <!-- confirmDelete Dialog-->
-    <GekEntityConfirmDelete
-      entity="contact"
-      entityName="Contact"
-      entityDesc="Kontakt"
-      @entity-delete-confirm-contact="
-        deleteEntity({ entityName: 'Contact', entityDesc: 'Kontakt' })
-      "
-    />
+    <GekEntityConfirmDelete entity="contact" entityName="Contact" entityDesc="Kontakt" />
   </div>
   <!-- END Page Content -->
 </template>
@@ -156,7 +133,7 @@ import Vuex from "vuex";
 import GekEntityEditDialog from "/vue/components/entities/GekEntityEditDialog.vue";
 import GekEntityEditList from "/vue/components/entities/GekEntityEditList.vue";
 import GekEntityConfirmDelete from "/vue/components/entities/GekEntityConfirmDelete.vue";
-import {gkwebapp_T_ContactTypes, gkwebapp_T_OrgTypes} from "/src/assets/js/gekvue.js"
+import { gkwebapp_T_ContactTypes, gkwebapp_T_OrgTypes } from "/src/assets/js/gekvue.js";
 
 export default {
   components: {
@@ -171,12 +148,8 @@ export default {
     this.$store.dispatch("loadEntities", { entityName: "Contact" });
   },
   methods: {
-    ...Vuex.mapMutations([
-      "SET_ENTITY_NEW",
-      "SET_ENTITY_EDIT",
-      "SET_ENTITY_DELETE",
-    ]),
-    ...Vuex.mapActions(["loadEntities", "deleteEntity", "saveEntity"]),
+    ...Vuex.mapMutations(["SET_ENTITY_NEW", "SET_ENTITY_EDIT", "SET_ENTITY_DELETE"]),
+    ...Vuex.mapActions(["loadEntities"]),
     orgDesc(org) {
       return gkwebapp_T_OrgTypes[org].text;
     },
@@ -201,7 +174,11 @@ export default {
     },
   },
   computed: {
-    ...Vuex.mapGetters(["isAdminUser", "getEditNewByEntityName", "getEditEntityObjectByEntityName"]),
+    ...Vuex.mapGetters([
+      "isAdminUser",
+      "getEditNewByEntityName",
+      "getEditEntityObjectByEntityName",
+    ]),
     ...Vuex.mapState(["gekEntityObjects"]),
     tableHeaders() {
       var h = [

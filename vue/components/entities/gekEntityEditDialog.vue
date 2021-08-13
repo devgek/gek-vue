@@ -45,16 +45,21 @@ export default {
     };
   },
   methods: {
+    ...Vuex.mapMutations(["SET_EDIT_DIALOG"]),
+    ...Vuex.mapActions(["saveEntity"]),
     abort() {
+      // maybe calling component wants to react
       this.$emit("entity-edit-abort-" + this.entity);
-      this.$store.commit("SET_EDIT_DIALOG", {
+      this.SET_EDIT_DIALOG({
         entityName: this.entityName,
         editDialog: false,
       });
     },
     save() {
+      this.saveEntity({ entityName: this.entityName, entityDesc: this.entityDesc });
+      // maybe calling component wants to react
       this.$emit("entity-edit-save-" + this.entity);
-      this.$store.commit("SET_EDIT_DIALOG", {
+      this.SET_EDIT_DIALOG({
         entityName: this.entityName,
         editDialog: false,
       });
@@ -65,10 +70,6 @@ export default {
     ...Vuex.mapGetters(["getEditDialogByEntityName", "getEditNewByEntityName"]),
     dialog: {
       get() {
-        console.log(
-          "in getter dialog",
-          this.getEditDialogByEntityName(this.entityName)
-        );
         return this.getEditDialogByEntityName(this.entityName);
       },
       // eslint-disable-next-line no-unused-vars

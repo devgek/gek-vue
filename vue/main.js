@@ -7,7 +7,7 @@ import Vue from 'vue'
 import Vuex from 'vuex'
 
 import myVuetify from './vuetify.js'
-import myRouter from './router.js'
+import {GekEntityRouter} from './gekEntityRouter.js'
 import {GekEntityStoreModule} from './gekEntityStoreModule.js'
 import myI18n from './i18n.js'
 
@@ -42,13 +42,11 @@ const myVueInstance = new Vue({
     },
   ...MyApp,
   store: myStore,
-  router: myRouter,
+  router: GekEntityRouter,
   vuetify: myVuetify,
   i18n: myI18n,
   data: {
-    user: "",
-    token: "",
-    isAdmin: false,
+    maxi: "franzi",
   },
   render(h) {
     return h(MyApp);

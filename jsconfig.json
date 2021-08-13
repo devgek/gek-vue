@@ -1,3 +1,9 @@
 {
-  "include": ["./vue/**/*"]
+  "compilerOptions": {
+    "baseUrl": ".",
+    "paths": {
+      "@/*": ["./vue/*"],
+    }
+  },
+  "exclude": ["node_modules", "dist"]
 }

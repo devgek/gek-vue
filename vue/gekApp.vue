@@ -1,5 +1,5 @@
 <template>
-  <div id="GekApp">
+  <div id="GekAppRoot">
     <div>before app router-view</div>
     <div>{{ player }}</div>
     <router-view></router-view>

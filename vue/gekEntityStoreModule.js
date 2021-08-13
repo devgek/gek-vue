@@ -13,7 +13,7 @@ const logConsole = true;
 GekEntityApiService.init(apiBaseUrl, logConsole);
 
 const GekEntityStoreModule = {
-  namespaced: true,
+  namespaced: false,
   state() {
     return {
       userData: null,
@@ -86,7 +86,6 @@ const GekEntityStoreModule = {
       return GekEntityApiService.getEntities(commit, payload);
     },
     loadEntityOptions({ commit }, payload) {
-      console.log("loadEntityOptions:" + payload.entityName);
       return GekEntityApiService.getEntityOptions(commit, payload);
     },
     saveEntity({ dispatch, getters }, payload) {
