@@ -1,10 +1,12 @@
 function newEntityObjectContactAddress() {
   return {
     ID: 0,
-    OrgType: 0,
-    Name: "",
-    NameExt: "",
-    ContactType: 0,
+    ContactID: 0,
+    Street: "",
+    StreetNr: "",
+    StreetExt: "",
+    Zip: "",
+    City: "",
   };
 }
 

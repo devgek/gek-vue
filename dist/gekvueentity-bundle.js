@@ -1933,33 +1933,6 @@ ___CSS_LOADER_EXPORT___.push([module.id, "/* MaterialDesignIcons.com */\n@font-f
 
 /***/ }),
 
-/***/ "./node_modules/css-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js??clonedRuleSet-2[0].rules[0].use[2]!./node_modules/vuetify/src/components/VAppBar/VAppBar.sass":
-/*!***********************************************************************************************************************************************************************************!*\
-  !*** ./node_modules/css-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js??clonedRuleSet-2[0].rules[0].use[2]!./node_modules/vuetify/src/components/VAppBar/VAppBar.sass ***!
-  \***********************************************************************************************************************************************************************************/
-/***/ ((module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
-/* harmony export */ });
-/* harmony import */ var _css_loader_dist_runtime_cssWithMappingToString_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../../../css-loader/dist/runtime/cssWithMappingToString.js */ "./node_modules/css-loader/dist/runtime/cssWithMappingToString.js");
-/* harmony import */ var _css_loader_dist_runtime_cssWithMappingToString_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_css_loader_dist_runtime_cssWithMappingToString_js__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../../../css-loader/dist/runtime/api.js */ "./node_modules/css-loader/dist/runtime/api.js");
-/* harmony import */ var _css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1__);
-// Imports
-
-
-var ___CSS_LOADER_EXPORT___ = _css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default()((_css_loader_dist_runtime_cssWithMappingToString_js__WEBPACK_IMPORTED_MODULE_0___default()));
-// Module
-___CSS_LOADER_EXPORT___.push([module.id, ".theme--light.v-app-bar.v-toolbar.v-sheet {\n  background-color: #f5f5f5;\n}\n\n.theme--dark.v-app-bar.v-toolbar.v-sheet {\n  background-color: #272727;\n}\n\n.v-sheet.v-app-bar.v-toolbar {\n  border-radius: 0;\n}\n.v-sheet.v-app-bar.v-toolbar:not(.v-sheet--outlined) {\n  box-shadow: 0px 2px 4px -1px rgba(0, 0, 0, 0.2), 0px 4px 5px 0px rgba(0, 0, 0, 0.14), 0px 1px 10px 0px rgba(0, 0, 0, 0.12);\n}\n.v-sheet.v-app-bar.v-toolbar.v-sheet--shaped {\n  border-radius: 24px 0;\n}\n\n.v-app-bar:not([data-booted=true]) {\n  transition: none !important;\n}\n\n.v-app-bar.v-app-bar--fixed {\n  position: fixed;\n  top: 0;\n  z-index: 5;\n}\n\n.v-app-bar.v-app-bar--hide-shadow {\n  box-shadow: 0px 0px 0px 0px rgba(0, 0, 0, 0.2), 0px 0px 0px 0px rgba(0, 0, 0, 0.14), 0px 0px 0px 0px rgba(0, 0, 0, 0.12) !important;\n}\n\n.v-app-bar--fade-img-on-scroll .v-toolbar__image .v-image__image {\n  transition: 0.4s opacity cubic-bezier(0.4, 0, 0.2, 1);\n}\n\n.v-app-bar.v-toolbar--prominent.v-app-bar--shrink-on-scroll .v-toolbar__image {\n  will-change: opacity;\n}\n.v-app-bar.v-toolbar--prominent.v-app-bar--shrink-on-scroll.v-app-bar--collapse-on-scroll .v-toolbar__extension {\n  display: none;\n}\n.v-app-bar.v-toolbar--prominent.v-app-bar--shrink-on-scroll.v-app-bar--is-scrolled .v-toolbar__title {\n  padding-top: 9px;\n}\n.v-app-bar.v-toolbar--prominent.v-app-bar--shrink-on-scroll.v-app-bar--is-scrolled:not(.v-app-bar--bottom) .v-toolbar__title {\n  padding-bottom: 9px;\n}\n\n.v-app-bar.v-app-bar--shrink-on-scroll .v-toolbar__title {\n  font-size: inherit;\n}\n\n.v-app-bar-title__placeholder, .v-app-bar-title__content {\n  overflow: hidden;\n  text-overflow: ellipsis;\n  white-space: nowrap;\n}\n.v-app-bar-title__content {\n  position: absolute;\n}", "",{"version":3,"sources":["webpack://./node_modules/vuetify/src/styles/tools/_theme.sass","webpack://./node_modules/vuetify/src/components/VAppBar/VAppBar.sass","webpack://./node_modules/vuetify/src/styles/tools/_sheet.sass","webpack://./node_modules/vuetify/src/styles/tools/_radius.sass","webpack://./node_modules/vuetify/src/styles/tools/_elevation.sass","webpack://./node_modules/vuetify/src/styles/tools/_bootable.sass","webpack://./node_modules/vuetify/src/components/VAppBar/_variables.scss"],"names":[],"mappings":"AACE;ECEA,yBAAA;AADF;;ADCE;ECAA,yBAAA;AAGF;;ACME;ECTE,gBAAA;AFOJ;ACPE;EEFA,0HAAA;AHYF;ACNI;ECFA,qBAAA;AFWJ;;AIfE;EACE,2BAAA;AJkBJ;;AARA;EACE,eAAA;EACA,MAAA;EACA,UAAA;AAWF;;AATA;EGhBE,mIAAA;AH6BF;;AAPE;EACE,qDKlBiB;AL4BrB;;AAPE;EACE,oBAAA;AAUJ;AAPI;EACE,aAAA;AASN;AANI;EACE,gBKhCkC;ALwCxC;AALM;EACE,mBKpCgC;AL2CxC;;AAJE;EACE,kBAAA;AAOJ;;AAJE;EAEE,gBAAA;EACA,uBAAA;EACA,mBAAA;AAMJ;AAJE;EACE,kBAAA;AAMJ","sourcesContent":["@mixin theme ($component)\n  .theme--light.#{$component}\n    @content($material-light)\n  .theme--dark.#{$component}\n    @content($material-dark)\n","@import './_variables.scss'\n\n+theme('v-app-bar.v-toolbar.v-sheet') using ($material)\n  background-color: map-get($material, 'app-bar')\n\n+sheet('v-app-bar.v-toolbar', $app-bar-elevation, $app-bar-border-radius, $app-bar-shaped-border-radius)\n\n// Block\n.v-app-bar\n  +bootable()\n\n// Modifier\n.v-app-bar.v-app-bar--fixed\n  position: fixed\n  top: 0\n  z-index: 5\n\n.v-app-bar.v-app-bar--hide-shadow\n  // Workaround for cascaded elevation styles\n  // that persist when the bar is inactive.\n  +elevation(0, true)\n\n.v-app-bar--fade-img-on-scroll\n  .v-toolbar__image .v-image__image\n    transition: $app-bar-transition\n\n.v-app-bar.v-toolbar--prominent.v-app-bar--shrink-on-scroll\n  .v-toolbar__image\n    will-change: opacity\n\n  &.v-app-bar--collapse-on-scroll\n    .v-toolbar__extension\n      display: none\n\n  &.v-app-bar--is-scrolled\n    .v-toolbar__title\n      padding-top: $app-bar-scrolled-title-padding-bottom\n\n    &:not(.v-app-bar--bottom)\n      .v-toolbar__title\n        padding-bottom: $app-bar-scrolled-title-padding-bottom\n\n.v-app-bar.v-app-bar--shrink-on-scroll\n  .v-toolbar__title\n    font-size: inherit\n\n.v-app-bar-title\n  &__placeholder,\n  &__content\n    overflow: hidden\n    text-overflow: ellipsis\n    white-space: nowrap\n\n  &__content\n    position: absolute\n","@mixin paper ($elevation, $radius, $shaped-radius)\n  +radius($radius)\n\n  &:not(.v-sheet--outlined)\n    +elevation($elevation)\n\n  @if ($shaped-radius)\n    &.v-sheet--shaped\n      +radius($shaped-radius)\n\n\n@mixin sheet ($component, $elevation, $radius, $shaped-radius)\n  .v-sheet.#{$component}\n    +paper($elevation, $radius, $shaped-radius)\n","@mixin radius($r, $important: false)\n  // Key exists within the $rounded variable\n  @if (map-has-key($rounded, $r))\n    border-radius: map-get($rounded, $r) if($important, !important, null)\n  @else\n    border-radius: $r if($important, !important, null)\n","@mixin elevation($z, $important: false)\n  box-shadow: map-get($shadow-key-umbra, $z), map-get($shadow-key-penumbra, $z), map-get($shadow-key-ambient, $z) if($important, !important, null)\n\n@mixin elevationTransition($duration: 280ms, $easing: cubic-bezier(0.4, 0, 0.2, 1))\n  transition: box-shadow $duration $easing\n","@mixin bootable()\n  &:not([data-booted=\"true\"])\n    transition: none !important\n","@import '../../styles/styles.sass';\n\n$app-bar-border-radius: 0 !default;\n$app-bar-elevation: 4 !default;\n$app-bar-scrolled-title-padding-bottom: 9px !default;\n$app-bar-shaped-border-radius: map-get($rounded, 'xl') $app-bar-border-radius !default;\n$app-bar-transition: .4s opacity map-get($transition, 'fast-out-slow-in') !default;\n"],"sourceRoot":""}]);
-// Exports
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
-
-
-/***/ }),
-
 /***/ "./node_modules/css-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js??clonedRuleSet-2[0].rules[0].use[2]!./node_modules/vuetify/src/components/VApp/VApp.sass":
 /*!*****************************************************************************************************************************************************************************!*\
   !*** ./node_modules/css-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js??clonedRuleSet-2[0].rules[0].use[2]!./node_modules/vuetify/src/components/VApp/VApp.sass ***!
@@ -1981,6 +1954,33 @@ __webpack_require__.r(__webpack_exports__);
 var ___CSS_LOADER_EXPORT___ = _css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default()((_css_loader_dist_runtime_cssWithMappingToString_js__WEBPACK_IMPORTED_MODULE_0___default()));
 // Module
 ___CSS_LOADER_EXPORT___.push([module.id, ".theme--light.v-application {\n  background: #FFFFFF;\n  color: rgba(0, 0, 0, 0.87);\n}\n.theme--light.v-application .text--primary {\n  color: rgba(0, 0, 0, 0.87) !important;\n}\n.theme--light.v-application .text--secondary {\n  color: rgba(0, 0, 0, 0.6) !important;\n}\n.theme--light.v-application .text--disabled {\n  color: rgba(0, 0, 0, 0.38) !important;\n}\n\n.theme--dark.v-application {\n  background: #121212;\n  color: #FFFFFF;\n}\n.theme--dark.v-application .text--primary {\n  color: #FFFFFF !important;\n}\n.theme--dark.v-application .text--secondary {\n  color: rgba(255, 255, 255, 0.7) !important;\n}\n.theme--dark.v-application .text--disabled {\n  color: rgba(255, 255, 255, 0.5) !important;\n}\n\n.v-application {\n  display: flex;\n  position: relative;\n}\n.v-application a {\n  cursor: pointer;\n}\n.v-application--is-rtl {\n  direction: rtl;\n}\n.v-application--wrap {\n  flex: 1 1 auto;\n  backface-visibility: hidden;\n  display: flex;\n  flex-direction: column;\n  min-height: 100vh;\n  max-width: 100%;\n  position: relative;\n}\n\n@-moz-document url-prefix() {\n  @media print {\n    .v-application {\n      display: block;\n    }\n    .v-application--wrap {\n      display: block;\n    }\n  }\n}", "",{"version":3,"sources":["webpack://./node_modules/vuetify/src/styles/tools/_theme.sass","webpack://./node_modules/vuetify/src/components/VApp/VApp.sass"],"names":[],"mappings":"AACE;ECGA,mBAAA;EACA,0BAAA;AAFF;AAKI;EACE,qCAAA;AAHN;AAKI;EACE,oCAAA;AAHN;AAKI;EACE,qCAAA;AAHN;;ADTE;ECCA,mBAAA;EACA,cAAA;AAYF;AATI;EACE,yBAAA;AAWN;AATI;EACE,0CAAA;AAWN;AATI;EACE,0CAAA;AAWN;;AATA;EACE,aAAA;EACA,kBAAA;AAYF;AAVE;EACE,eAAA;AAYJ;AAVE;EACE,cAAA;AAYJ;AAVE;EACE,cAAA;EACA,2BAAA;EACA,aAAA;EACA,sBAAA;EACA,iBAAA;EACA,eAAA;EACA,kBAAA;AAYJ;;AATA;EACE;IACE;MACE,cAAA;IAYF;IAVE;MACE,cAAA;IAYJ;EACF;AACF","sourcesContent":["@mixin theme ($component)\n  .theme--light.#{$component}\n    @content($material-light)\n  .theme--dark.#{$component}\n    @content($material-dark)\n","@import '../../styles/styles.sass'\n\n// Theme\n+theme(v-application) using ($material)\n  background: map-get($material, 'background')\n  color: map-deep-get($material, 'text', 'primary')\n\n  .text\n    &--primary\n      color: map-deep-get($material, 'text', 'primary') !important\n\n    &--secondary\n      color: map-deep-get($material, 'text', 'secondary') !important\n\n    &--disabled\n      color: map-deep-get($material, 'text', 'disabled') !important\n\n.v-application\n  display: flex\n  position: relative\n\n  a\n    cursor: pointer\n\n  &--is-rtl\n    direction: rtl\n\n  &--wrap\n    flex: 1 1 auto\n    backface-visibility: hidden\n    display: flex\n    flex-direction: column\n    min-height: 100vh\n    max-width: 100%\n    position: relative\n\n// Firefox overrides\n@-moz-document url-prefix()\n  @media print\n    .v-application\n      display: block\n\n      &--wrap\n        display: block\n"],"sourceRoot":""}]);
+// Exports
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
+
+
+/***/ }),
+
+/***/ "./node_modules/css-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js??clonedRuleSet-2[0].rules[0].use[2]!./node_modules/vuetify/src/components/VAppBar/VAppBar.sass":
+/*!***********************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/css-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js??clonedRuleSet-2[0].rules[0].use[2]!./node_modules/vuetify/src/components/VAppBar/VAppBar.sass ***!
+  \***********************************************************************************************************************************************************************************/
+/***/ ((module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _css_loader_dist_runtime_cssWithMappingToString_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../../../css-loader/dist/runtime/cssWithMappingToString.js */ "./node_modules/css-loader/dist/runtime/cssWithMappingToString.js");
+/* harmony import */ var _css_loader_dist_runtime_cssWithMappingToString_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_css_loader_dist_runtime_cssWithMappingToString_js__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../../../css-loader/dist/runtime/api.js */ "./node_modules/css-loader/dist/runtime/api.js");
+/* harmony import */ var _css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1__);
+// Imports
+
+
+var ___CSS_LOADER_EXPORT___ = _css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default()((_css_loader_dist_runtime_cssWithMappingToString_js__WEBPACK_IMPORTED_MODULE_0___default()));
+// Module
+___CSS_LOADER_EXPORT___.push([module.id, ".theme--light.v-app-bar.v-toolbar.v-sheet {\n  background-color: #f5f5f5;\n}\n\n.theme--dark.v-app-bar.v-toolbar.v-sheet {\n  background-color: #272727;\n}\n\n.v-sheet.v-app-bar.v-toolbar {\n  border-radius: 0;\n}\n.v-sheet.v-app-bar.v-toolbar:not(.v-sheet--outlined) {\n  box-shadow: 0px 2px 4px -1px rgba(0, 0, 0, 0.2), 0px 4px 5px 0px rgba(0, 0, 0, 0.14), 0px 1px 10px 0px rgba(0, 0, 0, 0.12);\n}\n.v-sheet.v-app-bar.v-toolbar.v-sheet--shaped {\n  border-radius: 24px 0;\n}\n\n.v-app-bar:not([data-booted=true]) {\n  transition: none !important;\n}\n\n.v-app-bar.v-app-bar--fixed {\n  position: fixed;\n  top: 0;\n  z-index: 5;\n}\n\n.v-app-bar.v-app-bar--hide-shadow {\n  box-shadow: 0px 0px 0px 0px rgba(0, 0, 0, 0.2), 0px 0px 0px 0px rgba(0, 0, 0, 0.14), 0px 0px 0px 0px rgba(0, 0, 0, 0.12) !important;\n}\n\n.v-app-bar--fade-img-on-scroll .v-toolbar__image .v-image__image {\n  transition: 0.4s opacity cubic-bezier(0.4, 0, 0.2, 1);\n}\n\n.v-app-bar.v-toolbar--prominent.v-app-bar--shrink-on-scroll .v-toolbar__image {\n  will-change: opacity;\n}\n.v-app-bar.v-toolbar--prominent.v-app-bar--shrink-on-scroll.v-app-bar--collapse-on-scroll .v-toolbar__extension {\n  display: none;\n}\n.v-app-bar.v-toolbar--prominent.v-app-bar--shrink-on-scroll.v-app-bar--is-scrolled .v-toolbar__title {\n  padding-top: 9px;\n}\n.v-app-bar.v-toolbar--prominent.v-app-bar--shrink-on-scroll.v-app-bar--is-scrolled:not(.v-app-bar--bottom) .v-toolbar__title {\n  padding-bottom: 9px;\n}\n\n.v-app-bar.v-app-bar--shrink-on-scroll .v-toolbar__title {\n  font-size: inherit;\n}\n\n.v-app-bar-title__placeholder, .v-app-bar-title__content {\n  overflow: hidden;\n  text-overflow: ellipsis;\n  white-space: nowrap;\n}\n.v-app-bar-title__content {\n  position: absolute;\n}", "",{"version":3,"sources":["webpack://./node_modules/vuetify/src/styles/tools/_theme.sass","webpack://./node_modules/vuetify/src/components/VAppBar/VAppBar.sass","webpack://./node_modules/vuetify/src/styles/tools/_sheet.sass","webpack://./node_modules/vuetify/src/styles/tools/_radius.sass","webpack://./node_modules/vuetify/src/styles/tools/_elevation.sass","webpack://./node_modules/vuetify/src/styles/tools/_bootable.sass","webpack://./node_modules/vuetify/src/components/VAppBar/_variables.scss"],"names":[],"mappings":"AACE;ECEA,yBAAA;AADF;;ADCE;ECAA,yBAAA;AAGF;;ACME;ECTE,gBAAA;AFOJ;ACPE;EEFA,0HAAA;AHYF;ACNI;ECFA,qBAAA;AFWJ;;AIfE;EACE,2BAAA;AJkBJ;;AARA;EACE,eAAA;EACA,MAAA;EACA,UAAA;AAWF;;AATA;EGhBE,mIAAA;AH6BF;;AAPE;EACE,qDKlBiB;AL4BrB;;AAPE;EACE,oBAAA;AAUJ;AAPI;EACE,aAAA;AASN;AANI;EACE,gBKhCkC;ALwCxC;AALM;EACE,mBKpCgC;AL2CxC;;AAJE;EACE,kBAAA;AAOJ;;AAJE;EAEE,gBAAA;EACA,uBAAA;EACA,mBAAA;AAMJ;AAJE;EACE,kBAAA;AAMJ","sourcesContent":["@mixin theme ($component)\n  .theme--light.#{$component}\n    @content($material-light)\n  .theme--dark.#{$component}\n    @content($material-dark)\n","@import './_variables.scss'\n\n+theme('v-app-bar.v-toolbar.v-sheet') using ($material)\n  background-color: map-get($material, 'app-bar')\n\n+sheet('v-app-bar.v-toolbar', $app-bar-elevation, $app-bar-border-radius, $app-bar-shaped-border-radius)\n\n// Block\n.v-app-bar\n  +bootable()\n\n// Modifier\n.v-app-bar.v-app-bar--fixed\n  position: fixed\n  top: 0\n  z-index: 5\n\n.v-app-bar.v-app-bar--hide-shadow\n  // Workaround for cascaded elevation styles\n  // that persist when the bar is inactive.\n  +elevation(0, true)\n\n.v-app-bar--fade-img-on-scroll\n  .v-toolbar__image .v-image__image\n    transition: $app-bar-transition\n\n.v-app-bar.v-toolbar--prominent.v-app-bar--shrink-on-scroll\n  .v-toolbar__image\n    will-change: opacity\n\n  &.v-app-bar--collapse-on-scroll\n    .v-toolbar__extension\n      display: none\n\n  &.v-app-bar--is-scrolled\n    .v-toolbar__title\n      padding-top: $app-bar-scrolled-title-padding-bottom\n\n    &:not(.v-app-bar--bottom)\n      .v-toolbar__title\n        padding-bottom: $app-bar-scrolled-title-padding-bottom\n\n.v-app-bar.v-app-bar--shrink-on-scroll\n  .v-toolbar__title\n    font-size: inherit\n\n.v-app-bar-title\n  &__placeholder,\n  &__content\n    overflow: hidden\n    text-overflow: ellipsis\n    white-space: nowrap\n\n  &__content\n    position: absolute\n","@mixin paper ($elevation, $radius, $shaped-radius)\n  +radius($radius)\n\n  &:not(.v-sheet--outlined)\n    +elevation($elevation)\n\n  @if ($shaped-radius)\n    &.v-sheet--shaped\n      +radius($shaped-radius)\n\n\n@mixin sheet ($component, $elevation, $radius, $shaped-radius)\n  .v-sheet.#{$component}\n    +paper($elevation, $radius, $shaped-radius)\n","@mixin radius($r, $important: false)\n  // Key exists within the $rounded variable\n  @if (map-has-key($rounded, $r))\n    border-radius: map-get($rounded, $r) if($important, !important, null)\n  @else\n    border-radius: $r if($important, !important, null)\n","@mixin elevation($z, $important: false)\n  box-shadow: map-get($shadow-key-umbra, $z), map-get($shadow-key-penumbra, $z), map-get($shadow-key-ambient, $z) if($important, !important, null)\n\n@mixin elevationTransition($duration: 280ms, $easing: cubic-bezier(0.4, 0, 0.2, 1))\n  transition: box-shadow $duration $easing\n","@mixin bootable()\n  &:not([data-booted=\"true\"])\n    transition: none !important\n","@import '../../styles/styles.sass';\n\n$app-bar-border-radius: 0 !default;\n$app-bar-elevation: 4 !default;\n$app-bar-scrolled-title-padding-bottom: 9px !default;\n$app-bar-shaped-border-radius: map-get($rounded, 'xl') $app-bar-border-radius !default;\n$app-bar-transition: .4s opacity map-get($transition, 'fast-out-slow-in') !default;\n"],"sourceRoot":""}]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -3087,7 +3087,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default()((_node_modules_css_loader_dist_runtime_cssWithMappingToString_js__WEBPACK_IMPORTED_MODULE_0___default()));
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, "\n.gek-bg-page-header[data-v-32e1f047] {\r\n  /* background-color: #F0F4C3; */\r\n  background-color: #F0F4C3;/*#ECEFF1; blue-grey-lighten-5*/\n}\r\n", "",{"version":3,"sources":["webpack://./vue/components/GekPageHeader.vue"],"names":[],"mappings":";AAoCA;EACA,+BAAA;EACA,yBAAA,CAAA,+BAAA;AACA","sourcesContent":["<template>\r\n <v-card>\r\n  <v-card-title class=\"gek-bg-page-header primary--text\">{{ header() }}</v-card-title>\r\n </v-card>\r\n</template>\r\n<script>\r\nexport default {\r\n  props: {\r\n    headerText: {\r\n      type: String,\r\n      default: \"\",\r\n    },\r\n    headerKey: {\r\n      type: String,\r\n      default: null,\r\n    }\r\n  },\r\n  data() {\r\n    return {\r\n    };\r\n  },\r\n  methods: {\r\n    header() {\r\n      if (this.headerKey === null) {\r\n        return this.headerText;\r\n      }\r\n      else {\r\n        return this.$t(this.headerKey);\r\n      }\r\n    },\r\n  },\r\n  computed: {\r\n  },\r\n}\r\n</script>\r\n<style scoped>\r\n.gek-bg-page-header {\r\n  /* background-color: #F0F4C3; */\r\n  background-color: #F0F4C3;/*#ECEFF1; blue-grey-lighten-5*/\r\n}\r\n</style>"],"sourceRoot":""}]);
+___CSS_LOADER_EXPORT___.push([module.id, "\n.gek-bg-page-header[data-v-32e1f047] {\n  /* background-color: #F0F4C3; */\n  background-color: #F0F4C3;/*#ECEFF1; blue-grey-lighten-5*/\n}\n", "",{"version":3,"sources":["webpack://./vue/components/GekPageHeader.vue"],"names":[],"mappings":";AAoCA;EACA,+BAAA;EACA,yBAAA,CAAA,+BAAA;AACA","sourcesContent":["<template>\n <v-card>\n  <v-card-title class=\"gek-bg-page-header primary--text\">{{ header() }}</v-card-title>\n </v-card>\n</template>\n<script>\nexport default {\n  props: {\n    headerText: {\n      type: String,\n      default: \"\",\n    },\n    headerKey: {\n      type: String,\n      default: null,\n    }\n  },\n  data() {\n    return {\n    };\n  },\n  methods: {\n    header() {\n      if (this.headerKey === null) {\n        return this.headerText;\n      }\n      else {\n        return this.$t(this.headerKey);\n      }\n    },\n  },\n  computed: {\n  },\n}\n</script>\n<style scoped>\n.gek-bg-page-header {\n  /* background-color: #F0F4C3; */\n  background-color: #F0F4C3;/*#ECEFF1; blue-grey-lighten-5*/\n}\n</style>"],"sourceRoot":""}]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -3114,7 +3114,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default()((_node_modules_css_loader_dist_runtime_cssWithMappingToString_js__WEBPACK_IMPORTED_MODULE_0___default()));
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, "\n.gek-entity-edit-list-header[data-v-a60eaa88] {\r\n  /* background-color: #F0F4C3; */\r\n  background-color: #ECEFF1; /*blue-grey-lighten-5*/\n}\r\n", "",{"version":3,"sources":["webpack://./vue/components/entities/GekEntityEditList.vue"],"names":[],"mappings":";AAoHA;EACA,+BAAA;EACA,yBAAA,EAAA,sBAAA;AACA","sourcesContent":["<template>\r\n  <v-sheet>\r\n    <v-card>\r\n      <v-card-title class=\"gek-entity-edit-list-header primary--text\">{{\r\n        $t(\"form.\" + entity + \".list.header\")\r\n      }}</v-card-title>\r\n      <v-card-text class=\"mt-5\">\r\n        <v-container fluid>\r\n          <v-row align=\"start\" dense>\r\n            <v-col cols=\"12\" align=\"end\">\r\n              <div class=\"float-right mb-2\">\r\n                <v-btn\r\n                  outlined\r\n                  color=\"primary\"\r\n                  @click=\"\r\n                    SET_ENTITY_NEW({\r\n                      entityName: entityName,\r\n                      entityDesc: 'Benutzer',\r\n                    })\r\n                  \"\r\n                  >{{ $t(\"form.\" + entity + \".list.buttonnew\") }}</v-btn\r\n                >\r\n              </div>\r\n              <div class=\"pb-3\">&nbsp;</div>\r\n            </v-col>\r\n          </v-row>\r\n          <v-data-table\r\n            :items=\"getEntityListByEntityName(entityName)\"\r\n            :headers=\"tableHeaders\"\r\n            :items-per-page=\"5\"\r\n            :show-expand=\"showExpand\"\r\n            :expanded.sync=\"expanded\"\r\n            :single-expand=\"singleExpand\"\r\n            item-key=\"Name\"\r\n          >\r\n            <!-- pass through scoped slots -->\r\n            <template\r\n              v-for=\"(_, scopedSlotName) in $scopedSlots\"\r\n              v-slot:[scopedSlotName]=\"slotData\"\r\n            >\r\n              <slot :name=\"scopedSlotName\" v-bind=\"slotData\"></slot>\r\n            </template>\r\n\r\n            <template v-slot:item.actions=\"{ item }\" v-if=\"isAdminUser\">\r\n              <v-btn\r\n                small\r\n                color=\"primary\"\r\n                outlined\r\n                @click=\"\r\n                  SET_ENTITY_EDIT({\r\n                    entityName: entityName,\r\n                    entityObject: item,\r\n                  })\r\n                \"\r\n              >\r\n                <v-icon>mdi-pencil</v-icon>\r\n              </v-btn>\r\n              <v-btn\r\n                small\r\n                color=\"primary\"\r\n                outlined\r\n                @click=\"\r\n                  SET_ENTITY_DELETE({\r\n                    entityName: entityName,\r\n                    entityObject: item,\r\n                  })\r\n                \"\r\n              >\r\n                <v-icon>mdi-delete</v-icon>\r\n              </v-btn>\r\n            </template>\r\n          </v-data-table>\r\n        </v-container>\r\n      </v-card-text>\r\n    </v-card>\r\n  </v-sheet>\r\n</template>\r\n<script>\r\nimport Vuex from 'vuex'\r\n\r\nexport default {\r\n  props: {\r\n    entity: {\r\n      type: String,\r\n      required: true,\r\n    },\r\n    entityName: {\r\n      type: String,\r\n      required: true,\r\n    },\r\n    tableHeaders: {\r\n      type: Array,\r\n      required: true,\r\n    },\r\n    showExpand: {\r\n      type: Boolean,\r\n      default: false\r\n    }\r\n  },\r\n  data() {\r\n    return {\r\n      expanded: [],\r\n      singleExpand: true,\r\n    };\r\n  },\r\n  methods: {\r\n    ...Vuex.mapMutations([\"SET_ENTITY_NEW\", \"SET_ENTITY_EDIT\", \"SET_ENTITY_DELETE\"]),\r\n  },\r\n  computed: {\r\n    ...Vuex.mapState([\"gekEntityObjects\"]),\r\n    ...Vuex.mapGetters([\"isAdminUser\", \"getEntityListByEntityName\"]),\r\n  },\r\n}\r\n</script>\r\n\r\n<style scoped>\r\n.gek-entity-edit-list-header {\r\n  /* background-color: #F0F4C3; */\r\n  background-color: #ECEFF1; /*blue-grey-lighten-5*/\r\n}\r\n</style>"],"sourceRoot":""}]);
+___CSS_LOADER_EXPORT___.push([module.id, "\n.gek-entity-edit-list-header[data-v-a60eaa88] {\n  /* background-color: #F0F4C3; */\n  background-color: #ECEFF1; /*blue-grey-lighten-5*/\n}\n", "",{"version":3,"sources":["webpack://./vue/components/entities/GekEntityEditList.vue"],"names":[],"mappings":";AAoHA;EACA,+BAAA;EACA,yBAAA,EAAA,sBAAA;AACA","sourcesContent":["<template>\n  <v-sheet>\n    <v-card>\n      <v-card-title class=\"gek-entity-edit-list-header primary--text\">{{\n        $t(\"form.\" + entity + \".list.header\")\n      }}</v-card-title>\n      <v-card-text class=\"mt-5\">\n        <v-container fluid>\n          <v-row align=\"start\" dense>\n            <v-col cols=\"12\" align=\"end\">\n              <div class=\"float-right mb-2\">\n                <v-btn\n                  outlined\n                  color=\"primary\"\n                  @click=\"\n                    SET_ENTITY_NEW({\n                      entityName: entityName,\n                      entityDesc: 'Benutzer',\n                    })\n                  \"\n                  >{{ $t(\"form.\" + entity + \".list.buttonnew\") }}</v-btn\n                >\n              </div>\n              <div class=\"pb-3\">&nbsp;</div>\n            </v-col>\n          </v-row>\n          <v-data-table\n            :items=\"getEntityListByEntityName(entityName)\"\n            :headers=\"tableHeaders\"\n            :items-per-page=\"5\"\n            :show-expand=\"showExpand\"\n            :expanded.sync=\"expanded\"\n            :single-expand=\"singleExpand\"\n            item-key=\"Name\"\n          >\n            <!-- pass through scoped slots -->\n            <template\n              v-for=\"(_, scopedSlotName) in $scopedSlots\"\n              v-slot:[scopedSlotName]=\"slotData\"\n            >\n              <slot :name=\"scopedSlotName\" v-bind=\"slotData\"></slot>\n            </template>\n\n            <template v-slot:item.actions=\"{ item }\" v-if=\"isAdminUser\">\n              <v-btn\n                small\n                color=\"primary\"\n                outlined\n                @click=\"\n                  SET_ENTITY_EDIT({\n                    entityName: entityName,\n                    entityObject: item,\n                  })\n                \"\n              >\n                <v-icon>mdi-pencil</v-icon>\n              </v-btn>\n              <v-btn\n                small\n                color=\"primary\"\n                outlined\n                @click=\"\n                  SET_ENTITY_DELETE({\n                    entityName: entityName,\n                    entityObject: item,\n                  })\n                \"\n              >\n                <v-icon>mdi-delete</v-icon>\n              </v-btn>\n            </template>\n          </v-data-table>\n        </v-container>\n      </v-card-text>\n    </v-card>\n  </v-sheet>\n</template>\n<script>\nimport Vuex from 'vuex'\n\nexport default {\n  props: {\n    entity: {\n      type: String,\n      required: true,\n    },\n    entityName: {\n      type: String,\n      required: true,\n    },\n    tableHeaders: {\n      type: Array,\n      required: true,\n    },\n    showExpand: {\n      type: Boolean,\n      default: false\n    }\n  },\n  data() {\n    return {\n      expanded: [],\n      singleExpand: true,\n    };\n  },\n  methods: {\n    ...Vuex.mapMutations([\"SET_ENTITY_NEW\", \"SET_ENTITY_EDIT\", \"SET_ENTITY_DELETE\"]),\n  },\n  computed: {\n    ...Vuex.mapState([\"gekEntityModels\"]),\n    ...Vuex.mapGetters([\"isAdminUser\", \"getEntityListByEntityName\"]),\n  },\n}\n</script>\n\n<style scoped>\n.gek-entity-edit-list-header {\n  /* background-color: #F0F4C3; */\n  background-color: #ECEFF1; /*blue-grey-lighten-5*/\n}\n</style>"],"sourceRoot":""}]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -3176,7 +3176,7 @@ var ___CSS_LOADER_URL_REPLACEMENT_9___ = _node_modules_css_loader_dist_runtime_g
 var ___CSS_LOADER_URL_REPLACEMENT_10___ = _node_modules_css_loader_dist_runtime_getUrl_js__WEBPACK_IMPORTED_MODULE_2___default()(_fonts_MaterialIcons_Regular_ttf__WEBPACK_IMPORTED_MODULE_11__);
 var ___CSS_LOADER_URL_REPLACEMENT_11___ = _node_modules_css_loader_dist_runtime_getUrl_js__WEBPACK_IMPORTED_MODULE_2___default()(_fonts_MaterialIcons_Regular_svg__WEBPACK_IMPORTED_MODULE_12__, { hash: "#Inconsolata" });
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, "@font-face {\r\n  font-family: 'Roboto';\r\n  font-style: normal;\r\n  font-weight: 400;\r\n  src: url(" + ___CSS_LOADER_URL_REPLACEMENT_0___ + "); /* IE9 Compat Modes */\r\n  src: local(''),\r\n       url(" + ___CSS_LOADER_URL_REPLACEMENT_1___ + ") format('embedded-opentype'), /* IE6-IE8 */\r\n       url(" + ___CSS_LOADER_URL_REPLACEMENT_2___ + ") format('woff2'), /* Super Modern Browsers */\r\n       url(" + ___CSS_LOADER_URL_REPLACEMENT_3___ + ") format('woff'), /* Modern Browsers */\r\n       url(" + ___CSS_LOADER_URL_REPLACEMENT_4___ + ") format('truetype'), /* Safari, Android, iOS */\r\n       url(" + ___CSS_LOADER_URL_REPLACEMENT_5___ + ") format('svg'); /* Legacy iOS */\r\n}\r\n\r\n@font-face {\r\n  font-family: 'Material Icons';\r\n  font-style: normal;\r\n  font-weight: 400;\r\n  src: url(" + ___CSS_LOADER_URL_REPLACEMENT_6___ + "); /* For IE6-8 */\r\n  src: local('Material Icons'),\r\n    local('MaterialIcons-Regular'),\r\n    url(" + ___CSS_LOADER_URL_REPLACEMENT_7___ + ") format('embedded-opentype'), /* IE6-IE8 */\r\n    url(" + ___CSS_LOADER_URL_REPLACEMENT_8___ + ") format('woff2'),\r\n    url(" + ___CSS_LOADER_URL_REPLACEMENT_9___ + ") format('woff'),\r\n    url(" + ___CSS_LOADER_URL_REPLACEMENT_10___ + ") format('truetype'),\r\n    url(" + ___CSS_LOADER_URL_REPLACEMENT_11___ + ") format('svg'); /* Legacy iOS */\r\n}\r\n\r\n.material-icons {\r\n  font-family: 'Material Icons';\r\n  font-weight: normal;\r\n  font-style: normal;\r\n  font-size: 24px;  /* Preferred icon size */\r\n  display: inline-block;\r\n  line-height: 1;\r\n  text-transform: none;\r\n  letter-spacing: normal;\r\n  word-wrap: normal;\r\n  white-space: nowrap;\r\n  direction: ltr;\r\n\r\n  /* Support for all WebKit browsers. */\r\n  -webkit-font-smoothing: antialiased;\r\n  /* Support for Safari and Chrome. */\r\n  text-rendering: optimizeLegibility;\r\n\r\n  /* Support for Firefox. */\r\n  -moz-osx-font-smoothing: grayscale;\r\n\r\n  /* Support for IE. */\r\n  font-feature-settings: 'liga';\r\n}\r\n\r\n.w-10 {\r\n  width: 10%;\r\n}\r\n\r\n.w-5 {\r\n  width: 5%;\r\n}\r\n\r\n.w-8 {\r\n  width: 8%;\r\n}", "",{"version":3,"sources":["webpack://./src/assets/css/gekvue.css"],"names":[],"mappings":"AAAA;EACE,qBAAqB;EACrB,kBAAkB;EAClB,gBAAgB;EAChB,4CAAiD,EAAE,qBAAqB;EACxE;;;;;4DAKsE,EAAE,eAAe;AACzF;;AAEA;EACE,6BAA6B;EAC7B,kBAAkB;EAClB,gBAAgB;EAChB,4CAA8C,EAAE,cAAc;EAC9D;;;;;;0DAMqE,EAAE,eAAe;AACxF;;AAEA;EACE,6BAA6B;EAC7B,mBAAmB;EACnB,kBAAkB;EAClB,eAAe,GAAG,wBAAwB;EAC1C,qBAAqB;EACrB,cAAc;EACd,oBAAoB;EACpB,sBAAsB;EACtB,iBAAiB;EACjB,mBAAmB;EACnB,cAAc;;EAEd,qCAAqC;EACrC,mCAAmC;EACnC,mCAAmC;EACnC,kCAAkC;;EAElC,yBAAyB;EACzB,kCAAkC;;EAElC,oBAAoB;EACpB,6BAA6B;AAC/B;;AAEA;EACE,UAAU;AACZ;;AAEA;EACE,SAAS;AACX;;AAEA;EACE,SAAS;AACX","sourcesContent":["@font-face {\r\n  font-family: 'Roboto';\r\n  font-style: normal;\r\n  font-weight: 400;\r\n  src: url('../fonts/roboto-v27-latin-regular.eot'); /* IE9 Compat Modes */\r\n  src: local(''),\r\n       url('../fonts/roboto-v27-latin-regular.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */\r\n       url('../fonts/roboto-v27-latin-regular.woff2') format('woff2'), /* Super Modern Browsers */\r\n       url('../fonts/roboto-v27-latin-regular.woff') format('woff'), /* Modern Browsers */\r\n       url('../fonts/roboto-v27-latin-regular.ttf') format('truetype'), /* Safari, Android, iOS */\r\n       url('../fonts/roboto-v27-latin-regular.svg#Roboto') format('svg'); /* Legacy iOS */\r\n}\r\n\r\n@font-face {\r\n  font-family: 'Material Icons';\r\n  font-style: normal;\r\n  font-weight: 400;\r\n  src: url('../fonts/MaterialIcons-Regular.eot'); /* For IE6-8 */\r\n  src: local('Material Icons'),\r\n    local('MaterialIcons-Regular'),\r\n    url('../fonts/MaterialIcons-Regular.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */\r\n    url('../fonts/MaterialIcons-Regular.woff2') format('woff2'),\r\n    url('../fonts/MaterialIcons-Regular.woff') format('woff'),\r\n    url('../fonts/MaterialIcons-Regular.ttf') format('truetype'),\r\n    url('../fonts/MaterialIcons-Regular.svg#Inconsolata') format('svg'); /* Legacy iOS */\r\n}\r\n\r\n.material-icons {\r\n  font-family: 'Material Icons';\r\n  font-weight: normal;\r\n  font-style: normal;\r\n  font-size: 24px;  /* Preferred icon size */\r\n  display: inline-block;\r\n  line-height: 1;\r\n  text-transform: none;\r\n  letter-spacing: normal;\r\n  word-wrap: normal;\r\n  white-space: nowrap;\r\n  direction: ltr;\r\n\r\n  /* Support for all WebKit browsers. */\r\n  -webkit-font-smoothing: antialiased;\r\n  /* Support for Safari and Chrome. */\r\n  text-rendering: optimizeLegibility;\r\n\r\n  /* Support for Firefox. */\r\n  -moz-osx-font-smoothing: grayscale;\r\n\r\n  /* Support for IE. */\r\n  font-feature-settings: 'liga';\r\n}\r\n\r\n.w-10 {\r\n  width: 10%;\r\n}\r\n\r\n.w-5 {\r\n  width: 5%;\r\n}\r\n\r\n.w-8 {\r\n  width: 8%;\r\n}"],"sourceRoot":""}]);
+___CSS_LOADER_EXPORT___.push([module.id, "@font-face {\n  font-family: 'Roboto';\n  font-style: normal;\n  font-weight: 400;\n  src: url(" + ___CSS_LOADER_URL_REPLACEMENT_0___ + "); /* IE9 Compat Modes */\n  src: local(''),\n       url(" + ___CSS_LOADER_URL_REPLACEMENT_1___ + ") format('embedded-opentype'), /* IE6-IE8 */\n       url(" + ___CSS_LOADER_URL_REPLACEMENT_2___ + ") format('woff2'), /* Super Modern Browsers */\n       url(" + ___CSS_LOADER_URL_REPLACEMENT_3___ + ") format('woff'), /* Modern Browsers */\n       url(" + ___CSS_LOADER_URL_REPLACEMENT_4___ + ") format('truetype'), /* Safari, Android, iOS */\n       url(" + ___CSS_LOADER_URL_REPLACEMENT_5___ + ") format('svg'); /* Legacy iOS */\n}\n\n@font-face {\n  font-family: 'Material Icons';\n  font-style: normal;\n  font-weight: 400;\n  src: url(" + ___CSS_LOADER_URL_REPLACEMENT_6___ + "); /* For IE6-8 */\n  src: local('Material Icons'),\n    local('MaterialIcons-Regular'),\n    url(" + ___CSS_LOADER_URL_REPLACEMENT_7___ + ") format('embedded-opentype'), /* IE6-IE8 */\n    url(" + ___CSS_LOADER_URL_REPLACEMENT_8___ + ") format('woff2'),\n    url(" + ___CSS_LOADER_URL_REPLACEMENT_9___ + ") format('woff'),\n    url(" + ___CSS_LOADER_URL_REPLACEMENT_10___ + ") format('truetype'),\n    url(" + ___CSS_LOADER_URL_REPLACEMENT_11___ + ") format('svg'); /* Legacy iOS */\n}\n\n.material-icons {\n  font-family: 'Material Icons';\n  font-weight: normal;\n  font-style: normal;\n  font-size: 24px;  /* Preferred icon size */\n  display: inline-block;\n  line-height: 1;\n  text-transform: none;\n  letter-spacing: normal;\n  word-wrap: normal;\n  white-space: nowrap;\n  direction: ltr;\n\n  /* Support for all WebKit browsers. */\n  -webkit-font-smoothing: antialiased;\n  /* Support for Safari and Chrome. */\n  text-rendering: optimizeLegibility;\n\n  /* Support for Firefox. */\n  -moz-osx-font-smoothing: grayscale;\n\n  /* Support for IE. */\n  font-feature-settings: 'liga';\n}\n\n.w-10 {\n  width: 10%;\n}\n\n.w-5 {\n  width: 5%;\n}\n\n.w-8 {\n  width: 8%;\n}", "",{"version":3,"sources":["webpack://./src/assets/css/gekvue.css"],"names":[],"mappings":"AAAA;EACE,qBAAqB;EACrB,kBAAkB;EAClB,gBAAgB;EAChB,4CAAiD,EAAE,qBAAqB;EACxE;;;;;4DAKsE,EAAE,eAAe;AACzF;;AAEA;EACE,6BAA6B;EAC7B,kBAAkB;EAClB,gBAAgB;EAChB,4CAA8C,EAAE,cAAc;EAC9D;;;;;;0DAMqE,EAAE,eAAe;AACxF;;AAEA;EACE,6BAA6B;EAC7B,mBAAmB;EACnB,kBAAkB;EAClB,eAAe,GAAG,wBAAwB;EAC1C,qBAAqB;EACrB,cAAc;EACd,oBAAoB;EACpB,sBAAsB;EACtB,iBAAiB;EACjB,mBAAmB;EACnB,cAAc;;EAEd,qCAAqC;EACrC,mCAAmC;EACnC,mCAAmC;EACnC,kCAAkC;;EAElC,yBAAyB;EACzB,kCAAkC;;EAElC,oBAAoB;EACpB,6BAA6B;AAC/B;;AAEA;EACE,UAAU;AACZ;;AAEA;EACE,SAAS;AACX;;AAEA;EACE,SAAS;AACX","sourcesContent":["@font-face {\n  font-family: 'Roboto';\n  font-style: normal;\n  font-weight: 400;\n  src: url('../fonts/roboto-v27-latin-regular.eot'); /* IE9 Compat Modes */\n  src: local(''),\n       url('../fonts/roboto-v27-latin-regular.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */\n       url('../fonts/roboto-v27-latin-regular.woff2') format('woff2'), /* Super Modern Browsers */\n       url('../fonts/roboto-v27-latin-regular.woff') format('woff'), /* Modern Browsers */\n       url('../fonts/roboto-v27-latin-regular.ttf') format('truetype'), /* Safari, Android, iOS */\n       url('../fonts/roboto-v27-latin-regular.svg#Roboto') format('svg'); /* Legacy iOS */\n}\n\n@font-face {\n  font-family: 'Material Icons';\n  font-style: normal;\n  font-weight: 400;\n  src: url('../fonts/MaterialIcons-Regular.eot'); /* For IE6-8 */\n  src: local('Material Icons'),\n    local('MaterialIcons-Regular'),\n    url('../fonts/MaterialIcons-Regular.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */\n    url('../fonts/MaterialIcons-Regular.woff2') format('woff2'),\n    url('../fonts/MaterialIcons-Regular.woff') format('woff'),\n    url('../fonts/MaterialIcons-Regular.ttf') format('truetype'),\n    url('../fonts/MaterialIcons-Regular.svg#Inconsolata') format('svg'); /* Legacy iOS */\n}\n\n.material-icons {\n  font-family: 'Material Icons';\n  font-weight: normal;\n  font-style: normal;\n  font-size: 24px;  /* Preferred icon size */\n  display: inline-block;\n  line-height: 1;\n  text-transform: none;\n  letter-spacing: normal;\n  word-wrap: normal;\n  white-space: nowrap;\n  direction: ltr;\n\n  /* Support for all WebKit browsers. */\n  -webkit-font-smoothing: antialiased;\n  /* Support for Safari and Chrome. */\n  text-rendering: optimizeLegibility;\n\n  /* Support for Firefox. */\n  -moz-osx-font-smoothing: grayscale;\n\n  /* Support for IE. */\n  font-feature-settings: 'liga';\n}\n\n.w-10 {\n  width: 10%;\n}\n\n.w-5 {\n  width: 5%;\n}\n\n.w-8 {\n  width: 8%;\n}"],"sourceRoot":""}]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -6535,6 +6535,9 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
 
 
 
@@ -6552,6 +6555,10 @@ __webpack_require__.r(__webpack_exports__);
       type: String,
       required: true,
     },
+    embedded: {
+      type: Boolean,
+      default: false
+    }
   },
   data() {
     return {
@@ -6580,8 +6587,8 @@ __webpack_require__.r(__webpack_exports__);
     },
   },
   computed: {
-    ...vuex__WEBPACK_IMPORTED_MODULE_0__.default.mapState(["gekEntityObjects"]),
-    ...vuex__WEBPACK_IMPORTED_MODULE_0__.default.mapGetters(["getEditDialogByEntityName", "getEditNewByEntityName"]),
+    ...vuex__WEBPACK_IMPORTED_MODULE_0__.default.mapState(["gekEntityModels"]),
+    ...vuex__WEBPACK_IMPORTED_MODULE_0__.default.mapGetters(["getEmbedderObjectByEntityName","getEditEntityObjectByEntityName", "getEditDialogByEntityName", "getEditNewByEntityName"]),
     dialog: {
       get() {
         return this.getEditDialogByEntityName(this.entityName);
@@ -6731,7 +6738,7 @@ __webpack_require__.r(__webpack_exports__);
     ...vuex__WEBPACK_IMPORTED_MODULE_0__.default.mapMutations(["SET_ENTITY_NEW", "SET_ENTITY_EDIT", "SET_ENTITY_DELETE"]),
   },
   computed: {
-    ...vuex__WEBPACK_IMPORTED_MODULE_0__.default.mapState(["gekEntityObjects"]),
+    ...vuex__WEBPACK_IMPORTED_MODULE_0__.default.mapState(["gekEntityModels"]),
     ...vuex__WEBPACK_IMPORTED_MODULE_0__.default.mapGetters(["isAdminUser", "getEntityListByEntityName"]),
   },
 });
@@ -6739,9 +6746,9 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
-/***/ "./node_modules/vue-loader/lib/index.js??vue-loader-options!./vue/components/entities/gekEntityOptionsSelect.vue?vue&type=script&lang=js&":
+/***/ "./node_modules/vue-loader/lib/index.js??vue-loader-options!./vue/components/entities/GekEntityOptionsSelect.vue?vue&type=script&lang=js&":
 /*!************************************************************************************************************************************************!*\
-  !*** ./node_modules/vue-loader/lib/index.js??vue-loader-options!./vue/components/entities/gekEntityOptionsSelect.vue?vue&type=script&lang=js& ***!
+  !*** ./node_modules/vue-loader/lib/index.js??vue-loader-options!./vue/components/entities/GekEntityOptionsSelect.vue?vue&type=script&lang=js& ***!
   \************************************************************************************************************************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
@@ -6900,9 +6907,9 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
 /* harmony import */ var vuex__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! vuex */ "./node_modules/vuex/dist/vuex.esm.js");
-/* harmony import */ var _src_assets_js_gekvue_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../src/assets/js/gekvue.js */ "./src/assets/js/gekvue.js");
-/* harmony import */ var _vue_components_GekPageHeader_vue__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../vue/components/GekPageHeader.vue */ "./vue/components/GekPageHeader.vue");
-/* harmony import */ var _vue_components_entities_gekEntityOptionsSelect_vue__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../vue/components/entities/gekEntityOptionsSelect.vue */ "./vue/components/entities/gekEntityOptionsSelect.vue");
+/* harmony import */ var _src_assets_js_gekvue_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../../../src/assets/js/gekvue.js */ "./src/assets/js/gekvue.js");
+/* harmony import */ var _vue_components_GekPageHeader_vue__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../../../vue/components/GekPageHeader.vue */ "./vue/components/GekPageHeader.vue");
+/* harmony import */ var _vue_components_entities_GekEntityOptionsSelect_vue__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../../vue/components/entities/GekEntityOptionsSelect.vue */ "./vue/components/entities/GekEntityOptionsSelect.vue");
 //
 //
 //
@@ -6949,7 +6956,7 @@ __webpack_require__.r(__webpack_exports__);
 
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
   components: {
-    GekPageHeader: _vue_components_GekPageHeader_vue__WEBPACK_IMPORTED_MODULE_1__.default, GekEntityOptionsSelect: _vue_components_entities_gekEntityOptionsSelect_vue__WEBPACK_IMPORTED_MODULE_2__.default
+    GekPageHeader: _vue_components_GekPageHeader_vue__WEBPACK_IMPORTED_MODULE_1__.default, GekEntityOptionsSelect: _vue_components_entities_GekEntityOptionsSelect_vue__WEBPACK_IMPORTED_MODULE_2__.default
   },
   data() {
     return {
@@ -7083,9 +7090,9 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
-/***/ "./node_modules/vue-loader/lib/index.js??vue-loader-options!./vue/pages/entities/gekPageContact.vue?vue&type=script&lang=js&":
+/***/ "./node_modules/vue-loader/lib/index.js??vue-loader-options!./vue/pages/entities/GekPageContact.vue?vue&type=script&lang=js&":
 /*!***********************************************************************************************************************************!*\
-  !*** ./node_modules/vue-loader/lib/index.js??vue-loader-options!./vue/pages/entities/gekPageContact.vue?vue&type=script&lang=js& ***!
+  !*** ./node_modules/vue-loader/lib/index.js??vue-loader-options!./vue/pages/entities/GekPageContact.vue?vue&type=script&lang=js& ***!
   \***********************************************************************************************************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
@@ -7095,10 +7102,64 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
 /* harmony import */ var vuex__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! vuex */ "./node_modules/vuex/dist/vuex.esm.js");
-/* harmony import */ var _vue_components_entities_GekEntityEditDialog_vue__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../vue/components/entities/GekEntityEditDialog.vue */ "./vue/components/entities/GekEntityEditDialog.vue");
-/* harmony import */ var _vue_components_entities_GekEntityEditList_vue__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../vue/components/entities/GekEntityEditList.vue */ "./vue/components/entities/GekEntityEditList.vue");
-/* harmony import */ var _vue_components_entities_GekEntityConfirmDelete_vue__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../vue/components/entities/GekEntityConfirmDelete.vue */ "./vue/components/entities/GekEntityConfirmDelete.vue");
-/* harmony import */ var _src_assets_js_gekvue_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../src/assets/js/gekvue.js */ "./src/assets/js/gekvue.js");
+/* harmony import */ var _vue_components_entities_GekEntityEditDialog_vue__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../../../vue/components/entities/GekEntityEditDialog.vue */ "./vue/components/entities/GekEntityEditDialog.vue");
+/* harmony import */ var _vue_components_entities_GekEntityEditList_vue__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../../../vue/components/entities/GekEntityEditList.vue */ "./vue/components/entities/GekEntityEditList.vue");
+/* harmony import */ var _vue_components_entities_GekEntityConfirmDelete_vue__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../../vue/components/entities/GekEntityConfirmDelete.vue */ "./vue/components/entities/GekEntityConfirmDelete.vue");
+/* harmony import */ var _src_assets_js_gekvue_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../../../src/assets/js/gekvue.js */ "./src/assets/js/gekvue.js");
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 //
 //
 //
@@ -7246,23 +7307,27 @@ __webpack_require__.r(__webpack_exports__);
     return {};
   },
   created() {
-    this.$store.dispatch("loadEntities", { entityName: "Contact" });
+    this.loadEntities({entityName: "Contact"})
   },
   methods: {
-    ...vuex__WEBPACK_IMPORTED_MODULE_4__.default.mapMutations(["SET_ENTITY_NEW", "SET_ENTITY_EDIT", "SET_ENTITY_DELETE"]),
+    ...vuex__WEBPACK_IMPORTED_MODULE_4__.default.mapMutations(["SET_ENTITY_NEW", "SET_ENTITY_NEW_EMBEDDED", "SET_ENTITY_EDIT", "SET_ENTITY_EDIT_EMBEDDED", "SET_ENTITY_DELETE", "SET_ENTITY_DELETE_EMBEDDED"]),
     ...vuex__WEBPACK_IMPORTED_MODULE_4__.default.mapActions(["loadEntities"]),
+    colorExpandIcon(hasChildren) {
+      if (hasChildren) {
+        return "primary";
+      }
+      else {
+        return "";
+      }
+    },
+    setEmbedder(ID) {
+      this.getEditEntityObjectByEntityName('ContactAddress').ContactID = ID;
+    },
     orgDesc(org) {
       return _src_assets_js_gekvue_js__WEBPACK_IMPORTED_MODULE_3__.gkwebapp_T_OrgTypes[org].text;
     },
     contactDesc(contact) {
       return _src_assets_js_gekvue_js__WEBPACK_IMPORTED_MODULE_3__.gkwebapp_T_ContactTypes[contact].text;
-    },
-    embeddedEntities(embeddedEntities) {
-      if (embeddedEntities) {
-        return "Entities:" + Object.keys(embeddedEntities).length;
-      } else {
-        return "nix";
-      }
     },
     hasEmbeddedEntities(embeddedEntities) {
       return embeddedEntities && Object.keys(embeddedEntities).length > 0;
@@ -7280,7 +7345,7 @@ __webpack_require__.r(__webpack_exports__);
       "getEditNewByEntityName",
       "getEditEntityObjectByEntityName",
     ]),
-    ...vuex__WEBPACK_IMPORTED_MODULE_4__.default.mapState(["gekEntityObjects"]),
+    ...vuex__WEBPACK_IMPORTED_MODULE_4__.default.mapState(["gekEntityModels"]),
     tableHeaders() {
       var h = [
         { text: "", sortable: false, value: "data-table-expand" },
@@ -7309,9 +7374,9 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
-/***/ "./node_modules/vue-loader/lib/index.js??vue-loader-options!./vue/pages/entities/gekPageUser.vue?vue&type=script&lang=js&":
+/***/ "./node_modules/vue-loader/lib/index.js??vue-loader-options!./vue/pages/entities/GekPageUser.vue?vue&type=script&lang=js&":
 /*!********************************************************************************************************************************!*\
-  !*** ./node_modules/vue-loader/lib/index.js??vue-loader-options!./vue/pages/entities/gekPageUser.vue?vue&type=script&lang=js& ***!
+  !*** ./node_modules/vue-loader/lib/index.js??vue-loader-options!./vue/pages/entities/GekPageUser.vue?vue&type=script&lang=js& ***!
   \********************************************************************************************************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
@@ -7321,10 +7386,10 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
 /* harmony import */ var vuex__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! vuex */ "./node_modules/vuex/dist/vuex.esm.js");
-/* harmony import */ var _vue_components_entities_GekEntityEditDialog_vue__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../vue/components/entities/GekEntityEditDialog.vue */ "./vue/components/entities/GekEntityEditDialog.vue");
-/* harmony import */ var _vue_components_entities_GekEntityEditList_vue__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../vue/components/entities/GekEntityEditList.vue */ "./vue/components/entities/GekEntityEditList.vue");
-/* harmony import */ var _vue_components_entities_GekEntityConfirmDelete_vue__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../vue/components/entities/GekEntityConfirmDelete.vue */ "./vue/components/entities/GekEntityConfirmDelete.vue");
-/* harmony import */ var _src_assets_js_gekvue_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../src/assets/js/gekvue.js */ "./src/assets/js/gekvue.js");
+/* harmony import */ var _vue_components_entities_GekEntityEditDialog_vue__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../../../vue/components/entities/GekEntityEditDialog.vue */ "./vue/components/entities/GekEntityEditDialog.vue");
+/* harmony import */ var _vue_components_entities_GekEntityEditList_vue__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../../../vue/components/entities/GekEntityEditList.vue */ "./vue/components/entities/GekEntityEditList.vue");
+/* harmony import */ var _vue_components_entities_GekEntityConfirmDelete_vue__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../../vue/components/entities/GekEntityConfirmDelete.vue */ "./vue/components/entities/GekEntityConfirmDelete.vue");
+/* harmony import */ var _src_assets_js_gekvue_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../../../src/assets/js/gekvue.js */ "./src/assets/js/gekvue.js");
 //
 //
 //
@@ -7719,9 +7784,9 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
-/***/ "./vue/components/entities/gekEntityOptionsSelect.vue?vue&type=script&lang=js&":
+/***/ "./vue/components/entities/GekEntityOptionsSelect.vue?vue&type=script&lang=js&":
 /*!*************************************************************************************!*\
-  !*** ./vue/components/entities/gekEntityOptionsSelect.vue?vue&type=script&lang=js& ***!
+  !*** ./vue/components/entities/GekEntityOptionsSelect.vue?vue&type=script&lang=js& ***!
   \*************************************************************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
@@ -7730,24 +7795,24 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
-/* harmony import */ var _node_modules_vue_loader_lib_index_js_vue_loader_options_gekEntityOptionsSelect_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../node_modules/vue-loader/lib/index.js??vue-loader-options!./gekEntityOptionsSelect.vue?vue&type=script&lang=js& */ "./node_modules/vue-loader/lib/index.js??vue-loader-options!./vue/components/entities/gekEntityOptionsSelect.vue?vue&type=script&lang=js&");
- /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (_node_modules_vue_loader_lib_index_js_vue_loader_options_gekEntityOptionsSelect_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__.default); 
+/* harmony import */ var _node_modules_vue_loader_lib_index_js_vue_loader_options_GekEntityOptionsSelect_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../node_modules/vue-loader/lib/index.js??vue-loader-options!./GekEntityOptionsSelect.vue?vue&type=script&lang=js& */ "./node_modules/vue-loader/lib/index.js??vue-loader-options!./vue/components/entities/GekEntityOptionsSelect.vue?vue&type=script&lang=js&");
+ /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (_node_modules_vue_loader_lib_index_js_vue_loader_options_GekEntityOptionsSelect_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__.default); 
 
 /***/ }),
 
-/***/ "./vue/components/entities/gekEntityOptionsSelect.vue?vue&type=template&id=2e8ec454&":
+/***/ "./vue/components/entities/GekEntityOptionsSelect.vue?vue&type=template&id=a4e38c14&":
 /*!*******************************************************************************************!*\
-  !*** ./vue/components/entities/gekEntityOptionsSelect.vue?vue&type=template&id=2e8ec454& ***!
+  !*** ./vue/components/entities/GekEntityOptionsSelect.vue?vue&type=template&id=a4e38c14& ***!
   \*******************************************************************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "render": () => (/* reexport safe */ _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_gekEntityOptionsSelect_vue_vue_type_template_id_2e8ec454___WEBPACK_IMPORTED_MODULE_0__.render),
-/* harmony export */   "staticRenderFns": () => (/* reexport safe */ _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_gekEntityOptionsSelect_vue_vue_type_template_id_2e8ec454___WEBPACK_IMPORTED_MODULE_0__.staticRenderFns)
+/* harmony export */   "render": () => (/* reexport safe */ _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_GekEntityOptionsSelect_vue_vue_type_template_id_a4e38c14___WEBPACK_IMPORTED_MODULE_0__.render),
+/* harmony export */   "staticRenderFns": () => (/* reexport safe */ _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_GekEntityOptionsSelect_vue_vue_type_template_id_a4e38c14___WEBPACK_IMPORTED_MODULE_0__.staticRenderFns)
 /* harmony export */ });
-/* harmony import */ var _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_gekEntityOptionsSelect_vue_vue_type_template_id_2e8ec454___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../node_modules/vue-loader/lib/index.js??vue-loader-options!./gekEntityOptionsSelect.vue?vue&type=template&id=2e8ec454& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib/index.js??vue-loader-options!./vue/components/entities/gekEntityOptionsSelect.vue?vue&type=template&id=2e8ec454&");
+/* harmony import */ var _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_GekEntityOptionsSelect_vue_vue_type_template_id_a4e38c14___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../node_modules/vue-loader/lib/index.js??vue-loader-options!./GekEntityOptionsSelect.vue?vue&type=template&id=a4e38c14& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib/index.js??vue-loader-options!./vue/components/entities/GekEntityOptionsSelect.vue?vue&type=template&id=a4e38c14&");
 
 
 /***/ }),
@@ -7901,9 +7966,9 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
-/***/ "./vue/pages/entities/gekPageContact.vue?vue&type=script&lang=js&":
+/***/ "./vue/pages/entities/GekPageContact.vue?vue&type=script&lang=js&":
 /*!************************************************************************!*\
-  !*** ./vue/pages/entities/gekPageContact.vue?vue&type=script&lang=js& ***!
+  !*** ./vue/pages/entities/GekPageContact.vue?vue&type=script&lang=js& ***!
   \************************************************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
@@ -7912,31 +7977,31 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
-/* harmony import */ var _node_modules_vue_loader_lib_index_js_vue_loader_options_gekPageContact_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../node_modules/vue-loader/lib/index.js??vue-loader-options!./gekPageContact.vue?vue&type=script&lang=js& */ "./node_modules/vue-loader/lib/index.js??vue-loader-options!./vue/pages/entities/gekPageContact.vue?vue&type=script&lang=js&");
- /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (_node_modules_vue_loader_lib_index_js_vue_loader_options_gekPageContact_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__.default); 
+/* harmony import */ var _node_modules_vue_loader_lib_index_js_vue_loader_options_GekPageContact_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../node_modules/vue-loader/lib/index.js??vue-loader-options!./GekPageContact.vue?vue&type=script&lang=js& */ "./node_modules/vue-loader/lib/index.js??vue-loader-options!./vue/pages/entities/GekPageContact.vue?vue&type=script&lang=js&");
+ /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (_node_modules_vue_loader_lib_index_js_vue_loader_options_GekPageContact_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__.default); 
 
 /***/ }),
 
-/***/ "./vue/pages/entities/gekPageContact.vue?vue&type=template&id=a77ed340&":
+/***/ "./vue/pages/entities/GekPageContact.vue?vue&type=template&id=1a045280&":
 /*!******************************************************************************!*\
-  !*** ./vue/pages/entities/gekPageContact.vue?vue&type=template&id=a77ed340& ***!
+  !*** ./vue/pages/entities/GekPageContact.vue?vue&type=template&id=1a045280& ***!
   \******************************************************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "render": () => (/* reexport safe */ _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_gekPageContact_vue_vue_type_template_id_a77ed340___WEBPACK_IMPORTED_MODULE_0__.render),
-/* harmony export */   "staticRenderFns": () => (/* reexport safe */ _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_gekPageContact_vue_vue_type_template_id_a77ed340___WEBPACK_IMPORTED_MODULE_0__.staticRenderFns)
+/* harmony export */   "render": () => (/* reexport safe */ _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_GekPageContact_vue_vue_type_template_id_1a045280___WEBPACK_IMPORTED_MODULE_0__.render),
+/* harmony export */   "staticRenderFns": () => (/* reexport safe */ _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_GekPageContact_vue_vue_type_template_id_1a045280___WEBPACK_IMPORTED_MODULE_0__.staticRenderFns)
 /* harmony export */ });
-/* harmony import */ var _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_gekPageContact_vue_vue_type_template_id_a77ed340___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../node_modules/vue-loader/lib/index.js??vue-loader-options!./gekPageContact.vue?vue&type=template&id=a77ed340& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib/index.js??vue-loader-options!./vue/pages/entities/gekPageContact.vue?vue&type=template&id=a77ed340&");
+/* harmony import */ var _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_GekPageContact_vue_vue_type_template_id_1a045280___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../node_modules/vue-loader/lib/index.js??vue-loader-options!./GekPageContact.vue?vue&type=template&id=1a045280& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib/index.js??vue-loader-options!./vue/pages/entities/GekPageContact.vue?vue&type=template&id=1a045280&");
 
 
 /***/ }),
 
-/***/ "./vue/pages/entities/gekPageUser.vue?vue&type=script&lang=js&":
+/***/ "./vue/pages/entities/GekPageUser.vue?vue&type=script&lang=js&":
 /*!*********************************************************************!*\
-  !*** ./vue/pages/entities/gekPageUser.vue?vue&type=script&lang=js& ***!
+  !*** ./vue/pages/entities/GekPageUser.vue?vue&type=script&lang=js& ***!
   \*********************************************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
@@ -7945,24 +8010,24 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
-/* harmony import */ var _node_modules_vue_loader_lib_index_js_vue_loader_options_gekPageUser_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../node_modules/vue-loader/lib/index.js??vue-loader-options!./gekPageUser.vue?vue&type=script&lang=js& */ "./node_modules/vue-loader/lib/index.js??vue-loader-options!./vue/pages/entities/gekPageUser.vue?vue&type=script&lang=js&");
- /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (_node_modules_vue_loader_lib_index_js_vue_loader_options_gekPageUser_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__.default); 
+/* harmony import */ var _node_modules_vue_loader_lib_index_js_vue_loader_options_GekPageUser_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../node_modules/vue-loader/lib/index.js??vue-loader-options!./GekPageUser.vue?vue&type=script&lang=js& */ "./node_modules/vue-loader/lib/index.js??vue-loader-options!./vue/pages/entities/GekPageUser.vue?vue&type=script&lang=js&");
+ /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (_node_modules_vue_loader_lib_index_js_vue_loader_options_GekPageUser_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__.default); 
 
 /***/ }),
 
-/***/ "./vue/pages/entities/gekPageUser.vue?vue&type=template&id=1a3d523b&":
+/***/ "./vue/pages/entities/GekPageUser.vue?vue&type=template&id=425febca&":
 /*!***************************************************************************!*\
-  !*** ./vue/pages/entities/gekPageUser.vue?vue&type=template&id=1a3d523b& ***!
+  !*** ./vue/pages/entities/GekPageUser.vue?vue&type=template&id=425febca& ***!
   \***************************************************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "render": () => (/* reexport safe */ _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_gekPageUser_vue_vue_type_template_id_1a3d523b___WEBPACK_IMPORTED_MODULE_0__.render),
-/* harmony export */   "staticRenderFns": () => (/* reexport safe */ _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_gekPageUser_vue_vue_type_template_id_1a3d523b___WEBPACK_IMPORTED_MODULE_0__.staticRenderFns)
+/* harmony export */   "render": () => (/* reexport safe */ _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_GekPageUser_vue_vue_type_template_id_425febca___WEBPACK_IMPORTED_MODULE_0__.render),
+/* harmony export */   "staticRenderFns": () => (/* reexport safe */ _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_GekPageUser_vue_vue_type_template_id_425febca___WEBPACK_IMPORTED_MODULE_0__.staticRenderFns)
 /* harmony export */ });
-/* harmony import */ var _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_gekPageUser_vue_vue_type_template_id_1a3d523b___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../node_modules/vue-loader/lib/index.js??vue-loader-options!./gekPageUser.vue?vue&type=template&id=1a3d523b& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib/index.js??vue-loader-options!./vue/pages/entities/gekPageUser.vue?vue&type=template&id=1a3d523b&");
+/* harmony import */ var _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_GekPageUser_vue_vue_type_template_id_425febca___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../node_modules/vue-loader/lib/index.js??vue-loader-options!./GekPageUser.vue?vue&type=template&id=425febca& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib/index.js??vue-loader-options!./vue/pages/entities/GekPageUser.vue?vue&type=template&id=425febca&");
 
 
 /***/ }),
@@ -8479,9 +8544,31 @@ var render = function() {
               _c(
                 "v-form",
                 [
-                  _vm._t("entity.fields", function() {
+                  _vm.embedded
+                    ? _vm._t(
+                        "entityEdit.embedder",
+                        function() {
+                          return [
+                            _c("div", [
+                              _vm._v(
+                                "default content of slot entityEdit.embedder"
+                              )
+                            ])
+                          ]
+                        },
+                        {
+                          embedderObject: _vm.getEmbedderObjectByEntityName(
+                            _vm.entityName
+                          )
+                        }
+                      )
+                    : _vm._e(),
+                  _vm._v(" "),
+                  _vm._t("entityEdit.fields", function() {
                     return [
-                      _c("div", [_vm._v("default content of entity.fields")])
+                      _c("div", [
+                        _vm._v("default content of slot entityEdit.fields")
+                      ])
                     ]
                   })
                 ],
@@ -8723,9 +8810,9 @@ render._withStripped = true
 
 /***/ }),
 
-/***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib/index.js??vue-loader-options!./vue/components/entities/gekEntityOptionsSelect.vue?vue&type=template&id=2e8ec454&":
+/***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib/index.js??vue-loader-options!./vue/components/entities/GekEntityOptionsSelect.vue?vue&type=template&id=a4e38c14&":
 /*!**********************************************************************************************************************************************************************************************************************************!*\
-  !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib/index.js??vue-loader-options!./vue/components/entities/gekEntityOptionsSelect.vue?vue&type=template&id=2e8ec454& ***!
+  !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib/index.js??vue-loader-options!./vue/components/entities/GekEntityOptionsSelect.vue?vue&type=template&id=a4e38c14& ***!
   \**********************************************************************************************************************************************************************************************************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
@@ -8908,9 +8995,9 @@ var render = function() {
                     [
                       _c("v-subheader", [
                         _vm._v(
-                          "\r\n          " +
+                          "\n          " +
                             _vm._s(_vm.$t("form.page1.labelContacttype")) +
-                            "\r\n          "
+                            "\n          "
                         )
                       ]),
                       _vm._v(" "),
@@ -9130,9 +9217,9 @@ render._withStripped = true
 
 /***/ }),
 
-/***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib/index.js??vue-loader-options!./vue/pages/entities/gekPageContact.vue?vue&type=template&id=a77ed340&":
+/***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib/index.js??vue-loader-options!./vue/pages/entities/GekPageContact.vue?vue&type=template&id=1a045280&":
 /*!*********************************************************************************************************************************************************************************************************************!*\
-  !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib/index.js??vue-loader-options!./vue/pages/entities/gekPageContact.vue?vue&type=template&id=a77ed340& ***!
+  !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib/index.js??vue-loader-options!./vue/pages/entities/GekPageContact.vue?vue&type=template&id=1a045280& ***!
   \*********************************************************************************************************************************************************************************************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
@@ -9189,10 +9276,15 @@ var render = function() {
               var isExpanded = ref.isExpanded
               var expand = ref.expand
               return [
-                _vm.hasEmbeddedEntities(item.ContactAddresses) && !isExpanded
+                !isExpanded
                   ? _c(
                       "v-icon",
                       {
+                        attrs: {
+                          color: _vm.colorExpandIcon(
+                            _vm.hasEmbeddedEntities(item.ContactAddresses)
+                          )
+                        },
                         on: {
                           click: function($event) {
                             return expand(true)
@@ -9225,63 +9317,67 @@ var render = function() {
               var headers = ref.headers
               var item = ref.item
               return [
-                _vm.hasEmbeddedEntities(item.ContactAddresses)
-                  ? _c(
-                      "td",
-                      { attrs: { colspan: headers.length } },
+                _c(
+                  "td",
+                  { attrs: { colspan: headers.length } },
+                  [
+                    _c(
+                      "v-row",
+                      { attrs: { align: "start", dense: "" } },
                       [
-                        _c(
-                          "v-row",
-                          { attrs: { align: "start", dense: "" } },
-                          [
-                            _c(
-                              "v-col",
-                              { attrs: { cols: "12", align: "end" } },
-                              [
-                                _c(
-                                  "div",
-                                  { staticClass: "float-right mb-2" },
-                                  [
-                                    _c(
-                                      "v-btn",
-                                      {
-                                        attrs: {
-                                          outlined: "",
-                                          color: "primary"
-                                        },
-                                        on: {
-                                          click: function($event) {
-                                            return _vm.SET_ENTITY_NEW({
-                                              entityName: "ContactAddress",
-                                              entityDesc: "Kontaktadresse"
-                                            })
-                                          }
-                                        }
-                                      },
-                                      [
-                                        _vm._v(
-                                          _vm._s(
-                                            _vm.$t(
-                                              "form.contactaddress.list.buttonnew"
-                                            )
-                                          )
-                                        )
-                                      ]
-                                    )
-                                  ],
-                                  1
-                                ),
-                                _vm._v(" "),
-                                _c("div", { staticClass: "pb-3" }, [
-                                  _vm._v(" ")
-                                ])
-                              ]
+                        _c("v-col", { attrs: { cols: "6", align: "start" } }, [
+                          _c("div", { staticClass: "mt-2" }, [
+                            _vm._v(
+                              "Kontaktadressen zu Kontakt: " +
+                                _vm._s(item.ID) +
+                                ", " +
+                                _vm._s(item.Name)
                             )
-                          ],
-                          1
-                        ),
+                          ])
+                        ]),
                         _vm._v(" "),
-                        _c("v-data-table", {
+                        _c("v-col", { attrs: { cols: "6", align: "end" } }, [
+                          _c(
+                            "div",
+                            { staticClass: "float-right mb-2 mt-2" },
+                            [
+                              _c(
+                                "v-btn",
+                                {
+                                  attrs: { outlined: "", color: "primary" },
+                                  on: {
+                                    click: function($event) {
+                                      return _vm.SET_ENTITY_NEW_EMBEDDED({
+                                        entityName: "Contact",
+                                        entityObjectEmbedder: item,
+                                        entityNameEmbedded: "ContactAddress",
+                                        entityDescEmbedded: "Kontaktadresse"
+                                      })
+                                    }
+                                  }
+                                },
+                                [
+                                  _vm._v(
+                                    _vm._s(
+                                      _vm.$t(
+                                        "form.contactaddress.list.buttonnew"
+                                      )
+                                    )
+                                  )
+                                ]
+                              )
+                            ],
+                            1
+                          ),
+                          _vm._v(" "),
+                          _c("div", { staticClass: "pb-3" }, [_vm._v(" ")])
+                        ])
+                      ],
+                      1
+                    ),
+                    _vm._v(" "),
+                    _vm.hasEmbeddedEntities(item.ContactAddresses)
+                      ? _c("v-data-table", {
                           attrs: {
                             items: item.ContactAddresses,
                             headers: _vm.tableHeadersEmbedded,
@@ -9293,7 +9389,7 @@ var render = function() {
                                 ? {
                                     key: "item.actions",
                                     fn: function(ref) {
-                                      var itemEmbedded = ref.itemEmbedded
+                                      var itemEmbedded = ref.item
                                       return [
                                         _c(
                                           "v-btn",
@@ -9305,10 +9401,14 @@ var render = function() {
                                             },
                                             on: {
                                               click: function($event) {
-                                                return _vm.SET_ENTITY_EDIT({
-                                                  entityName: "ContactAddress",
-                                                  entityObject: itemEmbedded
-                                                })
+                                                return _vm.SET_ENTITY_EDIT_EMBEDDED(
+                                                  {
+                                                    entityName:
+                                                      "ContactAddress",
+                                                    entityObject: itemEmbedded,
+                                                    entityObjectEmbedder: item
+                                                  }
+                                                )
                                               }
                                             }
                                           },
@@ -9328,10 +9428,14 @@ var render = function() {
                                             },
                                             on: {
                                               click: function($event) {
-                                                return _vm.SET_ENTITY_DELETE({
-                                                  entityName: "ContactAddress",
-                                                  entityObject: itemEmbedded
-                                                })
+                                                return _vm.SET_ENTITY_DELETE_EMBEDDED(
+                                                  {
+                                                    entityName:
+                                                      "ContactAddress",
+                                                    entityObject: itemEmbedded,
+                                                    entityObjectEmbedder: item
+                                                  }
+                                                )
                                               }
                                             }
                                           },
@@ -9349,10 +9453,10 @@ var render = function() {
                             true
                           )
                         })
-                      ],
-                      1
-                    )
-                  : _vm._e()
+                      : _vm._e()
+                  ],
+                  1
+                )
               ]
             }
           }
@@ -9367,7 +9471,7 @@ var render = function() {
         },
         scopedSlots: _vm._u([
           {
-            key: "entity.fields",
+            key: "entityEdit.fields",
             fn: function() {
               return [
                 _c("v-select", {
@@ -9469,8 +9573,146 @@ var render = function() {
         attrs: {
           entity: "contactaddress",
           entityName: "ContactAddress",
-          entityDesc: "Kontaktadresse"
-        }
+          entityDesc: "Kontaktadresse",
+          embedded: ""
+        },
+        scopedSlots: _vm._u([
+          {
+            key: "entityEdit.embedder",
+            fn: function(ref) {
+              var embedderObject = ref.embedderObject
+              return [
+                _c("div", { staticClass: "mb-2" }, [
+                  _vm._v(
+                    "zu Kontakt mit ID: " +
+                      _vm._s(embedderObject.ID) +
+                      " Name: " +
+                      _vm._s(embedderObject.Name) +
+                      " " +
+                      _vm._s(_vm.setEmbedder(embedderObject.ID))
+                  )
+                ])
+              ]
+            }
+          },
+          {
+            key: "entityEdit.fields",
+            fn: function() {
+              return [
+                _c("v-text-field", {
+                  attrs: {
+                    label: _vm.$t("form.contactaddress.edit.label.street"),
+                    required: "",
+                    outlined: "",
+                    dense: ""
+                  },
+                  model: {
+                    value: _vm.getEditEntityObjectByEntityName("ContactAddress")
+                      .Street,
+                    callback: function($$v) {
+                      _vm.$set(
+                        _vm.getEditEntityObjectByEntityName("ContactAddress"),
+                        "Street",
+                        $$v
+                      )
+                    },
+                    expression:
+                      "getEditEntityObjectByEntityName('ContactAddress').Street"
+                  }
+                }),
+                _vm._v(" "),
+                _c("v-text-field", {
+                  attrs: {
+                    label: _vm.$t("form.contactaddress.edit.label.streetnr"),
+                    required: "",
+                    outlined: "",
+                    dense: ""
+                  },
+                  model: {
+                    value: _vm.getEditEntityObjectByEntityName("ContactAddress")
+                      .StreetNr,
+                    callback: function($$v) {
+                      _vm.$set(
+                        _vm.getEditEntityObjectByEntityName("ContactAddress"),
+                        "StreetNr",
+                        $$v
+                      )
+                    },
+                    expression:
+                      "getEditEntityObjectByEntityName('ContactAddress').StreetNr"
+                  }
+                }),
+                _vm._v(" "),
+                _c("v-text-field", {
+                  attrs: {
+                    label: _vm.$t("form.contactaddress.edit.label.streetext"),
+                    required: "",
+                    outlined: "",
+                    dense: ""
+                  },
+                  model: {
+                    value: _vm.getEditEntityObjectByEntityName("ContactAddress")
+                      .StreetExt,
+                    callback: function($$v) {
+                      _vm.$set(
+                        _vm.getEditEntityObjectByEntityName("ContactAddress"),
+                        "StreetExt",
+                        $$v
+                      )
+                    },
+                    expression:
+                      "getEditEntityObjectByEntityName('ContactAddress').StreetExt"
+                  }
+                }),
+                _vm._v(" "),
+                _c("v-text-field", {
+                  attrs: {
+                    label: _vm.$t("form.contactaddress.edit.label.zip"),
+                    required: "",
+                    outlined: "",
+                    dense: ""
+                  },
+                  model: {
+                    value: _vm.getEditEntityObjectByEntityName("ContactAddress")
+                      .Zip,
+                    callback: function($$v) {
+                      _vm.$set(
+                        _vm.getEditEntityObjectByEntityName("ContactAddress"),
+                        "Zip",
+                        $$v
+                      )
+                    },
+                    expression:
+                      "getEditEntityObjectByEntityName('ContactAddress').Zip"
+                  }
+                }),
+                _vm._v(" "),
+                _c("v-text-field", {
+                  attrs: {
+                    label: _vm.$t("form.contactaddress.edit.label.city"),
+                    required: "",
+                    outlined: "",
+                    dense: ""
+                  },
+                  model: {
+                    value: _vm.getEditEntityObjectByEntityName("ContactAddress")
+                      .City,
+                    callback: function($$v) {
+                      _vm.$set(
+                        _vm.getEditEntityObjectByEntityName("ContactAddress"),
+                        "City",
+                        $$v
+                      )
+                    },
+                    expression:
+                      "getEditEntityObjectByEntityName('ContactAddress').City"
+                  }
+                })
+              ]
+            },
+            proxy: true
+          }
+        ])
       }),
       _vm._v(" "),
       _c("GekEntityConfirmDelete", {
@@ -9478,6 +9720,14 @@ var render = function() {
           entity: "contact",
           entityName: "Contact",
           entityDesc: "Kontakt"
+        }
+      }),
+      _vm._v(" "),
+      _c("GekEntityConfirmDelete", {
+        attrs: {
+          entity: "contactaddress",
+          entityName: "ContactAddress",
+          entityDesc: "Kontaktadresse"
         }
       })
     ],
@@ -9491,9 +9741,9 @@ render._withStripped = true
 
 /***/ }),
 
-/***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib/index.js??vue-loader-options!./vue/pages/entities/gekPageUser.vue?vue&type=template&id=1a3d523b&":
+/***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib/index.js??vue-loader-options!./vue/pages/entities/GekPageUser.vue?vue&type=template&id=425febca&":
 /*!******************************************************************************************************************************************************************************************************************!*\
-  !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib/index.js??vue-loader-options!./vue/pages/entities/gekPageUser.vue?vue&type=template&id=1a3d523b& ***!
+  !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib/index.js??vue-loader-options!./vue/pages/entities/GekPageUser.vue?vue&type=template&id=425febca& ***!
   \******************************************************************************************************************************************************************************************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
@@ -9539,7 +9789,7 @@ var render = function() {
         attrs: { entity: "user", entityName: "User", entityDesc: "Benutzer" },
         scopedSlots: _vm._u([
           {
-            key: "entity.fields",
+            key: "entityEdit.fields",
             fn: function() {
               return [
                 _c("v-text-field", {
@@ -12918,27 +13168,6 @@ if (inBrowser && window.Vue) {
 
 /***/ }),
 
-/***/ "./node_modules/vuetify/src/components/VAppBar/VAppBar.sass":
-/*!******************************************************************!*\
-  !*** ./node_modules/vuetify/src/components/VAppBar/VAppBar.sass ***!
-  \******************************************************************/
-/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
-
-// style-loader: Adds some css to the DOM by adding a <style> tag
-
-// load the styles
-var content = __webpack_require__(/*! !!../../../../css-loader/dist/cjs.js!../../../../sass-loader/dist/cjs.js??clonedRuleSet-2[0].rules[0].use[2]!./VAppBar.sass */ "./node_modules/css-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js??clonedRuleSet-2[0].rules[0].use[2]!./node_modules/vuetify/src/components/VAppBar/VAppBar.sass");
-if(content.__esModule) content = content.default;
-if(typeof content === 'string') content = [[module.id, content, '']];
-if(content.locals) module.exports = content.locals;
-// add the styles to the DOM
-var add = __webpack_require__(/*! !../../../../vue-style-loader/lib/addStylesClient.js */ "./node_modules/vue-style-loader/lib/addStylesClient.js").default
-var update = add("25aa98ca", content, false, {});
-// Hot Module Replacement
-if(false) {}
-
-/***/ }),
-
 /***/ "./node_modules/vuetify/src/components/VApp/VApp.sass":
 /*!************************************************************!*\
   !*** ./node_modules/vuetify/src/components/VApp/VApp.sass ***!
@@ -12955,6 +13184,27 @@ if(content.locals) module.exports = content.locals;
 // add the styles to the DOM
 var add = __webpack_require__(/*! !../../../../vue-style-loader/lib/addStylesClient.js */ "./node_modules/vue-style-loader/lib/addStylesClient.js").default
 var update = add("22b71de8", content, false, {});
+// Hot Module Replacement
+if(false) {}
+
+/***/ }),
+
+/***/ "./node_modules/vuetify/src/components/VAppBar/VAppBar.sass":
+/*!******************************************************************!*\
+  !*** ./node_modules/vuetify/src/components/VAppBar/VAppBar.sass ***!
+  \******************************************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+// style-loader: Adds some css to the DOM by adding a <style> tag
+
+// load the styles
+var content = __webpack_require__(/*! !!../../../../css-loader/dist/cjs.js!../../../../sass-loader/dist/cjs.js??clonedRuleSet-2[0].rules[0].use[2]!./VAppBar.sass */ "./node_modules/css-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js??clonedRuleSet-2[0].rules[0].use[2]!./node_modules/vuetify/src/components/VAppBar/VAppBar.sass");
+if(content.__esModule) content = content.default;
+if(typeof content === 'string') content = [[module.id, content, '']];
+if(content.locals) module.exports = content.locals;
+// add the styles to the DOM
+var add = __webpack_require__(/*! !../../../../vue-style-loader/lib/addStylesClient.js */ "./node_modules/vue-style-loader/lib/addStylesClient.js").default
+var update = add("25aa98ca", content, false, {});
 // Hot Module Replacement
 if(false) {}
 
@@ -26554,9 +26804,9 @@ component.options.__file = "vue/components/entities/GekEntityEditList.vue"
 
 /***/ }),
 
-/***/ "./vue/components/entities/gekEntityOptionsSelect.vue":
+/***/ "./vue/components/entities/GekEntityOptionsSelect.vue":
 /*!************************************************************!*\
-  !*** ./vue/components/entities/gekEntityOptionsSelect.vue ***!
+  !*** ./vue/components/entities/GekEntityOptionsSelect.vue ***!
   \************************************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
@@ -26565,8 +26815,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
-/* harmony import */ var _gekEntityOptionsSelect_vue_vue_type_template_id_2e8ec454___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./gekEntityOptionsSelect.vue?vue&type=template&id=2e8ec454& */ "./vue/components/entities/gekEntityOptionsSelect.vue?vue&type=template&id=2e8ec454&");
-/* harmony import */ var _gekEntityOptionsSelect_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./gekEntityOptionsSelect.vue?vue&type=script&lang=js& */ "./vue/components/entities/gekEntityOptionsSelect.vue?vue&type=script&lang=js&");
+/* harmony import */ var _GekEntityOptionsSelect_vue_vue_type_template_id_a4e38c14___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./GekEntityOptionsSelect.vue?vue&type=template&id=a4e38c14& */ "./vue/components/entities/GekEntityOptionsSelect.vue?vue&type=template&id=a4e38c14&");
+/* harmony import */ var _GekEntityOptionsSelect_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./GekEntityOptionsSelect.vue?vue&type=script&lang=js& */ "./vue/components/entities/GekEntityOptionsSelect.vue?vue&type=script&lang=js&");
 /* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! !../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
 /* harmony import */ var _node_modules_vuetify_loader_lib_runtime_installComponents_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! !../../../node_modules/vuetify-loader/lib/runtime/installComponents.js */ "./node_modules/vuetify-loader/lib/runtime/installComponents.js");
 /* harmony import */ var _node_modules_vuetify_loader_lib_runtime_installComponents_js__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_node_modules_vuetify_loader_lib_runtime_installComponents_js__WEBPACK_IMPORTED_MODULE_3__);
@@ -26581,9 +26831,9 @@ __webpack_require__.r(__webpack_exports__);
 /* normalize component */
 ;
 var component = (0,_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__.default)(
-  _gekEntityOptionsSelect_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__.default,
-  _gekEntityOptionsSelect_vue_vue_type_template_id_2e8ec454___WEBPACK_IMPORTED_MODULE_0__.render,
-  _gekEntityOptionsSelect_vue_vue_type_template_id_2e8ec454___WEBPACK_IMPORTED_MODULE_0__.staticRenderFns,
+  _GekEntityOptionsSelect_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__.default,
+  _GekEntityOptionsSelect_vue_vue_type_template_id_a4e38c14___WEBPACK_IMPORTED_MODULE_0__.render,
+  _GekEntityOptionsSelect_vue_vue_type_template_id_a4e38c14___WEBPACK_IMPORTED_MODULE_0__.staticRenderFns,
   false,
   null,
   null,
@@ -26601,7 +26851,7 @@ _node_modules_vuetify_loader_lib_runtime_installComponents_js__WEBPACK_IMPORTED_
 
 /* hot reload */
 if (false) { var api; }
-component.options.__file = "vue/components/entities/gekEntityOptionsSelect.vue"
+component.options.__file = "vue/components/entities/GekEntityOptionsSelect.vue"
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (component.exports);
 
 /***/ }),
@@ -26879,9 +27129,9 @@ component.options.__file = "vue/pages/GekPageLogin.vue"
 
 /***/ }),
 
-/***/ "./vue/pages/entities/gekPageContact.vue":
+/***/ "./vue/pages/entities/GekPageContact.vue":
 /*!***********************************************!*\
-  !*** ./vue/pages/entities/gekPageContact.vue ***!
+  !*** ./vue/pages/entities/GekPageContact.vue ***!
   \***********************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
@@ -26890,8 +27140,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
-/* harmony import */ var _gekPageContact_vue_vue_type_template_id_a77ed340___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./gekPageContact.vue?vue&type=template&id=a77ed340& */ "./vue/pages/entities/gekPageContact.vue?vue&type=template&id=a77ed340&");
-/* harmony import */ var _gekPageContact_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./gekPageContact.vue?vue&type=script&lang=js& */ "./vue/pages/entities/gekPageContact.vue?vue&type=script&lang=js&");
+/* harmony import */ var _GekPageContact_vue_vue_type_template_id_1a045280___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./GekPageContact.vue?vue&type=template&id=1a045280& */ "./vue/pages/entities/GekPageContact.vue?vue&type=template&id=1a045280&");
+/* harmony import */ var _GekPageContact_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./GekPageContact.vue?vue&type=script&lang=js& */ "./vue/pages/entities/GekPageContact.vue?vue&type=script&lang=js&");
 /* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! !../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
 /* harmony import */ var _node_modules_vuetify_loader_lib_runtime_installComponents_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! !../../../node_modules/vuetify-loader/lib/runtime/installComponents.js */ "./node_modules/vuetify-loader/lib/runtime/installComponents.js");
 /* harmony import */ var _node_modules_vuetify_loader_lib_runtime_installComponents_js__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_node_modules_vuetify_loader_lib_runtime_installComponents_js__WEBPACK_IMPORTED_MODULE_3__);
@@ -26910,9 +27160,9 @@ __webpack_require__.r(__webpack_exports__);
 /* normalize component */
 ;
 var component = (0,_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__.default)(
-  _gekPageContact_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__.default,
-  _gekPageContact_vue_vue_type_template_id_a77ed340___WEBPACK_IMPORTED_MODULE_0__.render,
-  _gekPageContact_vue_vue_type_template_id_a77ed340___WEBPACK_IMPORTED_MODULE_0__.staticRenderFns,
+  _GekPageContact_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__.default,
+  _GekPageContact_vue_vue_type_template_id_1a045280___WEBPACK_IMPORTED_MODULE_0__.render,
+  _GekPageContact_vue_vue_type_template_id_1a045280___WEBPACK_IMPORTED_MODULE_0__.staticRenderFns,
   false,
   null,
   null,
@@ -26934,14 +27184,14 @@ _node_modules_vuetify_loader_lib_runtime_installComponents_js__WEBPACK_IMPORTED_
 
 /* hot reload */
 if (false) { var api; }
-component.options.__file = "vue/pages/entities/gekPageContact.vue"
+component.options.__file = "vue/pages/entities/GekPageContact.vue"
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (component.exports);
 
 /***/ }),
 
-/***/ "./vue/pages/entities/gekPageUser.vue":
+/***/ "./vue/pages/entities/GekPageUser.vue":
 /*!********************************************!*\
-  !*** ./vue/pages/entities/gekPageUser.vue ***!
+  !*** ./vue/pages/entities/GekPageUser.vue ***!
   \********************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
@@ -26950,8 +27200,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
-/* harmony import */ var _gekPageUser_vue_vue_type_template_id_1a3d523b___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./gekPageUser.vue?vue&type=template&id=1a3d523b& */ "./vue/pages/entities/gekPageUser.vue?vue&type=template&id=1a3d523b&");
-/* harmony import */ var _gekPageUser_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./gekPageUser.vue?vue&type=script&lang=js& */ "./vue/pages/entities/gekPageUser.vue?vue&type=script&lang=js&");
+/* harmony import */ var _GekPageUser_vue_vue_type_template_id_425febca___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./GekPageUser.vue?vue&type=template&id=425febca& */ "./vue/pages/entities/GekPageUser.vue?vue&type=template&id=425febca&");
+/* harmony import */ var _GekPageUser_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./GekPageUser.vue?vue&type=script&lang=js& */ "./vue/pages/entities/GekPageUser.vue?vue&type=script&lang=js&");
 /* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! !../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
 /* harmony import */ var _node_modules_vuetify_loader_lib_runtime_installComponents_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! !../../../node_modules/vuetify-loader/lib/runtime/installComponents.js */ "./node_modules/vuetify-loader/lib/runtime/installComponents.js");
 /* harmony import */ var _node_modules_vuetify_loader_lib_runtime_installComponents_js__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_node_modules_vuetify_loader_lib_runtime_installComponents_js__WEBPACK_IMPORTED_MODULE_3__);
@@ -26965,9 +27215,9 @@ __webpack_require__.r(__webpack_exports__);
 /* normalize component */
 ;
 var component = (0,_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__.default)(
-  _gekPageUser_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__.default,
-  _gekPageUser_vue_vue_type_template_id_1a3d523b___WEBPACK_IMPORTED_MODULE_0__.render,
-  _gekPageUser_vue_vue_type_template_id_1a3d523b___WEBPACK_IMPORTED_MODULE_0__.staticRenderFns,
+  _GekPageUser_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__.default,
+  _GekPageUser_vue_vue_type_template_id_425febca___WEBPACK_IMPORTED_MODULE_0__.render,
+  _GekPageUser_vue_vue_type_template_id_425febca___WEBPACK_IMPORTED_MODULE_0__.staticRenderFns,
   false,
   null,
   null,
@@ -26984,7 +27234,7 @@ _node_modules_vuetify_loader_lib_runtime_installComponents_js__WEBPACK_IMPORTED_
 
 /* hot reload */
 if (false) { var api; }
-component.options.__file = "vue/pages/entities/gekPageUser.vue"
+component.options.__file = "vue/pages/entities/GekPageUser.vue"
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (component.exports);
 
 /***/ }),
@@ -27015,6 +27265,83 @@ module.exports = function installComponents (component, components) {
   }
 }
 
+
+/***/ }),
+
+/***/ "./node_modules/vuetify/lib/components/VApp/VApp.js":
+/*!**********************************************************!*\
+  !*** ./node_modules/vuetify/lib/components/VApp/VApp.js ***!
+  \**********************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _src_components_VApp_VApp_sass__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../../src/components/VApp/VApp.sass */ "./node_modules/vuetify/src/components/VApp/VApp.sass");
+/* harmony import */ var _src_components_VApp_VApp_sass__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_src_components_VApp_VApp_sass__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _mixins_themeable__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../mixins/themeable */ "./node_modules/vuetify/lib/mixins/themeable/index.js");
+/* harmony import */ var _util_mixins__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../util/mixins */ "./node_modules/vuetify/lib/util/mixins.js");
+// Styles
+ // Mixins
+
+ // Utilities
+
+
+/* @vue/component */
+
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ((0,_util_mixins__WEBPACK_IMPORTED_MODULE_1__.default)(_mixins_themeable__WEBPACK_IMPORTED_MODULE_2__.default).extend({
+  name: 'v-app',
+  props: {
+    dark: {
+      type: Boolean,
+      default: undefined
+    },
+    id: {
+      type: String,
+      default: 'app'
+    },
+    light: {
+      type: Boolean,
+      default: undefined
+    }
+  },
+  computed: {
+    isDark() {
+      return this.$vuetify.theme.dark;
+    }
+
+  },
+
+  beforeCreate() {
+    if (!this.$vuetify || this.$vuetify === this.$root) {
+      throw new Error('Vuetify is not properly initialized, see https://vuetifyjs.com/getting-started/quick-start#bootstrapping-the-vuetify-object');
+    }
+  },
+
+  render(h) {
+    const wrapper = h('div', {
+      staticClass: 'v-application--wrap'
+    }, this.$slots.default);
+    return h('div', {
+      staticClass: 'v-application',
+      class: {
+        'v-application--is-rtl': this.$vuetify.rtl,
+        'v-application--is-ltr': !this.$vuetify.rtl,
+        ...this.themeClasses
+      },
+      attrs: {
+        'data-app': true
+      },
+      domProps: {
+        id: this.id
+      }
+    }, [wrapper]);
+  }
+
+}));
+//# sourceMappingURL=VApp.js.map
 
 /***/ }),
 
@@ -27329,83 +27656,6 @@ __webpack_require__.r(__webpack_exports__);
 
 }));
 //# sourceMappingURL=VAppBarNavIcon.js.map
-
-/***/ }),
-
-/***/ "./node_modules/vuetify/lib/components/VApp/VApp.js":
-/*!**********************************************************!*\
-  !*** ./node_modules/vuetify/lib/components/VApp/VApp.js ***!
-  \**********************************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
-/* harmony export */ });
-/* harmony import */ var _src_components_VApp_VApp_sass__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../../src/components/VApp/VApp.sass */ "./node_modules/vuetify/src/components/VApp/VApp.sass");
-/* harmony import */ var _src_components_VApp_VApp_sass__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_src_components_VApp_VApp_sass__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _mixins_themeable__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../mixins/themeable */ "./node_modules/vuetify/lib/mixins/themeable/index.js");
-/* harmony import */ var _util_mixins__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../util/mixins */ "./node_modules/vuetify/lib/util/mixins.js");
-// Styles
- // Mixins
-
- // Utilities
-
-
-/* @vue/component */
-
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ((0,_util_mixins__WEBPACK_IMPORTED_MODULE_1__.default)(_mixins_themeable__WEBPACK_IMPORTED_MODULE_2__.default).extend({
-  name: 'v-app',
-  props: {
-    dark: {
-      type: Boolean,
-      default: undefined
-    },
-    id: {
-      type: String,
-      default: 'app'
-    },
-    light: {
-      type: Boolean,
-      default: undefined
-    }
-  },
-  computed: {
-    isDark() {
-      return this.$vuetify.theme.dark;
-    }
-
-  },
-
-  beforeCreate() {
-    if (!this.$vuetify || this.$vuetify === this.$root) {
-      throw new Error('Vuetify is not properly initialized, see https://vuetifyjs.com/getting-started/quick-start#bootstrapping-the-vuetify-object');
-    }
-  },
-
-  render(h) {
-    const wrapper = h('div', {
-      staticClass: 'v-application--wrap'
-    }, this.$slots.default);
-    return h('div', {
-      staticClass: 'v-application',
-      class: {
-        'v-application--is-rtl': this.$vuetify.rtl,
-        'v-application--is-ltr': !this.$vuetify.rtl,
-        ...this.themeClasses
-      },
-      attrs: {
-        'data-app': true
-      },
-      domProps: {
-        id: this.id
-      }
-    }, [wrapper]);
-  }
-
-}));
-//# sourceMappingURL=VApp.js.map
 
 /***/ }),
 
@@ -28264,6 +28514,453 @@ __webpack_require__.r(__webpack_exports__);
 
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (_VCounter__WEBPACK_IMPORTED_MODULE_0__.default);
 //# sourceMappingURL=index.js.map
+
+/***/ }),
+
+/***/ "./node_modules/vuetify/lib/components/VData/VData.js":
+/*!************************************************************!*\
+  !*** ./node_modules/vuetify/lib/components/VData/VData.js ***!
+  \************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _util_helpers__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../util/helpers */ "./node_modules/vuetify/lib/util/helpers.js");
+/* harmony import */ var vue__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! vue */ "./node_modules/vue/dist/vue.js");
+/* harmony import */ var vue__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(vue__WEBPACK_IMPORTED_MODULE_0__);
+// Helpers
+
+
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (vue__WEBPACK_IMPORTED_MODULE_0___default().extend({
+  name: 'v-data',
+  inheritAttrs: false,
+  props: {
+    items: {
+      type: Array,
+      default: () => []
+    },
+    options: {
+      type: Object,
+      default: () => ({})
+    },
+    sortBy: {
+      type: [String, Array],
+      default: () => []
+    },
+    sortDesc: {
+      type: [Boolean, Array],
+      default: () => []
+    },
+    customSort: {
+      type: Function,
+      default: _util_helpers__WEBPACK_IMPORTED_MODULE_1__.sortItems
+    },
+    mustSort: Boolean,
+    multiSort: Boolean,
+    page: {
+      type: Number,
+      default: 1
+    },
+    itemsPerPage: {
+      type: Number,
+      default: 10
+    },
+    groupBy: {
+      type: [String, Array],
+      default: () => []
+    },
+    groupDesc: {
+      type: [Boolean, Array],
+      default: () => []
+    },
+    customGroup: {
+      type: Function,
+      default: _util_helpers__WEBPACK_IMPORTED_MODULE_1__.groupItems
+    },
+    locale: {
+      type: String,
+      default: 'en-US'
+    },
+    disableSort: Boolean,
+    disablePagination: Boolean,
+    disableFiltering: Boolean,
+    search: String,
+    customFilter: {
+      type: Function,
+      default: _util_helpers__WEBPACK_IMPORTED_MODULE_1__.searchItems
+    },
+    serverItemsLength: {
+      type: Number,
+      default: -1
+    }
+  },
+
+  data() {
+    let internalOptions = {
+      page: this.page,
+      itemsPerPage: this.itemsPerPage,
+      sortBy: (0,_util_helpers__WEBPACK_IMPORTED_MODULE_1__.wrapInArray)(this.sortBy),
+      sortDesc: (0,_util_helpers__WEBPACK_IMPORTED_MODULE_1__.wrapInArray)(this.sortDesc),
+      groupBy: (0,_util_helpers__WEBPACK_IMPORTED_MODULE_1__.wrapInArray)(this.groupBy),
+      groupDesc: (0,_util_helpers__WEBPACK_IMPORTED_MODULE_1__.wrapInArray)(this.groupDesc),
+      mustSort: this.mustSort,
+      multiSort: this.multiSort
+    };
+
+    if (this.options) {
+      internalOptions = Object.assign(internalOptions, this.options);
+    }
+
+    const {
+      sortBy,
+      sortDesc,
+      groupBy,
+      groupDesc
+    } = internalOptions;
+    const sortDiff = sortBy.length - sortDesc.length;
+    const groupDiff = groupBy.length - groupDesc.length;
+
+    if (sortDiff > 0) {
+      internalOptions.sortDesc.push(...(0,_util_helpers__WEBPACK_IMPORTED_MODULE_1__.fillArray)(sortDiff, false));
+    }
+
+    if (groupDiff > 0) {
+      internalOptions.groupDesc.push(...(0,_util_helpers__WEBPACK_IMPORTED_MODULE_1__.fillArray)(groupDiff, false));
+    }
+
+    return {
+      internalOptions
+    };
+  },
+
+  computed: {
+    itemsLength() {
+      return this.serverItemsLength >= 0 ? this.serverItemsLength : this.filteredItems.length;
+    },
+
+    pageCount() {
+      return this.internalOptions.itemsPerPage <= 0 ? 1 : Math.ceil(this.itemsLength / this.internalOptions.itemsPerPage);
+    },
+
+    pageStart() {
+      if (this.internalOptions.itemsPerPage === -1 || !this.items.length) return 0;
+      return (this.internalOptions.page - 1) * this.internalOptions.itemsPerPage;
+    },
+
+    pageStop() {
+      if (this.internalOptions.itemsPerPage === -1) return this.itemsLength;
+      if (!this.items.length) return 0;
+      return Math.min(this.itemsLength, this.internalOptions.page * this.internalOptions.itemsPerPage);
+    },
+
+    isGrouped() {
+      return !!this.internalOptions.groupBy.length;
+    },
+
+    pagination() {
+      return {
+        page: this.internalOptions.page,
+        itemsPerPage: this.internalOptions.itemsPerPage,
+        pageStart: this.pageStart,
+        pageStop: this.pageStop,
+        pageCount: this.pageCount,
+        itemsLength: this.itemsLength
+      };
+    },
+
+    filteredItems() {
+      let items = this.items.slice();
+
+      if (!this.disableFiltering && this.serverItemsLength <= 0) {
+        items = this.customFilter(items, this.search);
+      }
+
+      return items;
+    },
+
+    computedItems() {
+      let items = this.filteredItems.slice();
+
+      if ((!this.disableSort || this.internalOptions.groupBy.length) && this.serverItemsLength <= 0) {
+        items = this.sortItems(items);
+      }
+
+      if (!this.disablePagination && this.serverItemsLength <= 0) {
+        items = this.paginateItems(items);
+      }
+
+      return items;
+    },
+
+    groupedItems() {
+      return this.isGrouped ? this.groupItems(this.computedItems) : null;
+    },
+
+    scopedProps() {
+      return {
+        sort: this.sort,
+        sortArray: this.sortArray,
+        group: this.group,
+        items: this.computedItems,
+        options: this.internalOptions,
+        updateOptions: this.updateOptions,
+        pagination: this.pagination,
+        groupedItems: this.groupedItems,
+        originalItemsLength: this.items.length
+      };
+    },
+
+    computedOptions() {
+      return { ...this.options
+      };
+    }
+
+  },
+  watch: {
+    computedOptions: {
+      handler(options, old) {
+        if ((0,_util_helpers__WEBPACK_IMPORTED_MODULE_1__.deepEqual)(options, old)) return;
+        this.updateOptions(options);
+      },
+
+      deep: true,
+      immediate: true
+    },
+    internalOptions: {
+      handler(options, old) {
+        if ((0,_util_helpers__WEBPACK_IMPORTED_MODULE_1__.deepEqual)(options, old)) return;
+        this.$emit('update:options', options);
+      },
+
+      deep: true,
+      immediate: true
+    },
+
+    page(page) {
+      this.updateOptions({
+        page
+      });
+    },
+
+    'internalOptions.page'(page) {
+      this.$emit('update:page', page);
+    },
+
+    itemsPerPage(itemsPerPage) {
+      this.updateOptions({
+        itemsPerPage
+      });
+    },
+
+    'internalOptions.itemsPerPage'(itemsPerPage) {
+      this.$emit('update:items-per-page', itemsPerPage);
+    },
+
+    sortBy(sortBy) {
+      this.updateOptions({
+        sortBy: (0,_util_helpers__WEBPACK_IMPORTED_MODULE_1__.wrapInArray)(sortBy)
+      });
+    },
+
+    'internalOptions.sortBy'(sortBy, old) {
+      !(0,_util_helpers__WEBPACK_IMPORTED_MODULE_1__.deepEqual)(sortBy, old) && this.$emit('update:sort-by', Array.isArray(this.sortBy) ? sortBy : sortBy[0]);
+    },
+
+    sortDesc(sortDesc) {
+      this.updateOptions({
+        sortDesc: (0,_util_helpers__WEBPACK_IMPORTED_MODULE_1__.wrapInArray)(sortDesc)
+      });
+    },
+
+    'internalOptions.sortDesc'(sortDesc, old) {
+      !(0,_util_helpers__WEBPACK_IMPORTED_MODULE_1__.deepEqual)(sortDesc, old) && this.$emit('update:sort-desc', Array.isArray(this.sortDesc) ? sortDesc : sortDesc[0]);
+    },
+
+    groupBy(groupBy) {
+      this.updateOptions({
+        groupBy: (0,_util_helpers__WEBPACK_IMPORTED_MODULE_1__.wrapInArray)(groupBy)
+      });
+    },
+
+    'internalOptions.groupBy'(groupBy, old) {
+      !(0,_util_helpers__WEBPACK_IMPORTED_MODULE_1__.deepEqual)(groupBy, old) && this.$emit('update:group-by', Array.isArray(this.groupBy) ? groupBy : groupBy[0]);
+    },
+
+    groupDesc(groupDesc) {
+      this.updateOptions({
+        groupDesc: (0,_util_helpers__WEBPACK_IMPORTED_MODULE_1__.wrapInArray)(groupDesc)
+      });
+    },
+
+    'internalOptions.groupDesc'(groupDesc, old) {
+      !(0,_util_helpers__WEBPACK_IMPORTED_MODULE_1__.deepEqual)(groupDesc, old) && this.$emit('update:group-desc', Array.isArray(this.groupDesc) ? groupDesc : groupDesc[0]);
+    },
+
+    multiSort(multiSort) {
+      this.updateOptions({
+        multiSort
+      });
+    },
+
+    'internalOptions.multiSort'(multiSort) {
+      this.$emit('update:multi-sort', multiSort);
+    },
+
+    mustSort(mustSort) {
+      this.updateOptions({
+        mustSort
+      });
+    },
+
+    'internalOptions.mustSort'(mustSort) {
+      this.$emit('update:must-sort', mustSort);
+    },
+
+    pageCount: {
+      handler(pageCount) {
+        this.$emit('page-count', pageCount);
+      },
+
+      immediate: true
+    },
+    computedItems: {
+      handler(computedItems) {
+        this.$emit('current-items', computedItems);
+      },
+
+      immediate: true
+    },
+    pagination: {
+      handler(pagination, old) {
+        if ((0,_util_helpers__WEBPACK_IMPORTED_MODULE_1__.deepEqual)(pagination, old)) return;
+        this.$emit('pagination', this.pagination);
+      },
+
+      immediate: true
+    }
+  },
+  methods: {
+    toggle(key, oldBy, oldDesc, page, mustSort, multiSort) {
+      let by = oldBy.slice();
+      let desc = oldDesc.slice();
+      const byIndex = by.findIndex(k => k === key);
+
+      if (byIndex < 0) {
+        if (!multiSort) {
+          by = [];
+          desc = [];
+        }
+
+        by.push(key);
+        desc.push(false);
+      } else if (byIndex >= 0 && !desc[byIndex]) {
+        desc[byIndex] = true;
+      } else if (!mustSort) {
+        by.splice(byIndex, 1);
+        desc.splice(byIndex, 1);
+      } else {
+        desc[byIndex] = false;
+      } // Reset page to 1 if sortBy or sortDesc have changed
+
+
+      if (!(0,_util_helpers__WEBPACK_IMPORTED_MODULE_1__.deepEqual)(by, oldBy) || !(0,_util_helpers__WEBPACK_IMPORTED_MODULE_1__.deepEqual)(desc, oldDesc)) {
+        page = 1;
+      }
+
+      return {
+        by,
+        desc,
+        page
+      };
+    },
+
+    group(key) {
+      const {
+        by: groupBy,
+        desc: groupDesc,
+        page
+      } = this.toggle(key, this.internalOptions.groupBy, this.internalOptions.groupDesc, this.internalOptions.page, true, false);
+      this.updateOptions({
+        groupBy,
+        groupDesc,
+        page
+      });
+    },
+
+    sort(key) {
+      if (Array.isArray(key)) return this.sortArray(key);
+      const {
+        by: sortBy,
+        desc: sortDesc,
+        page
+      } = this.toggle(key, this.internalOptions.sortBy, this.internalOptions.sortDesc, this.internalOptions.page, this.internalOptions.mustSort, this.internalOptions.multiSort);
+      this.updateOptions({
+        sortBy,
+        sortDesc,
+        page
+      });
+    },
+
+    sortArray(sortBy) {
+      const sortDesc = sortBy.map(s => {
+        const i = this.internalOptions.sortBy.findIndex(k => k === s);
+        return i > -1 ? this.internalOptions.sortDesc[i] : false;
+      });
+      this.updateOptions({
+        sortBy,
+        sortDesc
+      });
+    },
+
+    updateOptions(options) {
+      this.internalOptions = { ...this.internalOptions,
+        ...options,
+        page: this.serverItemsLength < 0 ? Math.max(1, Math.min(options.page || this.internalOptions.page, this.pageCount)) : options.page || this.internalOptions.page
+      };
+    },
+
+    sortItems(items) {
+      let sortBy = [];
+      let sortDesc = [];
+
+      if (!this.disableSort) {
+        sortBy = this.internalOptions.sortBy;
+        sortDesc = this.internalOptions.sortDesc;
+      }
+
+      if (this.internalOptions.groupBy.length) {
+        sortBy = [...this.internalOptions.groupBy, ...sortBy];
+        sortDesc = [...this.internalOptions.groupDesc, ...sortDesc];
+      }
+
+      return this.customSort(items, sortBy, sortDesc, this.locale);
+    },
+
+    groupItems(items) {
+      return this.customGroup(items, this.internalOptions.groupBy, this.internalOptions.groupDesc);
+    },
+
+    paginateItems(items) {
+      // Make sure we don't try to display non-existant page if items suddenly change
+      // TODO: Could possibly move this to pageStart/pageStop?
+      if (this.serverItemsLength === -1 && items.length <= this.pageStart) {
+        this.internalOptions.page = Math.max(1, Math.ceil(items.length / this.internalOptions.itemsPerPage)) || 1; // Prevent NaN
+      }
+
+      return items.slice(this.pageStart, this.pageStop);
+    }
+
+  },
+
+  render() {
+    return this.$scopedSlots.default && this.$scopedSlots.default(this.scopedProps);
+  }
+
+}));
+//# sourceMappingURL=VData.js.map
 
 /***/ }),
 
@@ -30188,453 +30885,6 @@ __webpack_require__.r(__webpack_exports__);
   }
 }));
 //# sourceMappingURL=header.js.map
-
-/***/ }),
-
-/***/ "./node_modules/vuetify/lib/components/VData/VData.js":
-/*!************************************************************!*\
-  !*** ./node_modules/vuetify/lib/components/VData/VData.js ***!
-  \************************************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
-/* harmony export */ });
-/* harmony import */ var _util_helpers__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../util/helpers */ "./node_modules/vuetify/lib/util/helpers.js");
-/* harmony import */ var vue__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! vue */ "./node_modules/vue/dist/vue.js");
-/* harmony import */ var vue__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(vue__WEBPACK_IMPORTED_MODULE_0__);
-// Helpers
-
-
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (vue__WEBPACK_IMPORTED_MODULE_0___default().extend({
-  name: 'v-data',
-  inheritAttrs: false,
-  props: {
-    items: {
-      type: Array,
-      default: () => []
-    },
-    options: {
-      type: Object,
-      default: () => ({})
-    },
-    sortBy: {
-      type: [String, Array],
-      default: () => []
-    },
-    sortDesc: {
-      type: [Boolean, Array],
-      default: () => []
-    },
-    customSort: {
-      type: Function,
-      default: _util_helpers__WEBPACK_IMPORTED_MODULE_1__.sortItems
-    },
-    mustSort: Boolean,
-    multiSort: Boolean,
-    page: {
-      type: Number,
-      default: 1
-    },
-    itemsPerPage: {
-      type: Number,
-      default: 10
-    },
-    groupBy: {
-      type: [String, Array],
-      default: () => []
-    },
-    groupDesc: {
-      type: [Boolean, Array],
-      default: () => []
-    },
-    customGroup: {
-      type: Function,
-      default: _util_helpers__WEBPACK_IMPORTED_MODULE_1__.groupItems
-    },
-    locale: {
-      type: String,
-      default: 'en-US'
-    },
-    disableSort: Boolean,
-    disablePagination: Boolean,
-    disableFiltering: Boolean,
-    search: String,
-    customFilter: {
-      type: Function,
-      default: _util_helpers__WEBPACK_IMPORTED_MODULE_1__.searchItems
-    },
-    serverItemsLength: {
-      type: Number,
-      default: -1
-    }
-  },
-
-  data() {
-    let internalOptions = {
-      page: this.page,
-      itemsPerPage: this.itemsPerPage,
-      sortBy: (0,_util_helpers__WEBPACK_IMPORTED_MODULE_1__.wrapInArray)(this.sortBy),
-      sortDesc: (0,_util_helpers__WEBPACK_IMPORTED_MODULE_1__.wrapInArray)(this.sortDesc),
-      groupBy: (0,_util_helpers__WEBPACK_IMPORTED_MODULE_1__.wrapInArray)(this.groupBy),
-      groupDesc: (0,_util_helpers__WEBPACK_IMPORTED_MODULE_1__.wrapInArray)(this.groupDesc),
-      mustSort: this.mustSort,
-      multiSort: this.multiSort
-    };
-
-    if (this.options) {
-      internalOptions = Object.assign(internalOptions, this.options);
-    }
-
-    const {
-      sortBy,
-      sortDesc,
-      groupBy,
-      groupDesc
-    } = internalOptions;
-    const sortDiff = sortBy.length - sortDesc.length;
-    const groupDiff = groupBy.length - groupDesc.length;
-
-    if (sortDiff > 0) {
-      internalOptions.sortDesc.push(...(0,_util_helpers__WEBPACK_IMPORTED_MODULE_1__.fillArray)(sortDiff, false));
-    }
-
-    if (groupDiff > 0) {
-      internalOptions.groupDesc.push(...(0,_util_helpers__WEBPACK_IMPORTED_MODULE_1__.fillArray)(groupDiff, false));
-    }
-
-    return {
-      internalOptions
-    };
-  },
-
-  computed: {
-    itemsLength() {
-      return this.serverItemsLength >= 0 ? this.serverItemsLength : this.filteredItems.length;
-    },
-
-    pageCount() {
-      return this.internalOptions.itemsPerPage <= 0 ? 1 : Math.ceil(this.itemsLength / this.internalOptions.itemsPerPage);
-    },
-
-    pageStart() {
-      if (this.internalOptions.itemsPerPage === -1 || !this.items.length) return 0;
-      return (this.internalOptions.page - 1) * this.internalOptions.itemsPerPage;
-    },
-
-    pageStop() {
-      if (this.internalOptions.itemsPerPage === -1) return this.itemsLength;
-      if (!this.items.length) return 0;
-      return Math.min(this.itemsLength, this.internalOptions.page * this.internalOptions.itemsPerPage);
-    },
-
-    isGrouped() {
-      return !!this.internalOptions.groupBy.length;
-    },
-
-    pagination() {
-      return {
-        page: this.internalOptions.page,
-        itemsPerPage: this.internalOptions.itemsPerPage,
-        pageStart: this.pageStart,
-        pageStop: this.pageStop,
-        pageCount: this.pageCount,
-        itemsLength: this.itemsLength
-      };
-    },
-
-    filteredItems() {
-      let items = this.items.slice();
-
-      if (!this.disableFiltering && this.serverItemsLength <= 0) {
-        items = this.customFilter(items, this.search);
-      }
-
-      return items;
-    },
-
-    computedItems() {
-      let items = this.filteredItems.slice();
-
-      if ((!this.disableSort || this.internalOptions.groupBy.length) && this.serverItemsLength <= 0) {
-        items = this.sortItems(items);
-      }
-
-      if (!this.disablePagination && this.serverItemsLength <= 0) {
-        items = this.paginateItems(items);
-      }
-
-      return items;
-    },
-
-    groupedItems() {
-      return this.isGrouped ? this.groupItems(this.computedItems) : null;
-    },
-
-    scopedProps() {
-      return {
-        sort: this.sort,
-        sortArray: this.sortArray,
-        group: this.group,
-        items: this.computedItems,
-        options: this.internalOptions,
-        updateOptions: this.updateOptions,
-        pagination: this.pagination,
-        groupedItems: this.groupedItems,
-        originalItemsLength: this.items.length
-      };
-    },
-
-    computedOptions() {
-      return { ...this.options
-      };
-    }
-
-  },
-  watch: {
-    computedOptions: {
-      handler(options, old) {
-        if ((0,_util_helpers__WEBPACK_IMPORTED_MODULE_1__.deepEqual)(options, old)) return;
-        this.updateOptions(options);
-      },
-
-      deep: true,
-      immediate: true
-    },
-    internalOptions: {
-      handler(options, old) {
-        if ((0,_util_helpers__WEBPACK_IMPORTED_MODULE_1__.deepEqual)(options, old)) return;
-        this.$emit('update:options', options);
-      },
-
-      deep: true,
-      immediate: true
-    },
-
-    page(page) {
-      this.updateOptions({
-        page
-      });
-    },
-
-    'internalOptions.page'(page) {
-      this.$emit('update:page', page);
-    },
-
-    itemsPerPage(itemsPerPage) {
-      this.updateOptions({
-        itemsPerPage
-      });
-    },
-
-    'internalOptions.itemsPerPage'(itemsPerPage) {
-      this.$emit('update:items-per-page', itemsPerPage);
-    },
-
-    sortBy(sortBy) {
-      this.updateOptions({
-        sortBy: (0,_util_helpers__WEBPACK_IMPORTED_MODULE_1__.wrapInArray)(sortBy)
-      });
-    },
-
-    'internalOptions.sortBy'(sortBy, old) {
-      !(0,_util_helpers__WEBPACK_IMPORTED_MODULE_1__.deepEqual)(sortBy, old) && this.$emit('update:sort-by', Array.isArray(this.sortBy) ? sortBy : sortBy[0]);
-    },
-
-    sortDesc(sortDesc) {
-      this.updateOptions({
-        sortDesc: (0,_util_helpers__WEBPACK_IMPORTED_MODULE_1__.wrapInArray)(sortDesc)
-      });
-    },
-
-    'internalOptions.sortDesc'(sortDesc, old) {
-      !(0,_util_helpers__WEBPACK_IMPORTED_MODULE_1__.deepEqual)(sortDesc, old) && this.$emit('update:sort-desc', Array.isArray(this.sortDesc) ? sortDesc : sortDesc[0]);
-    },
-
-    groupBy(groupBy) {
-      this.updateOptions({
-        groupBy: (0,_util_helpers__WEBPACK_IMPORTED_MODULE_1__.wrapInArray)(groupBy)
-      });
-    },
-
-    'internalOptions.groupBy'(groupBy, old) {
-      !(0,_util_helpers__WEBPACK_IMPORTED_MODULE_1__.deepEqual)(groupBy, old) && this.$emit('update:group-by', Array.isArray(this.groupBy) ? groupBy : groupBy[0]);
-    },
-
-    groupDesc(groupDesc) {
-      this.updateOptions({
-        groupDesc: (0,_util_helpers__WEBPACK_IMPORTED_MODULE_1__.wrapInArray)(groupDesc)
-      });
-    },
-
-    'internalOptions.groupDesc'(groupDesc, old) {
-      !(0,_util_helpers__WEBPACK_IMPORTED_MODULE_1__.deepEqual)(groupDesc, old) && this.$emit('update:group-desc', Array.isArray(this.groupDesc) ? groupDesc : groupDesc[0]);
-    },
-
-    multiSort(multiSort) {
-      this.updateOptions({
-        multiSort
-      });
-    },
-
-    'internalOptions.multiSort'(multiSort) {
-      this.$emit('update:multi-sort', multiSort);
-    },
-
-    mustSort(mustSort) {
-      this.updateOptions({
-        mustSort
-      });
-    },
-
-    'internalOptions.mustSort'(mustSort) {
-      this.$emit('update:must-sort', mustSort);
-    },
-
-    pageCount: {
-      handler(pageCount) {
-        this.$emit('page-count', pageCount);
-      },
-
-      immediate: true
-    },
-    computedItems: {
-      handler(computedItems) {
-        this.$emit('current-items', computedItems);
-      },
-
-      immediate: true
-    },
-    pagination: {
-      handler(pagination, old) {
-        if ((0,_util_helpers__WEBPACK_IMPORTED_MODULE_1__.deepEqual)(pagination, old)) return;
-        this.$emit('pagination', this.pagination);
-      },
-
-      immediate: true
-    }
-  },
-  methods: {
-    toggle(key, oldBy, oldDesc, page, mustSort, multiSort) {
-      let by = oldBy.slice();
-      let desc = oldDesc.slice();
-      const byIndex = by.findIndex(k => k === key);
-
-      if (byIndex < 0) {
-        if (!multiSort) {
-          by = [];
-          desc = [];
-        }
-
-        by.push(key);
-        desc.push(false);
-      } else if (byIndex >= 0 && !desc[byIndex]) {
-        desc[byIndex] = true;
-      } else if (!mustSort) {
-        by.splice(byIndex, 1);
-        desc.splice(byIndex, 1);
-      } else {
-        desc[byIndex] = false;
-      } // Reset page to 1 if sortBy or sortDesc have changed
-
-
-      if (!(0,_util_helpers__WEBPACK_IMPORTED_MODULE_1__.deepEqual)(by, oldBy) || !(0,_util_helpers__WEBPACK_IMPORTED_MODULE_1__.deepEqual)(desc, oldDesc)) {
-        page = 1;
-      }
-
-      return {
-        by,
-        desc,
-        page
-      };
-    },
-
-    group(key) {
-      const {
-        by: groupBy,
-        desc: groupDesc,
-        page
-      } = this.toggle(key, this.internalOptions.groupBy, this.internalOptions.groupDesc, this.internalOptions.page, true, false);
-      this.updateOptions({
-        groupBy,
-        groupDesc,
-        page
-      });
-    },
-
-    sort(key) {
-      if (Array.isArray(key)) return this.sortArray(key);
-      const {
-        by: sortBy,
-        desc: sortDesc,
-        page
-      } = this.toggle(key, this.internalOptions.sortBy, this.internalOptions.sortDesc, this.internalOptions.page, this.internalOptions.mustSort, this.internalOptions.multiSort);
-      this.updateOptions({
-        sortBy,
-        sortDesc,
-        page
-      });
-    },
-
-    sortArray(sortBy) {
-      const sortDesc = sortBy.map(s => {
-        const i = this.internalOptions.sortBy.findIndex(k => k === s);
-        return i > -1 ? this.internalOptions.sortDesc[i] : false;
-      });
-      this.updateOptions({
-        sortBy,
-        sortDesc
-      });
-    },
-
-    updateOptions(options) {
-      this.internalOptions = { ...this.internalOptions,
-        ...options,
-        page: this.serverItemsLength < 0 ? Math.max(1, Math.min(options.page || this.internalOptions.page, this.pageCount)) : options.page || this.internalOptions.page
-      };
-    },
-
-    sortItems(items) {
-      let sortBy = [];
-      let sortDesc = [];
-
-      if (!this.disableSort) {
-        sortBy = this.internalOptions.sortBy;
-        sortDesc = this.internalOptions.sortDesc;
-      }
-
-      if (this.internalOptions.groupBy.length) {
-        sortBy = [...this.internalOptions.groupBy, ...sortBy];
-        sortDesc = [...this.internalOptions.groupDesc, ...sortDesc];
-      }
-
-      return this.customSort(items, sortBy, sortDesc, this.locale);
-    },
-
-    groupItems(items) {
-      return this.customGroup(items, this.internalOptions.groupBy, this.internalOptions.groupDesc);
-    },
-
-    paginateItems(items) {
-      // Make sure we don't try to display non-existant page if items suddenly change
-      // TODO: Could possibly move this to pageStart/pageStop?
-      if (this.serverItemsLength === -1 && items.length <= this.pageStart) {
-        this.internalOptions.page = Math.max(1, Math.ceil(items.length / this.internalOptions.itemsPerPage)) || 1; // Prevent NaN
-      }
-
-      return items.slice(this.pageStart, this.pageStop);
-    }
-
-  },
-
-  render() {
-    return this.$scopedSlots.default && this.$scopedSlots.default(this.scopedProps);
-  }
-
-}));
-//# sourceMappingURL=VData.js.map
 
 /***/ }),
 
@@ -43690,6 +43940,93 @@ function darken(value, amount) {
 
 /***/ }),
 
+/***/ "./node_modules/vuetify/lib/util/color/transformCIELAB.js":
+/*!****************************************************************!*\
+  !*** ./node_modules/vuetify/lib/util/color/transformCIELAB.js ***!
+  \****************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "fromXYZ": () => (/* binding */ fromXYZ),
+/* harmony export */   "toXYZ": () => (/* binding */ toXYZ)
+/* harmony export */ });
+const delta = 0.20689655172413793; // 6÷29
+
+const cielabForwardTransform = t => t > delta ** 3 ? Math.cbrt(t) : t / (3 * delta ** 2) + 4 / 29;
+
+const cielabReverseTransform = t => t > delta ? t ** 3 : 3 * delta ** 2 * (t - 4 / 29);
+
+function fromXYZ(xyz) {
+  const transform = cielabForwardTransform;
+  const transformedY = transform(xyz[1]);
+  return [116 * transformedY - 16, 500 * (transform(xyz[0] / 0.95047) - transformedY), 200 * (transformedY - transform(xyz[2] / 1.08883))];
+}
+function toXYZ(lab) {
+  const transform = cielabReverseTransform;
+  const Ln = (lab[0] + 16) / 116;
+  return [transform(Ln + lab[1] / 500) * 0.95047, transform(Ln), transform(Ln - lab[2] / 200) * 1.08883];
+}
+//# sourceMappingURL=transformCIELAB.js.map
+
+/***/ }),
+
+/***/ "./node_modules/vuetify/lib/util/color/transformSRGB.js":
+/*!**************************************************************!*\
+  !*** ./node_modules/vuetify/lib/util/color/transformSRGB.js ***!
+  \**************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "fromXYZ": () => (/* binding */ fromXYZ),
+/* harmony export */   "toXYZ": () => (/* binding */ toXYZ)
+/* harmony export */ });
+/* harmony import */ var _util_helpers__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../util/helpers */ "./node_modules/vuetify/lib/util/helpers.js");
+ // For converting XYZ to sRGB
+
+const srgbForwardMatrix = [[3.2406, -1.5372, -0.4986], [-0.9689, 1.8758, 0.0415], [0.0557, -0.2040, 1.0570]]; // Forward gamma adjust
+
+const srgbForwardTransform = C => C <= 0.0031308 ? C * 12.92 : 1.055 * C ** (1 / 2.4) - 0.055; // For converting sRGB to XYZ
+
+
+const srgbReverseMatrix = [[0.4124, 0.3576, 0.1805], [0.2126, 0.7152, 0.0722], [0.0193, 0.1192, 0.9505]]; // Reverse gamma adjust
+
+const srgbReverseTransform = C => C <= 0.04045 ? C / 12.92 : ((C + 0.055) / 1.055) ** 2.4;
+
+function fromXYZ(xyz) {
+  const rgb = Array(3);
+  const transform = srgbForwardTransform;
+  const matrix = srgbForwardMatrix; // Matrix transform, then gamma adjustment
+
+  for (let i = 0; i < 3; ++i) {
+    rgb[i] = Math.round((0,_util_helpers__WEBPACK_IMPORTED_MODULE_0__.clamp)(transform(matrix[i][0] * xyz[0] + matrix[i][1] * xyz[1] + matrix[i][2] * xyz[2])) * 255);
+  } // Rescale back to [0, 255]
+
+
+  return (rgb[0] << 16) + (rgb[1] << 8) + (rgb[2] << 0);
+}
+function toXYZ(rgb) {
+  const xyz = [0, 0, 0];
+  const transform = srgbReverseTransform;
+  const matrix = srgbReverseMatrix; // Rescale from [0, 255] to [0, 1] then adjust sRGB gamma to linear RGB
+
+  const r = transform((rgb >> 16 & 0xff) / 255);
+  const g = transform((rgb >> 8 & 0xff) / 255);
+  const b = transform((rgb >> 0 & 0xff) / 255); // Matrix color space transform
+
+  for (let i = 0; i < 3; ++i) {
+    xyz[i] = matrix[i][0] * r + matrix[i][1] * g + matrix[i][2] * b;
+  }
+
+  return xyz;
+}
+//# sourceMappingURL=transformSRGB.js.map
+
+/***/ }),
+
 /***/ "./node_modules/vuetify/lib/util/colorUtils.js":
 /*!*****************************************************!*\
   !*** ./node_modules/vuetify/lib/util/colorUtils.js ***!
@@ -43957,93 +44294,6 @@ function contrastRatio(c1, c2) {
   return (Math.max(y1, y2) + 0.05) / (Math.min(y1, y2) + 0.05);
 }
 //# sourceMappingURL=colorUtils.js.map
-
-/***/ }),
-
-/***/ "./node_modules/vuetify/lib/util/color/transformCIELAB.js":
-/*!****************************************************************!*\
-  !*** ./node_modules/vuetify/lib/util/color/transformCIELAB.js ***!
-  \****************************************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "fromXYZ": () => (/* binding */ fromXYZ),
-/* harmony export */   "toXYZ": () => (/* binding */ toXYZ)
-/* harmony export */ });
-const delta = 0.20689655172413793; // 6÷29
-
-const cielabForwardTransform = t => t > delta ** 3 ? Math.cbrt(t) : t / (3 * delta ** 2) + 4 / 29;
-
-const cielabReverseTransform = t => t > delta ? t ** 3 : 3 * delta ** 2 * (t - 4 / 29);
-
-function fromXYZ(xyz) {
-  const transform = cielabForwardTransform;
-  const transformedY = transform(xyz[1]);
-  return [116 * transformedY - 16, 500 * (transform(xyz[0] / 0.95047) - transformedY), 200 * (transformedY - transform(xyz[2] / 1.08883))];
-}
-function toXYZ(lab) {
-  const transform = cielabReverseTransform;
-  const Ln = (lab[0] + 16) / 116;
-  return [transform(Ln + lab[1] / 500) * 0.95047, transform(Ln), transform(Ln - lab[2] / 200) * 1.08883];
-}
-//# sourceMappingURL=transformCIELAB.js.map
-
-/***/ }),
-
-/***/ "./node_modules/vuetify/lib/util/color/transformSRGB.js":
-/*!**************************************************************!*\
-  !*** ./node_modules/vuetify/lib/util/color/transformSRGB.js ***!
-  \**************************************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "fromXYZ": () => (/* binding */ fromXYZ),
-/* harmony export */   "toXYZ": () => (/* binding */ toXYZ)
-/* harmony export */ });
-/* harmony import */ var _util_helpers__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../util/helpers */ "./node_modules/vuetify/lib/util/helpers.js");
- // For converting XYZ to sRGB
-
-const srgbForwardMatrix = [[3.2406, -1.5372, -0.4986], [-0.9689, 1.8758, 0.0415], [0.0557, -0.2040, 1.0570]]; // Forward gamma adjust
-
-const srgbForwardTransform = C => C <= 0.0031308 ? C * 12.92 : 1.055 * C ** (1 / 2.4) - 0.055; // For converting sRGB to XYZ
-
-
-const srgbReverseMatrix = [[0.4124, 0.3576, 0.1805], [0.2126, 0.7152, 0.0722], [0.0193, 0.1192, 0.9505]]; // Reverse gamma adjust
-
-const srgbReverseTransform = C => C <= 0.04045 ? C / 12.92 : ((C + 0.055) / 1.055) ** 2.4;
-
-function fromXYZ(xyz) {
-  const rgb = Array(3);
-  const transform = srgbForwardTransform;
-  const matrix = srgbForwardMatrix; // Matrix transform, then gamma adjustment
-
-  for (let i = 0; i < 3; ++i) {
-    rgb[i] = Math.round((0,_util_helpers__WEBPACK_IMPORTED_MODULE_0__.clamp)(transform(matrix[i][0] * xyz[0] + matrix[i][1] * xyz[1] + matrix[i][2] * xyz[2])) * 255);
-  } // Rescale back to [0, 255]
-
-
-  return (rgb[0] << 16) + (rgb[1] << 8) + (rgb[2] << 0);
-}
-function toXYZ(rgb) {
-  const xyz = [0, 0, 0];
-  const transform = srgbReverseTransform;
-  const matrix = srgbReverseMatrix; // Rescale from [0, 255] to [0, 1] then adjust sRGB gamma to linear RGB
-
-  const r = transform((rgb >> 16 & 0xff) / 255);
-  const g = transform((rgb >> 8 & 0xff) / 255);
-  const b = transform((rgb >> 0 & 0xff) / 255); // Matrix color space transform
-
-  for (let i = 0; i < 3; ++i) {
-    xyz[i] = matrix[i][0] * r + matrix[i][1] * g + matrix[i][2] * b;
-  }
-
-  return xyz;
-}
-//# sourceMappingURL=transformSRGB.js.map
 
 /***/ }),
 
@@ -46403,7 +46653,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
-class EntityObject {
+class EntityModel {
   constructor(entityName, newEntityObjectFn) {
     this.entityName = entityName;
     this.newEntityObjectFn = newEntityObjectFn;
@@ -46413,11 +46663,12 @@ class EntityObject {
     this.entityList = [];
     this.optionList = [];
     this.editNew = false;
+    this.entityObjectEmbedder = {};
 
   }
 }
 
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (EntityObject);
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (EntityModel);
 
 
 /***/ }),
@@ -46440,8 +46691,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _layouts_GekLayoutEntityPage_vue__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./layouts/GekLayoutEntityPage.vue */ "./vue/layouts/GekLayoutEntityPage.vue");
 /* harmony import */ var _pages_GekNotFound_vue__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./pages/GekNotFound.vue */ "./vue/pages/GekNotFound.vue");
 /* harmony import */ var _pages_GekPageLogin_vue__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./pages/GekPageLogin.vue */ "./vue/pages/GekPageLogin.vue");
-/* harmony import */ var _pages_entities_gekPageUser_vue__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./pages/entities/gekPageUser.vue */ "./vue/pages/entities/gekPageUser.vue");
-/* harmony import */ var _pages_entities_gekPageContact_vue__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./pages/entities/gekPageContact.vue */ "./vue/pages/entities/gekPageContact.vue");
+/* harmony import */ var _pages_entities_GekPageUser_vue__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./pages/entities/GekPageUser.vue */ "./vue/pages/entities/GekPageUser.vue");
+/* harmony import */ var _pages_entities_GekPageContact_vue__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./pages/entities/GekPageContact.vue */ "./vue/pages/entities/GekPageContact.vue");
 /* harmony import */ var _pages_GekPage1_vue__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./pages/GekPage1.vue */ "./vue/pages/GekPage1.vue");
 console.log("router.js");
 
@@ -46479,13 +46730,13 @@ const myRoutes = [
     children: [
       {
         path: "user",
-        component: _pages_entities_gekPageUser_vue__WEBPACK_IMPORTED_MODULE_4__.default,
+        component: _pages_entities_GekPageUser_vue__WEBPACK_IMPORTED_MODULE_4__.default,
         name: "User",
         meta: { description: "show user" },
       },
       {
         path: "contact",
-        component: _pages_entities_gekPageContact_vue__WEBPACK_IMPORTED_MODULE_5__.default,
+        component: _pages_entities_GekPageContact_vue__WEBPACK_IMPORTED_MODULE_5__.default,
         name: "Contact",
         meta: { description: "show contact" },
       },
@@ -46572,10 +46823,12 @@ __webpack_require__.r(__webpack_exports__);
 function newEntityObjectContactAddress() {
   return {
     ID: 0,
-    OrgType: 0,
-    Name: "",
-    NameExt: "",
-    ContactType: 0,
+    ContactID: 0,
+    Street: "",
+    StreetNr: "",
+    StreetExt: "",
+    Zip: "",
+    City: "",
   };
 }
 
@@ -46598,7 +46851,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _gekEntityStoreUser_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./gekEntityStoreUser.js */ "./vue/gekEntityStoreUser.js");
 /* harmony import */ var _gekEntityStoreContact_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./gekEntityStoreContact.js */ "./vue/gekEntityStoreContact.js");
 /* harmony import */ var _gekEntityStoreContactAddress_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./gekEntityStoreContactAddress.js */ "./vue/gekEntityStoreContactAddress.js");
-/* harmony import */ var _services_gekEntityApiService_js__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./services/gekEntityApiService.js */ "./vue/services/gekEntityApiService.js");
+/* harmony import */ var _services_GekEntityApiService_js__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./services/GekEntityApiService.js */ "./vue/services/GekEntityApiService.js");
 // eslint-disable-next-line no-unused-vars
 /*global axios*/
 
@@ -46611,7 +46864,7 @@ __webpack_require__.r(__webpack_exports__);
 
 const apiBaseUrl = "http://localhost:8080";
 const logConsole = true;
-_services_gekEntityApiService_js__WEBPACK_IMPORTED_MODULE_4__.GekEntityApiService.init(apiBaseUrl, logConsole);
+_services_GekEntityApiService_js__WEBPACK_IMPORTED_MODULE_4__.GekEntityApiService.init(apiBaseUrl, logConsole);
 
 const GekEntityStoreModule = {
   namespaced: false,
@@ -46620,7 +46873,7 @@ const GekEntityStoreModule = {
       userData: null,
       message: null,
       navDrawer: true,
-      gekEntityObjects: {"User": new _gekEntityObject_js__WEBPACK_IMPORTED_MODULE_0__.default("User", _gekEntityStoreUser_js__WEBPACK_IMPORTED_MODULE_1__.default, this), "Contact": new _gekEntityObject_js__WEBPACK_IMPORTED_MODULE_0__.default("Contact", _gekEntityStoreContact_js__WEBPACK_IMPORTED_MODULE_2__.default, this), "ContactAddress": new _gekEntityObject_js__WEBPACK_IMPORTED_MODULE_0__.default("ContactAddress", _gekEntityStoreContactAddress_js__WEBPACK_IMPORTED_MODULE_3__.default, this)}
+      gekEntityModels: {"User": new _gekEntityObject_js__WEBPACK_IMPORTED_MODULE_0__.default("User", _gekEntityStoreUser_js__WEBPACK_IMPORTED_MODULE_1__.default, this), "Contact": new _gekEntityObject_js__WEBPACK_IMPORTED_MODULE_0__.default("Contact", _gekEntityStoreContact_js__WEBPACK_IMPORTED_MODULE_2__.default, this), "ContactAddress": new _gekEntityObject_js__WEBPACK_IMPORTED_MODULE_0__.default("ContactAddress", _gekEntityStoreContactAddress_js__WEBPACK_IMPORTED_MODULE_3__.default, this)}
     };
   },
   mutations: {
@@ -46631,32 +46884,50 @@ const GekEntityStoreModule = {
       state.navDrawer = drawer;
     },
     SET_ENTITY_NEW(state, payload) {
-      state.gekEntityObjects[payload.entityName].entityObject = state.gekEntityObjects[payload.entityName].newEntityObjectFn();
-      state.gekEntityObjects[payload.entityName].editNew = true;
-      state.gekEntityObjects[payload.entityName].editDialog = true;
+      state.gekEntityModels[payload.entityName].entityObject = state.gekEntityModels[payload.entityName].newEntityObjectFn();
+      state.gekEntityModels[payload.entityName].editNew = true;
+      state.gekEntityModels[payload.entityName].editDialog = true;
+    },
+    SET_ENTITY_NEW_EMBEDDED(state, payload) {
+      state.gekEntityModels[payload.entityNameEmbedded].entityObject = state.gekEntityModels[payload.entityNameEmbedded].newEntityObjectFn();
+      state.gekEntityModels[payload.entityNameEmbedded].entityObjectEmbedder = payload.entityObjectEmbedder;
+      state.gekEntityModels[payload.entityNameEmbedded].editNew = true;
+      state.gekEntityModels[payload.entityNameEmbedded].editDialog = true;
     },
     SET_ENTITY_EDIT(state, payload) {
       // create new object with JSON.parse
-      state.gekEntityObjects[payload.entityName].entityObject = JSON.parse(JSON.stringify(payload.entityObject));
-      state.gekEntityObjects[payload.entityName].editNew = false;
-      state.gekEntityObjects[payload.entityName].editDialog = true;
+      state.gekEntityModels[payload.entityName].entityObject = JSON.parse(JSON.stringify(payload.entityObject));
+      state.gekEntityModels[payload.entityName].editNew = false;
+      state.gekEntityModels[payload.entityName].editDialog = true;
+    },
+    SET_ENTITY_EDIT_EMBEDDED(state, payload) {
+      // create new object with JSON.parse
+      state.gekEntityModels[payload.entityName].entityObject = JSON.parse(JSON.stringify(payload.entityObject));
+      state.gekEntityModels[payload.entityName].entityObjectEmbedder = payload.entityObjectEmbedder;
+      state.gekEntityModels[payload.entityName].editNew = false;
+      state.gekEntityModels[payload.entityName].editDialog = true;
     },
     SET_ENTITY_DELETE(state, payload) {
-      state.gekEntityObjects[payload.entityName].entityObject = payload.entityObject;
-      state.gekEntityObjects[payload.entityName].editNew = false;
-      state.gekEntityObjects[payload.entityName].confirmDeleteDialog = true;
+      state.gekEntityModels[payload.entityName].entityObject = payload.entityObject;
+      state.gekEntityModels[payload.entityName].editNew = false;
+      state.gekEntityModels[payload.entityName].confirmDeleteDialog = true;
+    },
+    SET_ENTITY_DELETE_EMBEDDED(state, payload) {
+      state.gekEntityModels[payload.entityName].entityObject = payload.entityObject;
+      state.gekEntityModels[payload.entityName].editNew = false;
+      state.gekEntityModels[payload.entityName].confirmDeleteDialog = true;
     },
     SET_ENTITY_LIST(state, payload) {
-      state.gekEntityObjects[payload.entityName].entityList = payload.entityList;
+      state.gekEntityModels[payload.entityName].entityList = payload.entityList;
     },
     SET_OPTION_LIST(state, payload) {
-      state.gekEntityObjects[payload.entityName].optionList = payload.optionList;
+      state.gekEntityModels[payload.entityName].optionList = payload.optionList;
     },
     SET_EDIT_DIALOG(state, payload) {
-      state.gekEntityObjects[payload.entityName].editDialog = payload.editDialog;
+      state.gekEntityModels[payload.entityName].editDialog = payload.editDialog;
     },
     SET_CONFIRM_DELETE_DIALOG(state, payload) {
-      state.gekEntityObjects[payload.entityName].confirmDeleteDialog = payload.confirmDeleteDialog;
+      state.gekEntityModels[payload.entityName].confirmDeleteDialog = payload.confirmDeleteDialog;
     },
     LOGGED_IN(state, userData) {
       axios.defaults.headers.common[
@@ -46671,36 +46942,38 @@ const GekEntityStoreModule = {
     },
   },
   actions: {
-    setMessage({ commit }, message) {
-      commit("SET_MESSAGE", message);
-    },
     setNavDrawer({ commit }, drawer) {
       commit("SET_NAV_DRAWER", drawer);
     },
+    // eslint-disable-next-line no-unused-vars
     login({ commit }, credentials) {
-      return _services_gekEntityApiService_js__WEBPACK_IMPORTED_MODULE_4__.GekEntityApiService.login(commit, credentials);
+      return _services_GekEntityApiService_js__WEBPACK_IMPORTED_MODULE_4__.GekEntityApiService.login(this, credentials);
     },
     logout({ commit }) {
-      return _services_gekEntityApiService_js__WEBPACK_IMPORTED_MODULE_4__.GekEntityApiService.logout(commit);
+      return _services_GekEntityApiService_js__WEBPACK_IMPORTED_MODULE_4__.GekEntityApiService.logout(commit);
     },
     loadEntities({ commit }, payload) {
-      return _services_gekEntityApiService_js__WEBPACK_IMPORTED_MODULE_4__.GekEntityApiService.getEntities(commit, payload);
+      //TODO: change this hack!
+      if (payload.entityName == 'ContactAddress') {
+        payload.entityName = 'Contact';
+      }
+      return _services_GekEntityApiService_js__WEBPACK_IMPORTED_MODULE_4__.GekEntityApiService.getEntities(commit, payload);
     },
     loadEntityOptions({ commit }, payload) {
-      return _services_gekEntityApiService_js__WEBPACK_IMPORTED_MODULE_4__.GekEntityApiService.getEntityOptions(commit, payload);
+      return _services_GekEntityApiService_js__WEBPACK_IMPORTED_MODULE_4__.GekEntityApiService.getEntityOptions(commit, payload);
     },
-    saveEntity({ dispatch, getters }, payload) {
+    saveEntity({ commit, dispatch, getters }, payload) {
       payload.entityObject = getters.getEditEntityObjectByEntityName(payload.entityName);
       if (getters.getEditNewByEntityName(payload.entityName)) {
-        return _services_gekEntityApiService_js__WEBPACK_IMPORTED_MODULE_4__.GekEntityApiService.createEntity(dispatch, payload);
+        return _services_GekEntityApiService_js__WEBPACK_IMPORTED_MODULE_4__.GekEntityApiService.createEntity(commit, dispatch, payload);
       }
       else {
-        return _services_gekEntityApiService_js__WEBPACK_IMPORTED_MODULE_4__.GekEntityApiService.updateEntity(dispatch, payload);
+        return _services_GekEntityApiService_js__WEBPACK_IMPORTED_MODULE_4__.GekEntityApiService.updateEntity(commit, dispatch, payload);
       }
     },
-    deleteEntity({ dispatch, getters }, payload) {
+    deleteEntity({ commit, dispatch, getters }, payload) {
       payload.entityObject = getters.getEditEntityObjectByEntityName(payload.entityName);
-      return _services_gekEntityApiService_js__WEBPACK_IMPORTED_MODULE_4__.GekEntityApiService.deleteEntity(dispatch, payload);
+      return _services_GekEntityApiService_js__WEBPACK_IMPORTED_MODULE_4__.GekEntityApiService.deleteEntity(commit, dispatch, payload);
     }
   },
   getters: {
@@ -46708,27 +46981,30 @@ const GekEntityStoreModule = {
       return state.userData.admin;
     },
     getEntityListByEntityName: (state) => (entityName) => {
-      if (state.gekEntityObjects[entityName].entityList === null) {
+      if (state.gekEntityModels[entityName].entityList === null) {
         return []
       }
       else {
-        return state.gekEntityObjects[entityName].entityList;
+        return state.gekEntityModels[entityName].entityList;
       }
     },
     getOptionListByEntityName: (state) => (entityName) => {
-        return state.gekEntityObjects[entityName].optionList;
+        return state.gekEntityModels[entityName].optionList;
     },
     getEditEntityObjectByEntityName: (state) => (entityName) => {
-      return state.gekEntityObjects[entityName].entityObject;
+      return state.gekEntityModels[entityName].entityObject;
+    },
+    getEmbedderObjectByEntityName: (state) => (entityName) => {
+      return state.gekEntityModels[entityName].entityObjectEmbedder;
     },
     getEditNewByEntityName: (state) => (entityName) => {
-      return state.gekEntityObjects[entityName].editNew;
+      return state.gekEntityModels[entityName].editNew;
     },
     getConfirmDeleteDialogByEntityName: (state) => (entityName) => {
-      return state.gekEntityObjects[entityName].confirmDeleteDialog;
+      return state.gekEntityModels[entityName].confirmDeleteDialog;
     },
     getEditDialogByEntityName: (state) => (entityName) => {
-      return state.gekEntityObjects[entityName].editDialog;
+      return state.gekEntityModels[entityName].editDialog;
     },
     getUser(state) {
       if (state.userData) {
@@ -46972,11 +47248,11 @@ const myMessages = {
           header: "Kontaktadresse bearbeiten",
           headernew: "Kontaktadresse neu anlegen",
           label: {
-            orgtype: "Organisationstyp:",
-            name: "Name:",
-            nameext: "Namenszusatz:",
-            contacttype: "Kontakttyp:",
-            id: "Id:",
+            street: "Straße:",
+            streetnr: "Hausnummer:",
+            streetext: "Zusatz:",
+            zip: "Plz:",
+            city: "Ort:",
           },
         },
       },
@@ -47024,9 +47300,9 @@ const playerModule = {
 
 /***/ }),
 
-/***/ "./vue/services/gekEntityApiService.js":
+/***/ "./vue/services/GekEntityApiService.js":
 /*!*********************************************!*\
-  !*** ./vue/services/gekEntityApiService.js ***!
+  !*** ./vue/services/GekEntityApiService.js ***!
   \*********************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
@@ -47048,7 +47324,7 @@ const GekEntityApiService = {
       axios__WEBPACK_IMPORTED_MODULE_0___default().interceptors.response.use(
         (response) => response,
         (error) => {
-          console.log("axios-response-interceptor:: api error: ", error, error.toJSON());
+          console.log("axios-response-interceptor:: api error catched:");
           if (error.response) {
             // The request was made and the server responded with a status code
             // that falls out of the range of 2xx
@@ -47064,23 +47340,15 @@ const GekEntityApiService = {
             // Something happened in setting up the request that triggered an Error
             console.log("Error", error.message);
           }
-          console.log("error config:", error.config);
-          // console.log("axios-response-interceptor:: api error: " + error.response.status + " " + error.response.data);
-          // if (error.response.status === 401) {
-          //   this.$store.dispatch("logout");
-          // }
           return Promise.reject(error);
         }
       );
     }
   },
-  login(commit, credentials) {
+  login(store, credentials) {
     return axios__WEBPACK_IMPORTED_MODULE_0___default().post("/api/login", credentials)
       .then(({ data }) => {
-        commit("LOGGED_IN", data);
-      })
-      .catch((error) => {
-        return Promise.reject(error);
+        store.commit("LOGGED_IN", data);
       });
   },
   logout(commit) {
@@ -47104,7 +47372,7 @@ const GekEntityApiService = {
         });
       });
   },
-  createEntity(dispatch, payload) {
+  createEntity(commit, dispatch, payload) {
     return (
       axios__WEBPACK_IMPORTED_MODULE_0___default().post("/api/entitynew" + payload.entityName, payload.entityObject)
         // eslint-disable-next-line no-unused-vars
@@ -47114,7 +47382,7 @@ const GekEntityApiService = {
             i18n: "msg.entity.success.create",
             i18nArgs: { entityDesc: payload.entityDesc },
           };
-          dispatch("setMessage", message);
+          commit("SET_MESSAGE", message);
           dispatch("loadEntities", { entityName: payload.entityName });
         })
         // eslint-disable-next-line no-unused-vars
@@ -47124,11 +47392,11 @@ const GekEntityApiService = {
             i18n: "msg.entity.error.create",
             i18nArgs: { entityDesc: payload.entityDesc },
           };
-          dispatch("setMessage", message);
+          commit("SET_MESSAGE", message);
         })
     );
   },
-  updateEntity(dispatch, payload) {
+  updateEntity(commit, dispatch, payload) {
     return (
       axios__WEBPACK_IMPORTED_MODULE_0___default().post("/api/entityedit" + payload.entityName, payload.entityObject)
         // eslint-disable-next-line no-unused-vars
@@ -47138,7 +47406,7 @@ const GekEntityApiService = {
             i18n: "msg.entity.success.update",
             i18nArgs: { entityDesc: payload.entityDesc },
           };
-          dispatch("setMessage", message);
+          commit("SET_MESSAGE", message);
           dispatch("loadEntities", { entityName: payload.entityName });
         })
         // eslint-disable-next-line no-unused-vars
@@ -47148,11 +47416,11 @@ const GekEntityApiService = {
             i18n: "msg.entity.error.update",
             i18nArgs: { entityDesc: payload.entityDesc },
           };
-          dispatch("setMessage", message);
+          commit("SET_MESSAGE", message);
         })
     );
   },
-  deleteEntity(dispatch, payload) {
+  deleteEntity(commit, dispatch, payload) {
     return (
       axios__WEBPACK_IMPORTED_MODULE_0___default().post(
           "/api/entitydelete" +
@@ -47167,7 +47435,7 @@ const GekEntityApiService = {
             i18n: "msg.entity.success.delete",
             i18nArgs: { entityDesc: payload.entityDesc },
           };
-          dispatch("setMessage", message);
+          commit("SET_MESSAGE", message);
           dispatch("loadEntities", { entityName: payload.entityName });
         })
         // eslint-disable-next-line no-unused-vars
@@ -47177,7 +47445,7 @@ const GekEntityApiService = {
             i18n: "msg.entity.error.delete",
             i18nArgs: { entityDesc: payload.entityDesc },
           };
-          dispatch("setMessage", message);
+          commit("SET_MESSAGE", message);
         })
     );
   },

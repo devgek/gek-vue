@@ -4,8 +4,11 @@
       <v-card-title class="primary white--text">{{ title }}</v-card-title>
       <v-card-text class="pt-4">
         <v-form>
-          <slot name="entity.fields">
-            <div>default content of entity.fields</div>
+          <slot name="entityEdit.embedder" v-bind:embedderObject="getEmbedderObjectByEntityName(entityName)" v-if="embedded">
+            <div>default content of slot entityEdit.embedder</div>
+          </slot>
+          <slot name="entityEdit.fields" >
+            <div>default content of slot entityEdit.fields</div>
           </slot>
         </v-form>
       </v-card-text>
@@ -38,6 +41,10 @@ export default {
       type: String,
       required: true,
     },
+    embedded: {
+      type: Boolean,
+      default: false
+    }
   },
   data() {
     return {
@@ -66,8 +73,8 @@ export default {
     },
   },
   computed: {
-    ...Vuex.mapState(["gekEntityObjects"]),
-    ...Vuex.mapGetters(["getEditDialogByEntityName", "getEditNewByEntityName"]),
+    ...Vuex.mapState(["gekEntityModels"]),
+    ...Vuex.mapGetters(["getEmbedderObjectByEntityName","getEditEntityObjectByEntityName", "getEditDialogByEntityName", "getEditNewByEntityName"]),
     dialog: {
       get() {
         return this.getEditDialogByEntityName(this.entityName);

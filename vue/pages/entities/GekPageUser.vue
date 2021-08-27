@@ -11,7 +11,7 @@
     </GekEntityEditList>
     <!-- entityEditDialog -->
     <GekEntityEditDialog entity="user" entityName="User" entityDesc="Benutzer">
-      <template v-slot:entity.fields>
+      <template v-slot:entityEdit.fields>
         <v-text-field
           v-model="getEditEntityObjectByEntityName('User').Name"
           :label="$t('form.user.edit.label.name')"

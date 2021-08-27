@@ -6,8 +6,8 @@ import GekLayoutPlain from "./layouts/GekLayoutPlain.vue";
 import GekLayoutEntityPage from "./layouts/GekLayoutEntityPage.vue";
 import GekPageNotFound from "./pages/GekNotFound.vue";
 import GekPageLogin from "./pages/GekPageLogin.vue";
-import GekPageUser from "./pages/entities/gekPageUser.vue";
-import GekPageContact from "./pages/entities/gekPageContact.vue";
+import GekPageUser from "./pages/entities/GekPageUser.vue";
+import GekPageContact from "./pages/entities/GekPageContact.vue";
 import GekPage1 from "./pages/GekPage1.vue";
 
 Vue.use(VueRouter);

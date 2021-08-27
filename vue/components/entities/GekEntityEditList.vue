@@ -107,7 +107,7 @@ export default {
     ...Vuex.mapMutations(["SET_ENTITY_NEW", "SET_ENTITY_EDIT", "SET_ENTITY_DELETE"]),
   },
   computed: {
-    ...Vuex.mapState(["gekEntityObjects"]),
+    ...Vuex.mapState(["gekEntityModels"]),
     ...Vuex.mapGetters(["isAdminUser", "getEntityListByEntityName"]),
   },
 }

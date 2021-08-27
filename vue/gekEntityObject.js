@@ -1,4 +1,4 @@
-class EntityObject {
+class EntityModel {
   constructor(entityName, newEntityObjectFn) {
     this.entityName = entityName;
     this.newEntityObjectFn = newEntityObjectFn;
@@ -8,8 +8,9 @@ class EntityObject {
     this.entityList = [];
     this.optionList = [];
     this.editNew = false;
+    this.entityObjectEmbedder = {};
 
   }
 }
 
-export default EntityObject
+export default EntityModel

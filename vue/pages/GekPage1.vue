@@ -40,7 +40,7 @@
 import Vuex from 'vuex'
 import {gkwebapp_T_ContactTypes} from "/src/assets/js/gekvue.js"
 import GekPageHeader from "/vue/components/GekPageHeader.vue"
-import GekEntityOptionsSelect from "/vue/components/entities/gekEntityOptionsSelect.vue"
+import GekEntityOptionsSelect from "/vue/components/entities/GekEntityOptionsSelect.vue"
 
 export default {
   components: {
