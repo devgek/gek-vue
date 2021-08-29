@@ -37,30 +37,30 @@ const GekEntityApiService = {
         store.commit("LOGGED_IN", data);
       });
   },
-  logout(commit) {
-    commit("LOGOUT");
+  logout(store) {
+    store.commit("LOGOUT");
   },
-  getEntityOptions(commit, payload) {
+  getEntityOptions(store, payload) {
     return axios
       .post("/api/optionlist" + payload.entityName)
       .then(({ data }) => {
-        commit("SET_OPTION_LIST", {
+        store.commit("SET_OPTION_LIST", {
           entityName: payload.entityName,
           optionList: data.EntityOptions,
         });
       });
   },
-  getEntities(commit, payload) {
+  getEntities(store, payload) {
     return axios
       .post("/api/entitylist" + payload.entityName)
       .then(({ data }) => {
-        commit("SET_ENTITY_LIST", {
+        store.commit("SET_ENTITY_LIST", {
           entityName: payload.entityName,
           entityList: data.EntityObject,
         });
       });
   },
-  createEntity(commit, dispatch, payload) {
+  createEntity(store, payload) {
     return (
       axios
         .post("/api/entitynew" + payload.entityName, payload.entityObject)
@@ -71,8 +71,8 @@ const GekEntityApiService = {
             i18n: "msg.entity.success.create",
             i18nArgs: { entityDesc: payload.entityDesc },
           };
-          commit("SET_MESSAGE", message);
-          dispatch("loadEntities", { entityName: payload.entityName });
+          store.commit("SET_MESSAGE", message);
+          this.getEntities(store, { entityName: payload.entityName });
         })
         // eslint-disable-next-line no-unused-vars
         .catch((error) => {
@@ -81,11 +81,11 @@ const GekEntityApiService = {
             i18n: "msg.entity.error.create",
             i18nArgs: { entityDesc: payload.entityDesc },
           };
-          commit("SET_MESSAGE", message);
+          store.commit("SET_MESSAGE", message);
         })
     );
   },
-  updateEntity(commit, dispatch, payload) {
+  updateEntity(store, payload) {
     return (
       axios
         .post("/api/entityedit" + payload.entityName, payload.entityObject)
@@ -96,8 +96,8 @@ const GekEntityApiService = {
             i18n: "msg.entity.success.update",
             i18nArgs: { entityDesc: payload.entityDesc },
           };
-          commit("SET_MESSAGE", message);
-          dispatch("loadEntities", { entityName: payload.entityName });
+          store.commit("SET_MESSAGE", message);
+          this.getEntities(store, { entityName: payload.entityName });
         })
         // eslint-disable-next-line no-unused-vars
         .catch(({ error }) => {
@@ -106,11 +106,11 @@ const GekEntityApiService = {
             i18n: "msg.entity.error.update",
             i18nArgs: { entityDesc: payload.entityDesc },
           };
-          commit("SET_MESSAGE", message);
+          store.commit("SET_MESSAGE", message);
         })
     );
   },
-  deleteEntity(commit, dispatch, payload) {
+  deleteEntity(store, payload) {
     return (
       axios
         .post(
@@ -126,8 +126,8 @@ const GekEntityApiService = {
             i18n: "msg.entity.success.delete",
             i18nArgs: { entityDesc: payload.entityDesc },
           };
-          commit("SET_MESSAGE", message);
-          dispatch("loadEntities", { entityName: payload.entityName });
+          store.commit("SET_MESSAGE", message);
+          this.getEntities(store, { entityName: payload.entityName });
         })
         // eslint-disable-next-line no-unused-vars
         .catch((error) => {
@@ -136,7 +136,7 @@ const GekEntityApiService = {
             i18n: "msg.entity.error.delete",
             i18nArgs: { entityDesc: payload.entityDesc },
           };
-          commit("SET_MESSAGE", message);
+          store.commit("SET_MESSAGE", message);
         })
     );
   },

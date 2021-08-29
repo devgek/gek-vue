@@ -6152,7 +6152,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
-/* harmony import */ var vuex__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! vuex */ "./node_modules/vuex/dist/vuex.esm.js");
+/* harmony import */ var vuex__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! vuex */ "./node_modules/vuex/dist/vuex.esm.js");
+/* harmony import */ var _services_GekEntityService__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @/services/GekEntityService */ "./vue/services/GekEntityService.js");
 //
 //
 //
@@ -6186,6 +6187,7 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+
 
 
 
@@ -6201,16 +6203,16 @@ __webpack_require__.r(__webpack_exports__);
     return {};
   },
   methods: {
-    ...vuex__WEBPACK_IMPORTED_MODULE_0__.default.mapActions(["logout", "setNavDrawer"]),
+    ...vuex__WEBPACK_IMPORTED_MODULE_1__.default.mapMutations(["SET_NAV_DRAWER"]),
     doLogout() {
-      this.logout();
+      _services_GekEntityService__WEBPACK_IMPORTED_MODULE_0__.GekEntityService.logout();
     },
     switchDrawer() {
-      this.setNavDrawer(!this.getNavDrawer);
+      this.SET_NAV_DRAWER(!this.getNavDrawer);
     },
   },
   computed: {
-    ...vuex__WEBPACK_IMPORTED_MODULE_0__.default.mapGetters(["getUser", "getNavDrawer"]),
+    ...vuex__WEBPACK_IMPORTED_MODULE_1__.default.mapGetters(["getUser", "getNavDrawer"]),
     user() {
       return this.getUser;
     },
@@ -6415,7 +6417,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
-/* harmony import */ var vuex__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! vuex */ "./node_modules/vuex/dist/vuex.esm.js");
+/* harmony import */ var vuex__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! vuex */ "./node_modules/vuex/dist/vuex.esm.js");
+/* harmony import */ var _services_GekEntityService__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @/services/GekEntityService */ "./vue/services/GekEntityService.js");
 //
 //
 //
@@ -6435,6 +6438,7 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+
 
 
 
@@ -6457,8 +6461,7 @@ __webpack_require__.r(__webpack_exports__);
     return {};
   },
   methods: {
-    ...vuex__WEBPACK_IMPORTED_MODULE_0__.default.mapMutations(["SET_CONFIRM_DELETE_DIALOG"]),
-    ...vuex__WEBPACK_IMPORTED_MODULE_0__.default.mapActions(["deleteEntity"]),
+    ...vuex__WEBPACK_IMPORTED_MODULE_1__.default.mapMutations(["SET_CONFIRM_DELETE_DIALOG"]),
     abort() {
       // maybe calling component wants to react
       this.$emit("entity-delete-abort-" + this.entity);
@@ -6468,7 +6471,7 @@ __webpack_require__.r(__webpack_exports__);
       });
     },
     confirmDelete() {
-      this.deleteEntity({ entityName: this.entityName, entityDesc: this.entityDesc });
+      _services_GekEntityService__WEBPACK_IMPORTED_MODULE_0__.GekEntityService.deleteEntity({ entityName: this.entityName, entityDesc: this.entityDesc });
       // maybe calling component wants to react
       this.$emit("entity-delete-confirm-" + this.entity);
       this.SET_CONFIRM_DELETE_DIALOG({
@@ -6478,7 +6481,7 @@ __webpack_require__.r(__webpack_exports__);
     },
   },
   computed: {
-    ...vuex__WEBPACK_IMPORTED_MODULE_0__.default.mapGetters(["getConfirmDeleteDialogByEntityName"]),
+    ...vuex__WEBPACK_IMPORTED_MODULE_1__.default.mapGetters(["getConfirmDeleteDialogByEntityName"]),
     title() {
       return this.entityDesc + " löschen";
     },
@@ -6511,7 +6514,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
-/* harmony import */ var vuex__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! vuex */ "./node_modules/vuex/dist/vuex.esm.js");
+/* harmony import */ var vuex__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! vuex */ "./node_modules/vuex/dist/vuex.esm.js");
+/* harmony import */ var _services_GekEntityService__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @/services/GekEntityService */ "./vue/services/GekEntityService.js");
 //
 //
 //
@@ -6538,6 +6542,7 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+
 
 
 
@@ -6566,8 +6571,7 @@ __webpack_require__.r(__webpack_exports__);
     };
   },
   methods: {
-    ...vuex__WEBPACK_IMPORTED_MODULE_0__.default.mapMutations(["SET_EDIT_DIALOG"]),
-    ...vuex__WEBPACK_IMPORTED_MODULE_0__.default.mapActions(["saveEntity"]),
+    ...vuex__WEBPACK_IMPORTED_MODULE_1__.default.mapMutations(["SET_EDIT_DIALOG"]),
     abort() {
       // maybe calling component wants to react
       this.$emit("entity-edit-abort-" + this.entity);
@@ -6577,7 +6581,7 @@ __webpack_require__.r(__webpack_exports__);
       });
     },
     save() {
-      this.saveEntity({ entityName: this.entityName, entityDesc: this.entityDesc });
+      _services_GekEntityService__WEBPACK_IMPORTED_MODULE_0__.GekEntityService.saveEntity({ entityName: this.entityName, entityDesc: this.entityDesc });
       // maybe calling component wants to react
       this.$emit("entity-edit-save-" + this.entity);
       this.SET_EDIT_DIALOG({
@@ -6587,8 +6591,8 @@ __webpack_require__.r(__webpack_exports__);
     },
   },
   computed: {
-    ...vuex__WEBPACK_IMPORTED_MODULE_0__.default.mapState(["gekEntityModels"]),
-    ...vuex__WEBPACK_IMPORTED_MODULE_0__.default.mapGetters(["getEmbedderObjectByEntityName","getEditEntityObjectByEntityName", "getEditDialogByEntityName", "getEditNewByEntityName"]),
+    ...vuex__WEBPACK_IMPORTED_MODULE_1__.default.mapState(["gekEntityModels"]),
+    ...vuex__WEBPACK_IMPORTED_MODULE_1__.default.mapGetters(["getEmbedderObjectByEntityName","getEditEntityObjectByEntityName", "getEditDialogByEntityName", "getEditNewByEntityName"]),
     dialog: {
       get() {
         return this.getEditDialogByEntityName(this.entityName);
@@ -6757,7 +6761,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
-/* harmony import */ var vuex__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! vuex */ "./node_modules/vuex/dist/vuex.esm.js");
+/* harmony import */ var vuex__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! vuex */ "./node_modules/vuex/dist/vuex.esm.js");
+/* harmony import */ var _services_GekEntityService__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @/services/GekEntityService */ "./vue/services/GekEntityService.js");
 //
 //
 //
@@ -6775,6 +6780,7 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+
 
 
 
@@ -6799,10 +6805,9 @@ __webpack_require__.r(__webpack_exports__);
     };
   },
   created() {
-    this.loadEntityOptions({entityName: this.entityName})
+    _services_GekEntityService__WEBPACK_IMPORTED_MODULE_0__.GekEntityService.loadEntityOptions({entityName: this.entityName})
   },
   methods: {
-    ...vuex__WEBPACK_IMPORTED_MODULE_0__.default.mapActions(["loadEntityOptions"]),
     label() {
       if (this.labelKey === null) {
         return this.labelText;
@@ -6816,7 +6821,7 @@ __webpack_require__.r(__webpack_exports__);
     }
   },
   computed: {
-    ...vuex__WEBPACK_IMPORTED_MODULE_0__.default.mapGetters(["getOptionListByEntityName"]),
+    ...vuex__WEBPACK_IMPORTED_MODULE_1__.default.mapGetters(["getOptionListByEntityName"]),
     items() {
       return this.getOptionListByEntityName(this.entityName);
     }
@@ -7003,7 +7008,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
-/* harmony import */ var vuex__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! vuex */ "./node_modules/vuex/dist/vuex.esm.js");
+/* harmony import */ var _services_GekEntityService__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @/services/GekEntityService */ "./vue/services/GekEntityService.js");
 //
 //
 //
@@ -7068,14 +7073,13 @@ __webpack_require__.r(__webpack_exports__);
     };
   },
   methods: {
-    ...vuex__WEBPACK_IMPORTED_MODULE_0__.default.mapActions(["login"]),
     onSubmit() {
       if (this.user === "" || this.pass === "") {
         this.errorMessage = this.$t("form.login.msg.inputrequired");
         return;
       }
 
-      this.login({user: this.user, pass: this.pass})
+      _services_GekEntityService__WEBPACK_IMPORTED_MODULE_0__.GekEntityService.login({user: this.user, pass: this.pass})
         .then(() => {
           this.$router.push({ name: this.startPage });
         })
@@ -7101,11 +7105,12 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
-/* harmony import */ var vuex__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! vuex */ "./node_modules/vuex/dist/vuex.esm.js");
+/* harmony import */ var vuex__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! vuex */ "./node_modules/vuex/dist/vuex.esm.js");
 /* harmony import */ var _vue_components_entities_GekEntityEditDialog_vue__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../../../vue/components/entities/GekEntityEditDialog.vue */ "./vue/components/entities/GekEntityEditDialog.vue");
 /* harmony import */ var _vue_components_entities_GekEntityEditList_vue__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../../../vue/components/entities/GekEntityEditList.vue */ "./vue/components/entities/GekEntityEditList.vue");
 /* harmony import */ var _vue_components_entities_GekEntityConfirmDelete_vue__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../../vue/components/entities/GekEntityConfirmDelete.vue */ "./vue/components/entities/GekEntityConfirmDelete.vue");
 /* harmony import */ var _src_assets_js_gekvue_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../../../src/assets/js/gekvue.js */ "./src/assets/js/gekvue.js");
+/* harmony import */ var _services_GekEntityService__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @/services/GekEntityService */ "./vue/services/GekEntityService.js");
 //
 //
 //
@@ -7290,6 +7295,7 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+
 
 
 
@@ -7307,12 +7313,11 @@ __webpack_require__.r(__webpack_exports__);
     return {};
   },
   created() {
-    this.loadEntities({entityName: "Contact"})
+    _services_GekEntityService__WEBPACK_IMPORTED_MODULE_4__.GekEntityService.loadEntities({entityName: "Contact"})
   },
   methods: {
-    ...vuex__WEBPACK_IMPORTED_MODULE_4__.default.mapMutations(["SET_ENTITY_NEW", "SET_ENTITY_NEW_EMBEDDED", "SET_ENTITY_EDIT", "SET_ENTITY_EDIT_EMBEDDED", "SET_ENTITY_DELETE", "SET_ENTITY_DELETE_EMBEDDED"]),
-    ...vuex__WEBPACK_IMPORTED_MODULE_4__.default.mapActions(["loadEntities"]),
-    colorExpandIcon(hasChildren) {
+    ...vuex__WEBPACK_IMPORTED_MODULE_5__.default.mapMutations(["SET_ENTITY_NEW", "SET_ENTITY_NEW_EMBEDDED", "SET_ENTITY_EDIT", "SET_ENTITY_EDIT_EMBEDDED", "SET_ENTITY_DELETE", "SET_ENTITY_DELETE_EMBEDDED"]),
+     colorExpandIcon(hasChildren) {
       if (hasChildren) {
         return "primary";
       }
@@ -7340,12 +7345,12 @@ __webpack_require__.r(__webpack_exports__);
     },
   },
   computed: {
-    ...vuex__WEBPACK_IMPORTED_MODULE_4__.default.mapGetters([
+    ...vuex__WEBPACK_IMPORTED_MODULE_5__.default.mapGetters([
       "isAdminUser",
       "getEditNewByEntityName",
       "getEditEntityObjectByEntityName",
     ]),
-    ...vuex__WEBPACK_IMPORTED_MODULE_4__.default.mapState(["gekEntityModels"]),
+    ...vuex__WEBPACK_IMPORTED_MODULE_5__.default.mapState(["gekEntityModels"]),
     tableHeaders() {
       var h = [
         { text: "", sortable: false, value: "data-table-expand" },
@@ -7385,11 +7390,12 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
-/* harmony import */ var vuex__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! vuex */ "./node_modules/vuex/dist/vuex.esm.js");
+/* harmony import */ var vuex__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! vuex */ "./node_modules/vuex/dist/vuex.esm.js");
 /* harmony import */ var _vue_components_entities_GekEntityEditDialog_vue__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../../../vue/components/entities/GekEntityEditDialog.vue */ "./vue/components/entities/GekEntityEditDialog.vue");
 /* harmony import */ var _vue_components_entities_GekEntityEditList_vue__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../../../vue/components/entities/GekEntityEditList.vue */ "./vue/components/entities/GekEntityEditList.vue");
 /* harmony import */ var _vue_components_entities_GekEntityConfirmDelete_vue__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../../vue/components/entities/GekEntityConfirmDelete.vue */ "./vue/components/entities/GekEntityConfirmDelete.vue");
 /* harmony import */ var _src_assets_js_gekvue_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../../../src/assets/js/gekvue.js */ "./src/assets/js/gekvue.js");
+/* harmony import */ var _services_GekEntityService__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @/services/GekEntityService */ "./vue/services/GekEntityService.js");
 //
 //
 //
@@ -7443,6 +7449,7 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+
 
 
 
@@ -7460,10 +7467,9 @@ __webpack_require__.r(__webpack_exports__);
     return {};
   },
   created() {
-    this.$store.dispatch("loadEntities", { entityName: "User" });
+    _services_GekEntityService__WEBPACK_IMPORTED_MODULE_4__.GekEntityService.loadEntities({ entityName: "User" });
   },
   methods: {
-    ...vuex__WEBPACK_IMPORTED_MODULE_4__.default.mapActions(["loadEntities"]),
     roleDesc(role) {
       return _src_assets_js_gekvue_js__WEBPACK_IMPORTED_MODULE_3__.gkwebapp_T_RoleTypes[role].text;
     },
@@ -7472,7 +7478,7 @@ __webpack_require__.r(__webpack_exports__);
     },
   },
   computed: {
-    ...vuex__WEBPACK_IMPORTED_MODULE_4__.default.mapGetters(["getEditNewByEntityName", "getEditEntityObjectByEntityName"]),
+    ...vuex__WEBPACK_IMPORTED_MODULE_5__.default.mapGetters(["getEditNewByEntityName", "getEditEntityObjectByEntityName"]),
     tableHeaders() {
       var h = [
         {
@@ -46847,24 +46853,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "GekEntityStoreModule": () => (/* binding */ GekEntityStoreModule)
 /* harmony export */ });
-/* harmony import */ var _gekEntityObject_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./gekEntityObject.js */ "./vue/gekEntityObject.js");
-/* harmony import */ var _gekEntityStoreUser_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./gekEntityStoreUser.js */ "./vue/gekEntityStoreUser.js");
-/* harmony import */ var _gekEntityStoreContact_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./gekEntityStoreContact.js */ "./vue/gekEntityStoreContact.js");
-/* harmony import */ var _gekEntityStoreContactAddress_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./gekEntityStoreContactAddress.js */ "./vue/gekEntityStoreContactAddress.js");
-/* harmony import */ var _services_GekEntityApiService_js__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./services/GekEntityApiService.js */ "./vue/services/GekEntityApiService.js");
 // eslint-disable-next-line no-unused-vars
 /*global axios*/
-
-
-
-
-
-
-
-
-const apiBaseUrl = "http://localhost:8080";
-const logConsole = true;
-_services_GekEntityApiService_js__WEBPACK_IMPORTED_MODULE_4__.GekEntityApiService.init(apiBaseUrl, logConsole);
 
 const GekEntityStoreModule = {
   namespaced: false,
@@ -46873,7 +46863,7 @@ const GekEntityStoreModule = {
       userData: null,
       message: null,
       navDrawer: true,
-      gekEntityModels: {"User": new _gekEntityObject_js__WEBPACK_IMPORTED_MODULE_0__.default("User", _gekEntityStoreUser_js__WEBPACK_IMPORTED_MODULE_1__.default, this), "Contact": new _gekEntityObject_js__WEBPACK_IMPORTED_MODULE_0__.default("Contact", _gekEntityStoreContact_js__WEBPACK_IMPORTED_MODULE_2__.default, this), "ContactAddress": new _gekEntityObject_js__WEBPACK_IMPORTED_MODULE_0__.default("ContactAddress", _gekEntityStoreContactAddress_js__WEBPACK_IMPORTED_MODULE_3__.default, this)}
+      gekEntityModels: {}
     };
   },
   mutations: {
@@ -46882,6 +46872,9 @@ const GekEntityStoreModule = {
     },
     SET_NAV_DRAWER(state, drawer) {
       state.navDrawer = drawer;
+    },
+    SET_ENTITY_MODEL(state, payload) {
+      state.gekEntityModels[payload.entityName] = payload.entityModel;
     },
     SET_ENTITY_NEW(state, payload) {
       state.gekEntityModels[payload.entityName].entityObject = state.gekEntityModels[payload.entityName].newEntityObjectFn();
@@ -46942,39 +46935,6 @@ const GekEntityStoreModule = {
     },
   },
   actions: {
-    setNavDrawer({ commit }, drawer) {
-      commit("SET_NAV_DRAWER", drawer);
-    },
-    // eslint-disable-next-line no-unused-vars
-    login({ commit }, credentials) {
-      return _services_GekEntityApiService_js__WEBPACK_IMPORTED_MODULE_4__.GekEntityApiService.login(this, credentials);
-    },
-    logout({ commit }) {
-      return _services_GekEntityApiService_js__WEBPACK_IMPORTED_MODULE_4__.GekEntityApiService.logout(commit);
-    },
-    loadEntities({ commit }, payload) {
-      //TODO: change this hack!
-      if (payload.entityName == 'ContactAddress') {
-        payload.entityName = 'Contact';
-      }
-      return _services_GekEntityApiService_js__WEBPACK_IMPORTED_MODULE_4__.GekEntityApiService.getEntities(commit, payload);
-    },
-    loadEntityOptions({ commit }, payload) {
-      return _services_GekEntityApiService_js__WEBPACK_IMPORTED_MODULE_4__.GekEntityApiService.getEntityOptions(commit, payload);
-    },
-    saveEntity({ commit, dispatch, getters }, payload) {
-      payload.entityObject = getters.getEditEntityObjectByEntityName(payload.entityName);
-      if (getters.getEditNewByEntityName(payload.entityName)) {
-        return _services_GekEntityApiService_js__WEBPACK_IMPORTED_MODULE_4__.GekEntityApiService.createEntity(commit, dispatch, payload);
-      }
-      else {
-        return _services_GekEntityApiService_js__WEBPACK_IMPORTED_MODULE_4__.GekEntityApiService.updateEntity(commit, dispatch, payload);
-      }
-    },
-    deleteEntity({ commit, dispatch, getters }, payload) {
-      payload.entityObject = getters.getEditEntityObjectByEntityName(payload.entityName);
-      return _services_GekEntityApiService_js__WEBPACK_IMPORTED_MODULE_4__.GekEntityApiService.deleteEntity(commit, dispatch, payload);
-    }
   },
   getters: {
     isAdminUser(state) {
@@ -47351,28 +47311,28 @@ const GekEntityApiService = {
         store.commit("LOGGED_IN", data);
       });
   },
-  logout(commit) {
-    commit("LOGOUT");
+  logout(store) {
+    store.commit("LOGOUT");
   },
-  getEntityOptions(commit, payload) {
+  getEntityOptions(store, payload) {
     return axios__WEBPACK_IMPORTED_MODULE_0___default().post("/api/optionlist" + payload.entityName)
       .then(({ data }) => {
-        commit("SET_OPTION_LIST", {
+        store.commit("SET_OPTION_LIST", {
           entityName: payload.entityName,
           optionList: data.EntityOptions,
         });
       });
   },
-  getEntities(commit, payload) {
+  getEntities(store, payload) {
     return axios__WEBPACK_IMPORTED_MODULE_0___default().post("/api/entitylist" + payload.entityName)
       .then(({ data }) => {
-        commit("SET_ENTITY_LIST", {
+        store.commit("SET_ENTITY_LIST", {
           entityName: payload.entityName,
           entityList: data.EntityObject,
         });
       });
   },
-  createEntity(commit, dispatch, payload) {
+  createEntity(store, payload) {
     return (
       axios__WEBPACK_IMPORTED_MODULE_0___default().post("/api/entitynew" + payload.entityName, payload.entityObject)
         // eslint-disable-next-line no-unused-vars
@@ -47382,8 +47342,8 @@ const GekEntityApiService = {
             i18n: "msg.entity.success.create",
             i18nArgs: { entityDesc: payload.entityDesc },
           };
-          commit("SET_MESSAGE", message);
-          dispatch("loadEntities", { entityName: payload.entityName });
+          store.commit("SET_MESSAGE", message);
+          this.getEntities(store, { entityName: payload.entityName });
         })
         // eslint-disable-next-line no-unused-vars
         .catch((error) => {
@@ -47392,11 +47352,11 @@ const GekEntityApiService = {
             i18n: "msg.entity.error.create",
             i18nArgs: { entityDesc: payload.entityDesc },
           };
-          commit("SET_MESSAGE", message);
+          store.commit("SET_MESSAGE", message);
         })
     );
   },
-  updateEntity(commit, dispatch, payload) {
+  updateEntity(store, payload) {
     return (
       axios__WEBPACK_IMPORTED_MODULE_0___default().post("/api/entityedit" + payload.entityName, payload.entityObject)
         // eslint-disable-next-line no-unused-vars
@@ -47406,8 +47366,8 @@ const GekEntityApiService = {
             i18n: "msg.entity.success.update",
             i18nArgs: { entityDesc: payload.entityDesc },
           };
-          commit("SET_MESSAGE", message);
-          dispatch("loadEntities", { entityName: payload.entityName });
+          store.commit("SET_MESSAGE", message);
+          this.getEntities(store, { entityName: payload.entityName });
         })
         // eslint-disable-next-line no-unused-vars
         .catch(({ error }) => {
@@ -47416,11 +47376,11 @@ const GekEntityApiService = {
             i18n: "msg.entity.error.update",
             i18nArgs: { entityDesc: payload.entityDesc },
           };
-          commit("SET_MESSAGE", message);
+          store.commit("SET_MESSAGE", message);
         })
     );
   },
-  deleteEntity(commit, dispatch, payload) {
+  deleteEntity(store, payload) {
     return (
       axios__WEBPACK_IMPORTED_MODULE_0___default().post(
           "/api/entitydelete" +
@@ -47435,8 +47395,8 @@ const GekEntityApiService = {
             i18n: "msg.entity.success.delete",
             i18nArgs: { entityDesc: payload.entityDesc },
           };
-          commit("SET_MESSAGE", message);
-          dispatch("loadEntities", { entityName: payload.entityName });
+          store.commit("SET_MESSAGE", message);
+          this.getEntities(store, { entityName: payload.entityName });
         })
         // eslint-disable-next-line no-unused-vars
         .catch((error) => {
@@ -47445,10 +47405,68 @@ const GekEntityApiService = {
             i18n: "msg.entity.error.delete",
             i18nArgs: { entityDesc: payload.entityDesc },
           };
-          commit("SET_MESSAGE", message);
+          store.commit("SET_MESSAGE", message);
         })
     );
   },
+};
+
+
+
+
+/***/ }),
+
+/***/ "./vue/services/GekEntityService.js":
+/*!******************************************!*\
+  !*** ./vue/services/GekEntityService.js ***!
+  \******************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "GekEntityService": () => (/* binding */ GekEntityService)
+/* harmony export */ });
+/* harmony import */ var _GekEntityApiService_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./GekEntityApiService.js */ "./vue/services/GekEntityApiService.js");
+
+
+// contains the business logic of GekEntity module
+const GekEntityService = {
+    theStore: null,
+    init(store, apiBaseUrl, logConsole) {
+        this.theStore = store;
+        return _GekEntityApiService_js__WEBPACK_IMPORTED_MODULE_0__.GekEntityApiService.init(apiBaseUrl, logConsole)
+    },
+    // eslint-disable-next-line no-unused-vars
+    login(credentials) {
+        return _GekEntityApiService_js__WEBPACK_IMPORTED_MODULE_0__.GekEntityApiService.login(this.theStore, credentials);
+    },
+    logout() {
+        return _GekEntityApiService_js__WEBPACK_IMPORTED_MODULE_0__.GekEntityApiService.logout(this.theStore);
+    },
+    loadEntities(payload) {
+        //TODO: change this hack!
+        if (payload.entityName == 'ContactAddress') {
+            payload.entityName = 'Contact';
+        }
+        return _GekEntityApiService_js__WEBPACK_IMPORTED_MODULE_0__.GekEntityApiService.getEntities(this.theStore, payload);
+    },
+    loadEntityOptions(payload) {
+        return _GekEntityApiService_js__WEBPACK_IMPORTED_MODULE_0__.GekEntityApiService.getEntityOptions(this.theStore, payload);
+    },
+    saveEntity(payload) {
+        payload.entityObject = this.theStore.getters.getEditEntityObjectByEntityName(payload.entityName);
+        if (this.theStore.getters.getEditNewByEntityName(payload.entityName)) {
+            return _GekEntityApiService_js__WEBPACK_IMPORTED_MODULE_0__.GekEntityApiService.createEntity(this.theStore, payload);
+        }
+        else {
+            return _GekEntityApiService_js__WEBPACK_IMPORTED_MODULE_0__.GekEntityApiService.updateEntity(this.theStore, payload);
+        }
+    },
+    deleteEntity(payload) {
+        payload.entityObject = this.theStore.getters.getEditEntityObjectByEntityName(payload.entityName);
+        return _GekEntityApiService_js__WEBPACK_IMPORTED_MODULE_0__.GekEntityApiService.deleteEntity(this.theStore, payload);
+    }
 };
 
 
@@ -47619,6 +47637,11 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _src_plugin_gekentities_vueplugin_js__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../src/plugin/gekentities-vueplugin.js */ "./src/plugin/gekentities-vueplugin.js");
 /* harmony import */ var _GekApp_vue__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./GekApp.vue */ "./vue/GekApp.vue");
 /* harmony import */ var _modules_player_playerModule_js__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./modules/player/playerModule.js */ "./vue/modules/player/playerModule.js");
+/* harmony import */ var _gekEntityObject__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! @/gekEntityObject */ "./vue/gekEntityObject.js");
+/* harmony import */ var _gekEntityStoreUser__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! @/gekEntityStoreUser */ "./vue/gekEntityStoreUser.js");
+/* harmony import */ var _gekEntityStoreContact__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! @/gekEntityStoreContact */ "./vue/gekEntityStoreContact.js");
+/* harmony import */ var _gekEntityStoreContactAddress__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! @/gekEntityStoreContactAddress */ "./vue/gekEntityStoreContactAddress.js");
+/* harmony import */ var _services_GekEntityService__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! @/services/GekEntityService */ "./vue/services/GekEntityService.js");
 console.log("main.js");
 
 
@@ -47656,6 +47679,30 @@ const myStore = new vuex__WEBPACK_IMPORTED_MODULE_10__.default.Store(myStoreOpti
 myStore.registerModule("player", _modules_player_playerModule_js__WEBPACK_IMPORTED_MODULE_9__.playerModule);
 myStore.registerModule("gekentities", _gekEntityStoreModule_js__WEBPACK_IMPORTED_MODULE_4__.GekEntityStoreModule);
 console.log("after registerModule gekentities and player");
+
+// entity models must be set to gekEntityStoreModule
+
+
+
+
+
+const userModel = new _gekEntityObject__WEBPACK_IMPORTED_MODULE_11__.default("User", _gekEntityStoreUser__WEBPACK_IMPORTED_MODULE_12__.default);
+const contactModel = new _gekEntityObject__WEBPACK_IMPORTED_MODULE_11__.default("Contact", _gekEntityStoreContact__WEBPACK_IMPORTED_MODULE_13__.default);
+const contactAddressModel = new _gekEntityObject__WEBPACK_IMPORTED_MODULE_11__.default("ContactAddress", _gekEntityStoreContactAddress__WEBPACK_IMPORTED_MODULE_14__.default);
+vue__WEBPACK_IMPORTED_MODULE_7___default().set(myStore.state.gekentities.gekEntityModels, "User", userModel);
+vue__WEBPACK_IMPORTED_MODULE_7___default().set(myStore.state.gekentities.gekEntityModels, "Contact", contactModel);
+vue__WEBPACK_IMPORTED_MODULE_7___default().set(myStore.state.gekentities.gekEntityModels, "ContactAddress", contactAddressModel);
+
+/*
+myStore.commit('SET_ENTITY_MODEL', {entityName: "User", entityModel: userModel})
+myStore.commit('SET_ENTITY_MODEL', {entityName: "Contact", entityModel: contactModel})
+myStore.commit('SET_ENTITY_MODEL', {entityName: "ContactAddress", entityModel: contactAddressModel})
+ */
+
+const apiBaseUrl = "http://localhost:8080";
+const logConsole = true;
+
+_services_GekEntityService__WEBPACK_IMPORTED_MODULE_15__.GekEntityService.init(myStore, apiBaseUrl, logConsole);
 
 // eslint-disable-next-line no-unused-vars
 const myVueInstance = new (vue__WEBPACK_IMPORTED_MODULE_7___default())({

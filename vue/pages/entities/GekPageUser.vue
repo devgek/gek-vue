@@ -57,6 +57,7 @@ import GekEntityEditDialog from "/vue/components/entities/GekEntityEditDialog.vu
 import GekEntityEditList from "/vue/components/entities/GekEntityEditList.vue";
 import GekEntityConfirmDelete from "/vue/components/entities/GekEntityConfirmDelete.vue";
 import { gkwebapp_T_RoleTypes } from "/src/assets/js/gekvue.js";
+import {GekEntityService} from "@/services/GekEntityService";
 
 export default {
   components: {
@@ -68,10 +69,9 @@ export default {
     return {};
   },
   created() {
-    this.$store.dispatch("loadEntities", { entityName: "User" });
+    GekEntityService.loadEntities({ entityName: "User" });
   },
   methods: {
-    ...Vuex.mapActions(["loadEntities"]),
     roleDesc(role) {
       return gkwebapp_T_RoleTypes[role].text;
     },

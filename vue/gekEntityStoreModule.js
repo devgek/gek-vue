@@ -1,17 +1,6 @@
 // eslint-disable-next-line no-unused-vars
 /*global axios*/
 
-import EntityModel from './gekEntityObject.js'
-import newEntityObjectUser from './gekEntityStoreUser.js'
-import newEntityObjectContact from './gekEntityStoreContact.js'
-import newEntityObjectContactAddress from './gekEntityStoreContactAddress.js'
-
-import {GekEntityApiService} from './services/GekEntityApiService.js'
-
-const apiBaseUrl = "http://localhost:8080";
-const logConsole = true;
-GekEntityApiService.init(apiBaseUrl, logConsole);
-
 const GekEntityStoreModule = {
   namespaced: false,
   state() {
@@ -19,7 +8,7 @@ const GekEntityStoreModule = {
       userData: null,
       message: null,
       navDrawer: true,
-      gekEntityModels: {"User": new EntityModel("User", newEntityObjectUser, this), "Contact": new EntityModel("Contact", newEntityObjectContact, this), "ContactAddress": new EntityModel("ContactAddress", newEntityObjectContactAddress, this)}
+      gekEntityModels: {}
     };
   },
   mutations: {
@@ -28,6 +17,9 @@ const GekEntityStoreModule = {
     },
     SET_NAV_DRAWER(state, drawer) {
       state.navDrawer = drawer;
+    },
+    SET_ENTITY_MODEL(state, payload) {
+      state.gekEntityModels[payload.entityName] = payload.entityModel;
     },
     SET_ENTITY_NEW(state, payload) {
       state.gekEntityModels[payload.entityName].entityObject = state.gekEntityModels[payload.entityName].newEntityObjectFn();
@@ -88,39 +80,6 @@ const GekEntityStoreModule = {
     },
   },
   actions: {
-    setNavDrawer({ commit }, drawer) {
-      commit("SET_NAV_DRAWER", drawer);
-    },
-    // eslint-disable-next-line no-unused-vars
-    login({ commit }, credentials) {
-      return GekEntityApiService.login(this, credentials);
-    },
-    logout({ commit }) {
-      return GekEntityApiService.logout(commit);
-    },
-    loadEntities({ commit }, payload) {
-      //TODO: change this hack!
-      if (payload.entityName == 'ContactAddress') {
-        payload.entityName = 'Contact';
-      }
-      return GekEntityApiService.getEntities(commit, payload);
-    },
-    loadEntityOptions({ commit }, payload) {
-      return GekEntityApiService.getEntityOptions(commit, payload);
-    },
-    saveEntity({ commit, dispatch, getters }, payload) {
-      payload.entityObject = getters.getEditEntityObjectByEntityName(payload.entityName);
-      if (getters.getEditNewByEntityName(payload.entityName)) {
-        return GekEntityApiService.createEntity(commit, dispatch, payload);
-      }
-      else {
-        return GekEntityApiService.updateEntity(commit, dispatch, payload);
-      }
-    },
-    deleteEntity({ commit, dispatch, getters }, payload) {
-      payload.entityObject = getters.getEditEntityObjectByEntityName(payload.entityName);
-      return GekEntityApiService.deleteEntity(commit, dispatch, payload);
-    }
   },
   getters: {
     isAdminUser(state) {

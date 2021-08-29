@@ -34,6 +34,7 @@
 <script>
 
 import Vuex from "vuex";
+import {GekEntityService} from "@/services/GekEntityService";
 
 export default {
   props: {
@@ -46,12 +47,12 @@ export default {
     return {};
   },
   methods: {
-    ...Vuex.mapActions(["logout", "setNavDrawer"]),
+    ...Vuex.mapMutations(["SET_NAV_DRAWER"]),
     doLogout() {
-      this.logout();
+      GekEntityService.logout();
     },
     switchDrawer() {
-      this.setNavDrawer(!this.getNavDrawer);
+      this.SET_NAV_DRAWER(!this.getNavDrawer);
     },
   },
   computed: {

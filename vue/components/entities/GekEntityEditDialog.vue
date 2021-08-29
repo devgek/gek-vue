@@ -26,6 +26,7 @@
 </template>
 <script>
 import Vuex from "vuex";
+import {GekEntityService} from "@/services/GekEntityService";
 
 export default {
   props: {
@@ -53,7 +54,6 @@ export default {
   },
   methods: {
     ...Vuex.mapMutations(["SET_EDIT_DIALOG"]),
-    ...Vuex.mapActions(["saveEntity"]),
     abort() {
       // maybe calling component wants to react
       this.$emit("entity-edit-abort-" + this.entity);
@@ -63,7 +63,7 @@ export default {
       });
     },
     save() {
-      this.saveEntity({ entityName: this.entityName, entityDesc: this.entityDesc });
+      GekEntityService.saveEntity({ entityName: this.entityName, entityDesc: this.entityDesc });
       // maybe calling component wants to react
       this.$emit("entity-edit-save-" + this.entity);
       this.SET_EDIT_DIALOG({

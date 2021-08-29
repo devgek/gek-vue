@@ -17,6 +17,7 @@
 </template>
 <script>
 import Vuex from 'vuex'
+import {GekEntityService} from "@/services/GekEntityService";
 
 export default {
   props: {
@@ -39,10 +40,9 @@ export default {
     };
   },
   created() {
-    this.loadEntityOptions({entityName: this.entityName})
+    GekEntityService.loadEntityOptions({entityName: this.entityName})
   },
   methods: {
-    ...Vuex.mapActions(["loadEntityOptions"]),
     label() {
       if (this.labelKey === null) {
         return this.labelText;

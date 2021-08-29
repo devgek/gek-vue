@@ -41,7 +41,7 @@
 </template>
 <script>
 
-import Vuex from 'vuex';
+import {GekEntityService} from "@/services/GekEntityService";
 
 export default {
   props: {
@@ -62,14 +62,13 @@ export default {
     };
   },
   methods: {
-    ...Vuex.mapActions(["login"]),
     onSubmit() {
       if (this.user === "" || this.pass === "") {
         this.errorMessage = this.$t("form.login.msg.inputrequired");
         return;
       }
 
-      this.login({user: this.user, pass: this.pass})
+      GekEntityService.login({user: this.user, pass: this.pass})
         .then(() => {
           this.$router.push({ name: this.startPage });
         })

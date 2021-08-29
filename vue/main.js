@@ -36,6 +36,31 @@ myStore.registerModule("player", playerModule);
 myStore.registerModule("gekentities", GekEntityStoreModule);
 console.log("after registerModule gekentities and player");
 
+// entity models must be set to gekEntityStoreModule
+import EntityModel from "@/gekEntityObject";
+import newEntityObjectUser from "@/gekEntityStoreUser";
+import newEntityObjectContact from "@/gekEntityStoreContact";
+import newEntityObjectContactAddress from "@/gekEntityStoreContactAddress";
+
+const userModel = new EntityModel("User", newEntityObjectUser);
+const contactModel = new EntityModel("Contact", newEntityObjectContact);
+const contactAddressModel = new EntityModel("ContactAddress", newEntityObjectContactAddress);
+// new EntityModels must be set as property to be known by Vue's reactivity system
+Vue.set(myStore.state.gekentities.gekEntityModels, "User", userModel);
+Vue.set(myStore.state.gekentities.gekEntityModels, "Contact", contactModel);
+Vue.set(myStore.state.gekentities.gekEntityModels, "ContactAddress", contactAddressModel);
+
+/*
+myStore.commit('SET_ENTITY_MODEL', {entityName: "User", entityModel: userModel})
+myStore.commit('SET_ENTITY_MODEL', {entityName: "Contact", entityModel: contactModel})
+myStore.commit('SET_ENTITY_MODEL', {entityName: "ContactAddress", entityModel: contactAddressModel})
+ */
+
+const apiBaseUrl = "http://localhost:8080";
+const logConsole = true;
+import {GekEntityService} from "@/services/GekEntityService";
+GekEntityService.init(myStore, apiBaseUrl, logConsole);
+
 // eslint-disable-next-line no-unused-vars
 const myVueInstance = new Vue({
   computed: {

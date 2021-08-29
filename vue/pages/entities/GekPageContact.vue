@@ -188,6 +188,7 @@ import GekEntityEditDialog from "/vue/components/entities/GekEntityEditDialog.vu
 import GekEntityEditList from "/vue/components/entities/GekEntityEditList.vue";
 import GekEntityConfirmDelete from "/vue/components/entities/GekEntityConfirmDelete.vue";
 import { gkwebapp_T_ContactTypes, gkwebapp_T_OrgTypes } from "/src/assets/js/gekvue.js";
+import {GekEntityService} from "@/services/GekEntityService";
 
 export default {
   components: {
@@ -199,12 +200,11 @@ export default {
     return {};
   },
   created() {
-    this.loadEntities({entityName: "Contact"})
+    GekEntityService.loadEntities({entityName: "Contact"})
   },
   methods: {
     ...Vuex.mapMutations(["SET_ENTITY_NEW", "SET_ENTITY_NEW_EMBEDDED", "SET_ENTITY_EDIT", "SET_ENTITY_EDIT_EMBEDDED", "SET_ENTITY_DELETE", "SET_ENTITY_DELETE_EMBEDDED"]),
-    ...Vuex.mapActions(["loadEntities"]),
-    colorExpandIcon(hasChildren) {
+     colorExpandIcon(hasChildren) {
       if (hasChildren) {
         return "primary";
       }
