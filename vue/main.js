@@ -33,28 +33,24 @@ Vue.use(Vuex);
 const myStore = new Vuex.Store(myStoreOptions);
 
 myStore.registerModule("player", playerModule);
+// GekEntityStoreModule must be registered as Vuex module
 myStore.registerModule("gekentities", GekEntityStoreModule);
 console.log("after registerModule gekentities and player");
 
-// entity models must be set to gekEntityStoreModule
-import EntityModel from "@/gekEntityObject";
+// a GekEntityStoreModel must be created for each Entity and set to Vue's reactivity system
+import GekEntityStoreModel from "@/gekEntityStoreModel";
 import newEntityObjectUser from "@/gekEntityStoreUser";
 import newEntityObjectContact from "@/gekEntityStoreContact";
 import newEntityObjectContactAddress from "@/gekEntityStoreContactAddress";
 
-const userModel = new EntityModel("User", newEntityObjectUser);
-const contactModel = new EntityModel("Contact", newEntityObjectContact);
-const contactAddressModel = new EntityModel("ContactAddress", newEntityObjectContactAddress);
+const userModel = new GekEntityStoreModel("User", newEntityObjectUser);
+const contactModel = new GekEntityStoreModel("Contact", newEntityObjectContact);
+const contactAddressModel = new GekEntityStoreModel("ContactAddress", newEntityObjectContactAddress, "Contact");
 // new EntityModels must be set as property to be known by Vue's reactivity system
+// 'gekentities' is the module path of Vuex module GekEntityStoreModule
 Vue.set(myStore.state.gekentities.gekEntityModels, "User", userModel);
 Vue.set(myStore.state.gekentities.gekEntityModels, "Contact", contactModel);
 Vue.set(myStore.state.gekentities.gekEntityModels, "ContactAddress", contactAddressModel);
-
-/*
-myStore.commit('SET_ENTITY_MODEL', {entityName: "User", entityModel: userModel})
-myStore.commit('SET_ENTITY_MODEL', {entityName: "Contact", entityModel: contactModel})
-myStore.commit('SET_ENTITY_MODEL', {entityName: "ContactAddress", entityModel: contactAddressModel})
- */
 
 const apiBaseUrl = "http://localhost:8080";
 const logConsole = true;

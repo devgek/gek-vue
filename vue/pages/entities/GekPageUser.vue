@@ -10,7 +10,7 @@
       </template>
     </GekEntityEditList>
     <!-- entityEditDialog -->
-    <GekEntityEditDialog entity="user" entityName="User" entityDesc="Benutzer">
+    <GekEntityEditDialog entity="user" entityName="User" entityDesc="Benutzer" entityNameReload="User">
       <template v-slot:entityEdit.fields>
         <v-text-field
           v-model="getEditEntityObjectByEntityName('User').Name"
@@ -47,7 +47,7 @@
       </template>
     </GekEntityEditDialog>
     <!-- confirmDelete Dialog-->
-    <GekEntityConfirmDelete entity="user" entityName="User" entityDesc="Benutzer" />
+    <GekEntityConfirmDelete entity="user" entityName="User" entityDesc="Benutzer" entityNameReload="User"/>
   </div>
   <!-- END Page Content -->
 </template>

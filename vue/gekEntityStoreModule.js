@@ -18,9 +18,6 @@ const GekEntityStoreModule = {
     SET_NAV_DRAWER(state, drawer) {
       state.navDrawer = drawer;
     },
-    SET_ENTITY_MODEL(state, payload) {
-      state.gekEntityModels[payload.entityName] = payload.entityModel;
-    },
     SET_ENTITY_NEW(state, payload) {
       state.gekEntityModels[payload.entityName].entityObject = state.gekEntityModels[payload.entityName].newEntityObjectFn();
       state.gekEntityModels[payload.entityName].editNew = true;

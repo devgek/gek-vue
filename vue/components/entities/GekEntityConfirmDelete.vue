@@ -35,6 +35,10 @@ export default {
       type: String,
       required: true,
     },
+    entityNameReload: {
+      type: String,
+      default: "",
+    },
   },
   data() {
     return {};
@@ -50,7 +54,7 @@ export default {
       });
     },
     confirmDelete() {
-      GekEntityService.deleteEntity({ entityName: this.entityName, entityDesc: this.entityDesc });
+      GekEntityService.deleteEntity({ entityName: this.entityName, entityDesc: this.entityDesc, entityNameReload: this.entityNameReload });
       // maybe calling component wants to react
       this.$emit("entity-delete-confirm-" + this.entity);
       this.SET_CONFIRM_DELETE_DIALOG({

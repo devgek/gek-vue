@@ -1,5 +1,8 @@
 import axios from "axios";
-
+/*
+  GekEntityApiService encapsulates API-calls to Entity-API-Backend using axios.
+  You have to initialize GekEntityApiService with the API-BaseUrl. Logging API-Errors to console can be switched on/off.
+ */
 const GekEntityApiService = {
   init(apiBaseUrl, logConsole) {
     window.axios = axios;
@@ -31,114 +34,22 @@ const GekEntityApiService = {
     }
   },
   login(store, credentials) {
-    return axios
-      .post("/api/login", credentials)
-      .then(({ data }) => {
-        store.commit("LOGGED_IN", data);
-      });
-  },
-  logout(store) {
-    store.commit("LOGOUT");
+    return axios.post("/api/login", credentials);
   },
   getEntityOptions(store, payload) {
-    return axios
-      .post("/api/optionlist" + payload.entityName)
-      .then(({ data }) => {
-        store.commit("SET_OPTION_LIST", {
-          entityName: payload.entityName,
-          optionList: data.EntityOptions,
-        });
-      });
+    return axios.post("/api/optionlist" + payload.entityName);
   },
   getEntities(store, payload) {
-    return axios
-      .post("/api/entitylist" + payload.entityName)
-      .then(({ data }) => {
-        store.commit("SET_ENTITY_LIST", {
-          entityName: payload.entityName,
-          entityList: data.EntityObject,
-        });
-      });
+    return axios.post("/api/entitylist" + payload.entityName);
   },
   createEntity(store, payload) {
-    return (
-      axios
-        .post("/api/entitynew" + payload.entityName, payload.entityObject)
-        // eslint-disable-next-line no-unused-vars
-        .then(({ data }) => {
-          const message = {
-            type: "success",
-            i18n: "msg.entity.success.create",
-            i18nArgs: { entityDesc: payload.entityDesc },
-          };
-          store.commit("SET_MESSAGE", message);
-          this.getEntities(store, { entityName: payload.entityName });
-        })
-        // eslint-disable-next-line no-unused-vars
-        .catch((error) => {
-          const message = {
-            type: "error",
-            i18n: "msg.entity.error.create",
-            i18nArgs: { entityDesc: payload.entityDesc },
-          };
-          store.commit("SET_MESSAGE", message);
-        })
-    );
+    return axios.post("/api/entitynew" + payload.entityName, payload.entityObject);
   },
   updateEntity(store, payload) {
-    return (
-      axios
-        .post("/api/entityedit" + payload.entityName, payload.entityObject)
-        // eslint-disable-next-line no-unused-vars
-        .then(({ data }) => {
-          const message = {
-            type: "success",
-            i18n: "msg.entity.success.update",
-            i18nArgs: { entityDesc: payload.entityDesc },
-          };
-          store.commit("SET_MESSAGE", message);
-          this.getEntities(store, { entityName: payload.entityName });
-        })
-        // eslint-disable-next-line no-unused-vars
-        .catch(({ error }) => {
-          const message = {
-            type: "error",
-            i18n: "msg.entity.error.update",
-            i18nArgs: { entityDesc: payload.entityDesc },
-          };
-          store.commit("SET_MESSAGE", message);
-        })
-    );
+    return axios.post("/api/entityedit" + payload.entityName, payload.entityObject);
   },
   deleteEntity(store, payload) {
-    return (
-      axios
-        .post(
-          "/api/entitydelete" +
-            payload.entityName +
-            "/" +
-            payload.entityObject.ID
-        )
-        // eslint-disable-next-line no-unused-vars
-        .then(({ data }) => {
-          const message = {
-            type: "success",
-            i18n: "msg.entity.success.delete",
-            i18nArgs: { entityDesc: payload.entityDesc },
-          };
-          store.commit("SET_MESSAGE", message);
-          this.getEntities(store, { entityName: payload.entityName });
-        })
-        // eslint-disable-next-line no-unused-vars
-        .catch((error) => {
-          const message = {
-            type: "error",
-            i18n: "msg.entity.error.delete",
-            i18nArgs: { entityDesc: payload.entityDesc },
-          };
-          store.commit("SET_MESSAGE", message);
-        })
-    );
+    return axios.post("/api/entitydelete" + payload.entityName + "/" + payload.entityObject.ID);
   },
 };
 

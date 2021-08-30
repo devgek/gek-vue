@@ -1,4 +1,4 @@
-class EntityModel {
+class GekEntityStoreModel {
   constructor(entityName, newEntityObjectFn) {
     this.entityName = entityName;
     this.newEntityObjectFn = newEntityObjectFn;
@@ -13,4 +13,4 @@ class EntityModel {
   }
 }
 
-export default EntityModel
+export default GekEntityStoreModel

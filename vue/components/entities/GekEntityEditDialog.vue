@@ -42,6 +42,10 @@ export default {
       type: String,
       required: true,
     },
+    entityNameReload: {
+      type: String,
+      default: "",
+    },
     embedded: {
       type: Boolean,
       default: false
@@ -63,7 +67,7 @@ export default {
       });
     },
     save() {
-      GekEntityService.saveEntity({ entityName: this.entityName, entityDesc: this.entityDesc });
+      GekEntityService.saveEntity({ entityName: this.entityName, entityDesc: this.entityDesc, entityNameReload: this.entityNameReload });
       // maybe calling component wants to react
       this.$emit("entity-edit-save-" + this.entity);
       this.SET_EDIT_DIALOG({

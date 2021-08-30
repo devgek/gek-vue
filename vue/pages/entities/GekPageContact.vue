@@ -93,7 +93,7 @@
         </td>
       </template>
     </GekEntityEditList>
-    <GekEntityEditDialog entity="contact" entityName="Contact" entityDesc="Kontakt">
+    <GekEntityEditDialog entity="contact" entityName="Contact" entityDesc="Kontakt" entityNameReload="Contact">
       <template v-slot:entityEdit.fields>
         <v-select
           v-model="getEditEntityObjectByEntityName('Contact').OrgType"
@@ -131,6 +131,7 @@
       entity="contactaddress"
       entityName="ContactAddress"
       entityDesc="Kontaktadresse"
+      entityNameReload="Contact"
       embedded
     >
       <template v-slot:entityEdit.embedder="{embedderObject}">
@@ -177,8 +178,8 @@
 
     </GekEntityEditDialog>
     <!-- confirmDelete Dialog-->
-    <GekEntityConfirmDelete entity="contact" entityName="Contact" entityDesc="Kontakt" />
-    <GekEntityConfirmDelete entity="contactaddress" entityName="ContactAddress" entityDesc="Kontaktadresse" />
+    <GekEntityConfirmDelete entity="contact" entityName="Contact" entityDesc="Kontakt" entityNameReload="Contact"/>
+    <GekEntityConfirmDelete entity="contactaddress" entityName="ContactAddress" entityDesc="Kontaktadresse" entityNameReload="Contact"/>
   </div>
   <!-- END Page Content -->
 </template>

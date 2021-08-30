@@ -6259,8 +6259,7 @@ __webpack_require__.r(__webpack_exports__);
   created() {
     this.unsubscribe = this.$store.subscribe((mutation, state) => {
       if (mutation.type === "SET_MESSAGE") {
-        // console.log(`catching SET_MESSAGE mutation: ${state.message.type}, ${state.message.i18n},`);
-        console.log(`catching SET_MESSAGE mutation: ${state.gekentities.message.type}, ${state.gekentities.message.i18n},`);
+        //console.log(`catching SET_MESSAGE mutation: ${state.gekentities.message.type}, ${state.gekentities.message.i18n},`);
         this.showMessage = true;
       }
     });
@@ -6456,6 +6455,10 @@ __webpack_require__.r(__webpack_exports__);
       type: String,
       required: true,
     },
+    entityNameReload: {
+      type: String,
+      default: "",
+    },
   },
   data() {
     return {};
@@ -6471,7 +6474,7 @@ __webpack_require__.r(__webpack_exports__);
       });
     },
     confirmDelete() {
-      _services_GekEntityService__WEBPACK_IMPORTED_MODULE_0__.GekEntityService.deleteEntity({ entityName: this.entityName, entityDesc: this.entityDesc });
+      _services_GekEntityService__WEBPACK_IMPORTED_MODULE_0__.GekEntityService.deleteEntity({ entityName: this.entityName, entityDesc: this.entityDesc, entityNameReload: this.entityNameReload });
       // maybe calling component wants to react
       this.$emit("entity-delete-confirm-" + this.entity);
       this.SET_CONFIRM_DELETE_DIALOG({
@@ -6560,6 +6563,10 @@ __webpack_require__.r(__webpack_exports__);
       type: String,
       required: true,
     },
+    entityNameReload: {
+      type: String,
+      default: "",
+    },
     embedded: {
       type: Boolean,
       default: false
@@ -6581,7 +6588,7 @@ __webpack_require__.r(__webpack_exports__);
       });
     },
     save() {
-      _services_GekEntityService__WEBPACK_IMPORTED_MODULE_0__.GekEntityService.saveEntity({ entityName: this.entityName, entityDesc: this.entityDesc });
+      _services_GekEntityService__WEBPACK_IMPORTED_MODULE_0__.GekEntityService.saveEntity({ entityName: this.entityName, entityDesc: this.entityDesc, entityNameReload: this.entityNameReload });
       // maybe calling component wants to react
       this.$emit("entity-edit-save-" + this.entity);
       this.SET_EDIT_DIALOG({
@@ -7111,6 +7118,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _vue_components_entities_GekEntityConfirmDelete_vue__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../../vue/components/entities/GekEntityConfirmDelete.vue */ "./vue/components/entities/GekEntityConfirmDelete.vue");
 /* harmony import */ var _src_assets_js_gekvue_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../../../src/assets/js/gekvue.js */ "./src/assets/js/gekvue.js");
 /* harmony import */ var _services_GekEntityService__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @/services/GekEntityService */ "./vue/services/GekEntityService.js");
+//
 //
 //
 //
@@ -9473,7 +9481,8 @@ var render = function() {
         attrs: {
           entity: "contact",
           entityName: "Contact",
-          entityDesc: "Kontakt"
+          entityDesc: "Kontakt",
+          entityNameReload: "Contact"
         },
         scopedSlots: _vm._u([
           {
@@ -9580,6 +9589,7 @@ var render = function() {
           entity: "contactaddress",
           entityName: "ContactAddress",
           entityDesc: "Kontaktadresse",
+          entityNameReload: "Contact",
           embedded: ""
         },
         scopedSlots: _vm._u([
@@ -9725,7 +9735,8 @@ var render = function() {
         attrs: {
           entity: "contact",
           entityName: "Contact",
-          entityDesc: "Kontakt"
+          entityDesc: "Kontakt",
+          entityNameReload: "Contact"
         }
       }),
       _vm._v(" "),
@@ -9733,7 +9744,8 @@ var render = function() {
         attrs: {
           entity: "contactaddress",
           entityName: "ContactAddress",
-          entityDesc: "Kontaktadresse"
+          entityDesc: "Kontaktadresse",
+          entityNameReload: "Contact"
         }
       })
     ],
@@ -9792,7 +9804,12 @@ var render = function() {
       }),
       _vm._v(" "),
       _c("GekEntityEditDialog", {
-        attrs: { entity: "user", entityName: "User", entityDesc: "Benutzer" },
+        attrs: {
+          entity: "user",
+          entityName: "User",
+          entityDesc: "Benutzer",
+          entityNameReload: "User"
+        },
         scopedSlots: _vm._u([
           {
             key: "entityEdit.fields",
@@ -9889,7 +9906,12 @@ var render = function() {
       }),
       _vm._v(" "),
       _c("GekEntityConfirmDelete", {
-        attrs: { entity: "user", entityName: "User", entityDesc: "Benutzer" }
+        attrs: {
+          entity: "user",
+          entityName: "User",
+          entityDesc: "Benutzer",
+          entityNameReload: "User"
+        }
       })
     ],
     1
@@ -46648,37 +46670,6 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
-/***/ "./vue/gekEntityObject.js":
-/*!********************************!*\
-  !*** ./vue/gekEntityObject.js ***!
-  \********************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
-/* harmony export */ });
-class EntityModel {
-  constructor(entityName, newEntityObjectFn) {
-    this.entityName = entityName;
-    this.newEntityObjectFn = newEntityObjectFn;
-    this.entityObject = this.newEntityObjectFn.call();
-    this.confirmDeleteDialog = false;
-    this.editDialog = false;
-    this.entityList = [];
-    this.optionList = [];
-    this.editNew = false;
-    this.entityObjectEmbedder = {};
-
-  }
-}
-
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (EntityModel);
-
-
-/***/ }),
-
 /***/ "./vue/gekEntityRouter.js":
 /*!********************************!*\
   !*** ./vue/gekEntityRouter.js ***!
@@ -46842,6 +46833,37 @@ function newEntityObjectContactAddress() {
 
 /***/ }),
 
+/***/ "./vue/gekEntityStoreModel.js":
+/*!************************************!*\
+  !*** ./vue/gekEntityStoreModel.js ***!
+  \************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+class GekEntityStoreModel {
+  constructor(entityName, newEntityObjectFn) {
+    this.entityName = entityName;
+    this.newEntityObjectFn = newEntityObjectFn;
+    this.entityObject = this.newEntityObjectFn.call();
+    this.confirmDeleteDialog = false;
+    this.editDialog = false;
+    this.entityList = [];
+    this.optionList = [];
+    this.editNew = false;
+    this.entityObjectEmbedder = {};
+
+  }
+}
+
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (GekEntityStoreModel);
+
+
+/***/ }),
+
 /***/ "./vue/gekEntityStoreModule.js":
 /*!*************************************!*\
   !*** ./vue/gekEntityStoreModule.js ***!
@@ -46872,9 +46894,6 @@ const GekEntityStoreModule = {
     },
     SET_NAV_DRAWER(state, drawer) {
       state.navDrawer = drawer;
-    },
-    SET_ENTITY_MODEL(state, payload) {
-      state.gekEntityModels[payload.entityName] = payload.entityModel;
     },
     SET_ENTITY_NEW(state, payload) {
       state.gekEntityModels[payload.entityName].entityObject = state.gekEntityModels[payload.entityName].newEntityObjectFn();
@@ -47306,108 +47325,22 @@ const GekEntityApiService = {
     }
   },
   login(store, credentials) {
-    return axios__WEBPACK_IMPORTED_MODULE_0___default().post("/api/login", credentials)
-      .then(({ data }) => {
-        store.commit("LOGGED_IN", data);
-      });
-  },
-  logout(store) {
-    store.commit("LOGOUT");
+    return axios__WEBPACK_IMPORTED_MODULE_0___default().post("/api/login", credentials);
   },
   getEntityOptions(store, payload) {
-    return axios__WEBPACK_IMPORTED_MODULE_0___default().post("/api/optionlist" + payload.entityName)
-      .then(({ data }) => {
-        store.commit("SET_OPTION_LIST", {
-          entityName: payload.entityName,
-          optionList: data.EntityOptions,
-        });
-      });
+    return axios__WEBPACK_IMPORTED_MODULE_0___default().post("/api/optionlist" + payload.entityName);
   },
   getEntities(store, payload) {
-    return axios__WEBPACK_IMPORTED_MODULE_0___default().post("/api/entitylist" + payload.entityName)
-      .then(({ data }) => {
-        store.commit("SET_ENTITY_LIST", {
-          entityName: payload.entityName,
-          entityList: data.EntityObject,
-        });
-      });
+    return axios__WEBPACK_IMPORTED_MODULE_0___default().post("/api/entitylist" + payload.entityName);
   },
   createEntity(store, payload) {
-    return (
-      axios__WEBPACK_IMPORTED_MODULE_0___default().post("/api/entitynew" + payload.entityName, payload.entityObject)
-        // eslint-disable-next-line no-unused-vars
-        .then(({ data }) => {
-          const message = {
-            type: "success",
-            i18n: "msg.entity.success.create",
-            i18nArgs: { entityDesc: payload.entityDesc },
-          };
-          store.commit("SET_MESSAGE", message);
-          this.getEntities(store, { entityName: payload.entityName });
-        })
-        // eslint-disable-next-line no-unused-vars
-        .catch((error) => {
-          const message = {
-            type: "error",
-            i18n: "msg.entity.error.create",
-            i18nArgs: { entityDesc: payload.entityDesc },
-          };
-          store.commit("SET_MESSAGE", message);
-        })
-    );
+    return axios__WEBPACK_IMPORTED_MODULE_0___default().post("/api/entitynew" + payload.entityName, payload.entityObject);
   },
   updateEntity(store, payload) {
-    return (
-      axios__WEBPACK_IMPORTED_MODULE_0___default().post("/api/entityedit" + payload.entityName, payload.entityObject)
-        // eslint-disable-next-line no-unused-vars
-        .then(({ data }) => {
-          const message = {
-            type: "success",
-            i18n: "msg.entity.success.update",
-            i18nArgs: { entityDesc: payload.entityDesc },
-          };
-          store.commit("SET_MESSAGE", message);
-          this.getEntities(store, { entityName: payload.entityName });
-        })
-        // eslint-disable-next-line no-unused-vars
-        .catch(({ error }) => {
-          const message = {
-            type: "error",
-            i18n: "msg.entity.error.update",
-            i18nArgs: { entityDesc: payload.entityDesc },
-          };
-          store.commit("SET_MESSAGE", message);
-        })
-    );
+    return axios__WEBPACK_IMPORTED_MODULE_0___default().post("/api/entityedit" + payload.entityName, payload.entityObject);
   },
   deleteEntity(store, payload) {
-    return (
-      axios__WEBPACK_IMPORTED_MODULE_0___default().post(
-          "/api/entitydelete" +
-            payload.entityName +
-            "/" +
-            payload.entityObject.ID
-        )
-        // eslint-disable-next-line no-unused-vars
-        .then(({ data }) => {
-          const message = {
-            type: "success",
-            i18n: "msg.entity.success.delete",
-            i18nArgs: { entityDesc: payload.entityDesc },
-          };
-          store.commit("SET_MESSAGE", message);
-          this.getEntities(store, { entityName: payload.entityName });
-        })
-        // eslint-disable-next-line no-unused-vars
-        .catch((error) => {
-          const message = {
-            type: "error",
-            i18n: "msg.entity.error.delete",
-            i18nArgs: { entityDesc: payload.entityDesc },
-          };
-          store.commit("SET_MESSAGE", message);
-        })
-    );
+    return axios__WEBPACK_IMPORTED_MODULE_0___default().post("/api/entitydelete" + payload.entityName + "/" + payload.entityObject.ID);
   },
 };
 
@@ -47437,35 +47370,96 @@ const GekEntityService = {
         this.theStore = store;
         return _GekEntityApiService_js__WEBPACK_IMPORTED_MODULE_0__.GekEntityApiService.init(apiBaseUrl, logConsole)
     },
-    // eslint-disable-next-line no-unused-vars
     login(credentials) {
-        return _GekEntityApiService_js__WEBPACK_IMPORTED_MODULE_0__.GekEntityApiService.login(this.theStore, credentials);
+        return _GekEntityApiService_js__WEBPACK_IMPORTED_MODULE_0__.GekEntityApiService.login(this.theStore, credentials)
+            .then(({ data }) => {
+                this.theStore.commit("LOGGED_IN", data);
+            });
     },
     logout() {
-        return _GekEntityApiService_js__WEBPACK_IMPORTED_MODULE_0__.GekEntityApiService.logout(this.theStore);
+        return this.theStore.commit("LOGOUT");
     },
     loadEntities(payload) {
-        //TODO: change this hack!
-        if (payload.entityName == 'ContactAddress') {
-            payload.entityName = 'Contact';
-        }
-        return _GekEntityApiService_js__WEBPACK_IMPORTED_MODULE_0__.GekEntityApiService.getEntities(this.theStore, payload);
+        return _GekEntityApiService_js__WEBPACK_IMPORTED_MODULE_0__.GekEntityApiService.getEntities(this.theStore, payload)
+            .then(({ data }) => {
+                this.theStore.commit("SET_ENTITY_LIST", {entityName: payload.entityName, entityList: data.EntityObject});
+        })
+            .catch(({ error}) => {
+                console.log("GekEntityServe::loadEntities::Error:", error);
+            });
     },
     loadEntityOptions(payload) {
-        return _GekEntityApiService_js__WEBPACK_IMPORTED_MODULE_0__.GekEntityApiService.getEntityOptions(this.theStore, payload);
+        return _GekEntityApiService_js__WEBPACK_IMPORTED_MODULE_0__.GekEntityApiService.getEntityOptions(this.theStore, payload)
+            .then(({ data }) => {
+                this.theStore.commit("SET_OPTION_LIST", {entityName: payload.entityName, optionList: data.EntityOptions});
+            })
+            .catch(({ error}) => {
+                console.log("GekEntityServe::loadEntities::Error:", error);
+            });
     },
     saveEntity(payload) {
         payload.entityObject = this.theStore.getters.getEditEntityObjectByEntityName(payload.entityName);
+        let message = {
+            type: "",
+            i18n: "",
+            i18nArgs: { entityDesc: payload.entityDesc },
+        };
+        let savePromise;
         if (this.theStore.getters.getEditNewByEntityName(payload.entityName)) {
-            return _GekEntityApiService_js__WEBPACK_IMPORTED_MODULE_0__.GekEntityApiService.createEntity(this.theStore, payload);
+            savePromise = _GekEntityApiService_js__WEBPACK_IMPORTED_MODULE_0__.GekEntityApiService.createEntity(this.theStore, payload);
         }
         else {
-            return _GekEntityApiService_js__WEBPACK_IMPORTED_MODULE_0__.GekEntityApiService.updateEntity(this.theStore, payload);
+            savePromise = _GekEntityApiService_js__WEBPACK_IMPORTED_MODULE_0__.GekEntityApiService.updateEntity(this.theStore, payload);
         }
+
+        savePromise.then(() => {
+            message.type = "success";
+            if (this.theStore.getters.getEditNewByEntityName(payload.entityName)) {
+                message.i18n = "msg.entity.success.create";
+            }
+            else {
+                message.i18n = "msg.entity.success.update";
+            }
+            this.theStore.commit("SET_MESSAGE", message);
+            if (payload.entityNameReload != "") {
+                return this.loadEntities( { entityName: payload.entityNameReload });
+            }
+        })
+            .catch(() => {
+                message.type = "error";
+                if (this.theStore.getters.getEditNewByEntityName(payload.entityName)) {
+                    message.i18n = "msg.entity.error.create";
+                }
+                else {
+                    message.i18n = "msg.entity.error.update";
+                }
+                this.theStore.commit("SET_MESSAGE", message);
+            })
+
     },
     deleteEntity(payload) {
         payload.entityObject = this.theStore.getters.getEditEntityObjectByEntityName(payload.entityName);
-        return _GekEntityApiService_js__WEBPACK_IMPORTED_MODULE_0__.GekEntityApiService.deleteEntity(this.theStore, payload);
+
+        return _GekEntityApiService_js__WEBPACK_IMPORTED_MODULE_0__.GekEntityApiService.deleteEntity(this.theStore, payload)
+            .then(() => {
+            const message = {
+                type: "success",
+                i18n: "msg.entity.success.delete",
+                i18nArgs: { entityDesc: payload.entityDesc },
+            };
+            this.theStore.commit("SET_MESSAGE", message);
+            if (payload.entityNameReload != "") {
+                return this.loadEntities({ entityName: payload.entityNameReload });
+            }
+        })
+            .catch(() => {
+                const message = {
+                    type: "error",
+                    i18n: "msg.entity.error.delete",
+                    i18nArgs: { entityDesc: payload.entityDesc },
+                };
+                this.theStore.commit("SET_MESSAGE", message);
+            })
     }
 };
 
@@ -47637,7 +47631,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _src_plugin_gekentities_vueplugin_js__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../src/plugin/gekentities-vueplugin.js */ "./src/plugin/gekentities-vueplugin.js");
 /* harmony import */ var _GekApp_vue__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./GekApp.vue */ "./vue/GekApp.vue");
 /* harmony import */ var _modules_player_playerModule_js__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./modules/player/playerModule.js */ "./vue/modules/player/playerModule.js");
-/* harmony import */ var _gekEntityObject__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! @/gekEntityObject */ "./vue/gekEntityObject.js");
+/* harmony import */ var _gekEntityStoreModel__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! @/gekEntityStoreModel */ "./vue/gekEntityStoreModel.js");
 /* harmony import */ var _gekEntityStoreUser__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! @/gekEntityStoreUser */ "./vue/gekEntityStoreUser.js");
 /* harmony import */ var _gekEntityStoreContact__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! @/gekEntityStoreContact */ "./vue/gekEntityStoreContact.js");
 /* harmony import */ var _gekEntityStoreContactAddress__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! @/gekEntityStoreContactAddress */ "./vue/gekEntityStoreContactAddress.js");
@@ -47677,27 +47671,24 @@ vue__WEBPACK_IMPORTED_MODULE_7___default().use(vuex__WEBPACK_IMPORTED_MODULE_10_
 const myStore = new vuex__WEBPACK_IMPORTED_MODULE_10__.default.Store(myStoreOptions);
 
 myStore.registerModule("player", _modules_player_playerModule_js__WEBPACK_IMPORTED_MODULE_9__.playerModule);
+// GekEntityStoreModule must be registered as Vuex module
 myStore.registerModule("gekentities", _gekEntityStoreModule_js__WEBPACK_IMPORTED_MODULE_4__.GekEntityStoreModule);
 console.log("after registerModule gekentities and player");
 
-// entity models must be set to gekEntityStoreModule
+// a GekEntityStoreModel must be created for each Entity and set to Vue's reactivity system
 
 
 
 
 
-const userModel = new _gekEntityObject__WEBPACK_IMPORTED_MODULE_11__.default("User", _gekEntityStoreUser__WEBPACK_IMPORTED_MODULE_12__.default);
-const contactModel = new _gekEntityObject__WEBPACK_IMPORTED_MODULE_11__.default("Contact", _gekEntityStoreContact__WEBPACK_IMPORTED_MODULE_13__.default);
-const contactAddressModel = new _gekEntityObject__WEBPACK_IMPORTED_MODULE_11__.default("ContactAddress", _gekEntityStoreContactAddress__WEBPACK_IMPORTED_MODULE_14__.default);
+const userModel = new _gekEntityStoreModel__WEBPACK_IMPORTED_MODULE_11__.default("User", _gekEntityStoreUser__WEBPACK_IMPORTED_MODULE_12__.default);
+const contactModel = new _gekEntityStoreModel__WEBPACK_IMPORTED_MODULE_11__.default("Contact", _gekEntityStoreContact__WEBPACK_IMPORTED_MODULE_13__.default);
+const contactAddressModel = new _gekEntityStoreModel__WEBPACK_IMPORTED_MODULE_11__.default("ContactAddress", _gekEntityStoreContactAddress__WEBPACK_IMPORTED_MODULE_14__.default, "Contact");
+// new EntityModels must be set as property to be known by Vue's reactivity system
+// 'gekentities' is the module path of Vuex module GekEntityStoreModule
 vue__WEBPACK_IMPORTED_MODULE_7___default().set(myStore.state.gekentities.gekEntityModels, "User", userModel);
 vue__WEBPACK_IMPORTED_MODULE_7___default().set(myStore.state.gekentities.gekEntityModels, "Contact", contactModel);
 vue__WEBPACK_IMPORTED_MODULE_7___default().set(myStore.state.gekentities.gekEntityModels, "ContactAddress", contactAddressModel);
-
-/*
-myStore.commit('SET_ENTITY_MODEL', {entityName: "User", entityModel: userModel})
-myStore.commit('SET_ENTITY_MODEL', {entityName: "Contact", entityModel: contactModel})
-myStore.commit('SET_ENTITY_MODEL', {entityName: "ContactAddress", entityModel: contactAddressModel})
- */
 
 const apiBaseUrl = "http://localhost:8080";
 const logConsole = true;
