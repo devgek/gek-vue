@@ -83,16 +83,11 @@ export default {
     ...Vuex.mapGetters(["getEditNewByEntityName", "getEditEntityObjectByEntityName"]),
     tableHeaders() {
       var h = [
-        {
-          text: "Name",
-          align: "start",
-          sortable: true,
-          value: "Name",
-        },
+        { text: "Name", align: "start", sortable: true, value: "Name" },
         { text: "Passwort", value: "Pass", sortable: false },
         { text: "Email", value: "Email" },
         { text: "Benutzerrolle", value: "Role" },
-        { text: "Aktionen", value: "actions", sortable: false, class: "w-8" },
+        { text: "Aktionen", value: "actions", sortable: false, class: "w-8", align: "end" },
       ];
       return h;
     },

@@ -20,7 +20,7 @@ const GekEntityService = {
     loadEntities(payload) {
         return GekEntityApiService.getEntities(this.theStore, payload)
             .then(({ data }) => {
-                this.theStore.commit("SET_ENTITY_LIST", {entityName: payload.entityName, entityList: data.EntityObject});
+                this.theStore.commit("SET_ENTITY_LIST", {entityName: payload.entityName, entityList: data.data});
         })
             .catch(({ error}) => {
                 console.log("GekEntityServe::loadEntities::Error:", error);
@@ -29,7 +29,7 @@ const GekEntityService = {
     loadEntityOptions(payload) {
         return GekEntityApiService.getEntityOptions(this.theStore, payload)
             .then(({ data }) => {
-                this.theStore.commit("SET_OPTION_LIST", {entityName: payload.entityName, optionList: data.EntityOptions});
+                this.theStore.commit("SET_OPTION_LIST", {entityName: payload.entityName, optionList: data.data});
             })
             .catch(({ error}) => {
                 console.log("GekEntityServe::loadEntities::Error:", error);

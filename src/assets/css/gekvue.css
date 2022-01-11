@@ -61,3 +61,15 @@
 .w-8 {
   width: 8%;
 }
+
+.v-btn[gek-btn] {
+  text-transform: none;
+  font-weight: 1000;
+}
+
+.v-data-table__expanded__content {
+  border: 1px solid grey;
+  background-color: #eeeeee;
+  box-shadow: none;
+  padding-bottom: 10px;
+}

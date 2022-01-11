@@ -7,6 +7,8 @@ vue.js scaffolding project
 
 `npm install --save-dev webpack-cli`
 
+`npm install --save-dev http-server`
+
 `npm install vue`
 
 `npm install -D vue-template-compiler`
@@ -38,3 +40,13 @@ vue.js scaffolding project
 `npm install -D style-loader`
 
 `npm install @mdi/font -D`
+
+---
+# webpack build
+`npx webpack`
+
+---
+# run dev sever
+`npx http-server ./dist`
+
+---

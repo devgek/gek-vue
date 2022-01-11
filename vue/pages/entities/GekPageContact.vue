@@ -36,6 +36,7 @@
             <v-col cols="6" align="end">
               <div class="float-right mb-2 mt-2">
                 <v-btn
+                  gek-btn
                   outlined
                   color="primary"
                   @click="
@@ -61,6 +62,7 @@
           >
             <template v-slot:item.actions="{ item: itemEmbedded }" v-if="isAdminUser">
               <v-btn
+                gek-btn
                 small
                 color="primary"
                 outlined
@@ -75,6 +77,7 @@
                 <v-icon>mdi-pencil</v-icon>
               </v-btn>
               <v-btn
+                gek-btn
                 small
                 color="primary"
                 outlined
@@ -90,6 +93,11 @@
               </v-btn>
             </template>
           </v-data-table>
+          <v-row align="start" dense>
+            <v-col cols="12" align="start">
+              <div class="mb-2">&nbsp;</div>
+            </v-col>
+          </v-row>
         </td>
       </template>
     </GekEntityEditList>
@@ -246,7 +254,7 @@ export default {
         { text: "Name", value: "Name", sortable: true },
         { text: "Namenszusatz", value: "NameExt", sortable: false },
         { text: "Kontakttyp", value: "ContactType", sortable: true },
-        { text: "Aktionen", value: "actions", sortable: false, class: "w-8" },
+        { text: "Aktionen", value: "actions", sortable: false, class: "w-8", align: "end" },
       ];
       return h;
     },
@@ -257,7 +265,7 @@ export default {
         { text: "Zusatz", value: "StreetExt", sortable: false },
         { text: "Plz", value: "Zip", sortable: false },
         { text: "Ort", value: "City", sortable: false },
-        { text: "Aktionen", value: "actions", sortable: false, class: "w-8" },
+        { text: "Aktionen", value: "actions", sortable: false, class: "w-8", align: "end" },
       ];
       return h;
     },

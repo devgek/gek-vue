@@ -14,10 +14,10 @@
       </v-card-text>
       <v-card-actions>
         <v-spacer></v-spacer>
-        <v-btn small color="light" @click="abort">
+        <v-btn gek-btn small color="light" @click="abort">
           {{ $t("form.all.btn.back") }}
         </v-btn>
-        <v-btn small color="primary" @click="save">
+        <v-btn gek-btn small color="primary" @click="save">
           {{ $t("form.all.btn.save") }}
         </v-btn>
       </v-card-actions>

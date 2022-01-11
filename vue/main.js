@@ -52,7 +52,7 @@ Vue.set(myStore.state.gekentities.gekEntityModels, "User", userModel);
 Vue.set(myStore.state.gekentities.gekEntityModels, "Contact", contactModel);
 Vue.set(myStore.state.gekentities.gekEntityModels, "ContactAddress", contactAddressModel);
 
-const apiBaseUrl = "http://localhost:8080";
+const apiBaseUrl = "http://localhost:8082";
 const logConsole = true;
 import {GekEntityService} from "@/services/GekEntityService";
 GekEntityService.init(myStore, apiBaseUrl, logConsole);
