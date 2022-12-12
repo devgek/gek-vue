@@ -19,6 +19,7 @@
 </template>
 <script>
 import Vuex from "vuex";
+import {GekEntityService} from "@/services/GekEntityService";
 
 export default {
   props: {
@@ -34,13 +35,16 @@ export default {
       type: String,
       required: true,
     },
+    entityNameReload: {
+      type: String,
+      default: "",
+    },
   },
   data() {
     return {};
   },
   methods: {
     ...Vuex.mapMutations(["SET_CONFIRM_DELETE_DIALOG"]),
-    ...Vuex.mapActions(["deleteEntity"]),
     abort() {
       // maybe calling component wants to react
       this.$emit("entity-delete-abort-" + this.entity);
@@ -50,7 +54,7 @@ export default {
       });
     },
     confirmDelete() {
-      this.deleteEntity({ entityName: this.entityName, entityDesc: this.entityDesc });
+      GekEntityService.deleteEntity({ entityName: this.entityName, entityDesc: this.entityDesc, entityNameReload: this.entityNameReload });
       // maybe calling component wants to react
       this.$emit("entity-delete-confirm-" + this.entity);
       this.SET_CONFIRM_DELETE_DIALOG({

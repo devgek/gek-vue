@@ -10,8 +10,8 @@
       </template>
     </GekEntityEditList>
     <!-- entityEditDialog -->
-    <GekEntityEditDialog entity="user" entityName="User" entityDesc="Benutzer">
-      <template v-slot:entity.fields>
+    <GekEntityEditDialog entity="user" entityName="User" entityDesc="Benutzer" entityNameReload="User">
+      <template v-slot:entityEdit.fields>
         <v-text-field
           v-model="getEditEntityObjectByEntityName('User').Name"
           :label="$t('form.user.edit.label.name')"
@@ -47,7 +47,7 @@
       </template>
     </GekEntityEditDialog>
     <!-- confirmDelete Dialog-->
-    <GekEntityConfirmDelete entity="user" entityName="User" entityDesc="Benutzer" />
+    <GekEntityConfirmDelete entity="user" entityName="User" entityDesc="Benutzer" entityNameReload="User"/>
   </div>
   <!-- END Page Content -->
 </template>
@@ -57,6 +57,7 @@ import GekEntityEditDialog from "/vue/components/entities/GekEntityEditDialog.vu
 import GekEntityEditList from "/vue/components/entities/GekEntityEditList.vue";
 import GekEntityConfirmDelete from "/vue/components/entities/GekEntityConfirmDelete.vue";
 import { gkwebapp_T_RoleTypes } from "/src/assets/js/gekvue.js";
+import {GekEntityService} from "@/services/GekEntityService";
 
 export default {
   components: {
@@ -68,10 +69,9 @@ export default {
     return {};
   },
   created() {
-    this.$store.dispatch("loadEntities", { entityName: "User" });
+    GekEntityService.loadEntities({ entityName: "User" });
   },
   methods: {
-    ...Vuex.mapActions(["loadEntities"]),
     roleDesc(role) {
       return gkwebapp_T_RoleTypes[role].text;
     },
@@ -83,16 +83,11 @@ export default {
     ...Vuex.mapGetters(["getEditNewByEntityName", "getEditEntityObjectByEntityName"]),
     tableHeaders() {
       var h = [
-        {
-          text: "Name",
-          align: "start",
-          sortable: true,
-          value: "Name",
-        },
+        { text: "Name", align: "start", sortable: true, value: "Name" },
         { text: "Passwort", value: "Pass", sortable: false },
         { text: "Email", value: "Email" },
         { text: "Benutzerrolle", value: "Role" },
-        { text: "Aktionen", value: "actions", sortable: false, class: "w-8" },
+        { text: "Aktionen", value: "actions", sortable: false, class: "w-8", align: "end" },
       ];
       return h;
     },

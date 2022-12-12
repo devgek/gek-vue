@@ -4,17 +4,20 @@
       <v-card-title class="primary white--text">{{ title }}</v-card-title>
       <v-card-text class="pt-4">
         <v-form>
-          <slot name="entity.fields">
-            <div>default content of entity.fields</div>
+          <slot name="entityEdit.embedder" v-bind:embedderObject="getEmbedderObjectByEntityName(entityName)" v-if="embedded">
+            <div>default content of slot entityEdit.embedder</div>
+          </slot>
+          <slot name="entityEdit.fields" >
+            <div>default content of slot entityEdit.fields</div>
           </slot>
         </v-form>
       </v-card-text>
       <v-card-actions>
         <v-spacer></v-spacer>
-        <v-btn small color="light" @click="abort">
+        <v-btn gek-btn small color="light" @click="abort">
           {{ $t("form.all.btn.back") }}
         </v-btn>
-        <v-btn small color="primary" @click="save">
+        <v-btn gek-btn small color="primary" @click="save">
           {{ $t("form.all.btn.save") }}
         </v-btn>
       </v-card-actions>
@@ -23,6 +26,7 @@
 </template>
 <script>
 import Vuex from "vuex";
+import {GekEntityService} from "@/services/GekEntityService";
 
 export default {
   props: {
@@ -38,6 +42,14 @@ export default {
       type: String,
       required: true,
     },
+    entityNameReload: {
+      type: String,
+      default: "",
+    },
+    embedded: {
+      type: Boolean,
+      default: false
+    }
   },
   data() {
     return {
@@ -46,7 +58,6 @@ export default {
   },
   methods: {
     ...Vuex.mapMutations(["SET_EDIT_DIALOG"]),
-    ...Vuex.mapActions(["saveEntity"]),
     abort() {
       // maybe calling component wants to react
       this.$emit("entity-edit-abort-" + this.entity);
@@ -56,7 +67,7 @@ export default {
       });
     },
     save() {
-      this.saveEntity({ entityName: this.entityName, entityDesc: this.entityDesc });
+      GekEntityService.saveEntity({ entityName: this.entityName, entityDesc: this.entityDesc, entityNameReload: this.entityNameReload });
       // maybe calling component wants to react
       this.$emit("entity-edit-save-" + this.entity);
       this.SET_EDIT_DIALOG({
@@ -66,8 +77,8 @@ export default {
     },
   },
   computed: {
-    ...Vuex.mapState(["gekEntityObjects"]),
-    ...Vuex.mapGetters(["getEditDialogByEntityName", "getEditNewByEntityName"]),
+    ...Vuex.mapState(["gekEntityModels"]),
+    ...Vuex.mapGetters(["getEmbedderObjectByEntityName","getEditEntityObjectByEntityName", "getEditDialogByEntityName", "getEditNewByEntityName"]),
     dialog: {
       get() {
         return this.getEditDialogByEntityName(this.entityName);

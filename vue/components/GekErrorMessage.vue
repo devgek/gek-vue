@@ -21,10 +21,10 @@ export default {
     };
   },
   created() {
+    // eslint-disable-next-line no-unused-vars
     this.unsubscribe = this.$store.subscribe((mutation, state) => {
       if (mutation.type === "SET_MESSAGE") {
-        // console.log(`catching SET_MESSAGE mutation: ${state.message.type}, ${state.message.i18n},`);
-        console.log(`catching SET_MESSAGE mutation: ${state.gekentities.message.type}, ${state.gekentities.message.i18n},`);
+        //console.log(`catching SET_MESSAGE mutation: ${state.gekentities.message.type}, ${state.gekentities.message.i18n},`);
         this.showMessage = true;
       }
     });

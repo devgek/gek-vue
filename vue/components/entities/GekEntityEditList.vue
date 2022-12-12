@@ -8,14 +8,14 @@
         <v-container fluid>
           <v-row align="start" dense>
             <v-col cols="12" align="end">
-              <div class="float-right mb-2">
+              <div class="float-right mb-2 pr-3">
                 <v-btn
-                  outlined
+                  gek-btn
                   color="primary"
                   @click="
                     SET_ENTITY_NEW({
                       entityName: entityName,
-                      entityDesc: 'Benutzer',
+                      entityDesc: 'the entity desc',
                     })
                   "
                   >{{ $t("form." + entity + ".list.buttonnew") }}</v-btn
@@ -45,7 +45,6 @@
               <v-btn
                 small
                 color="primary"
-                outlined
                 @click="
                   SET_ENTITY_EDIT({
                     entityName: entityName,
@@ -58,7 +57,6 @@
               <v-btn
                 small
                 color="primary"
-                outlined
                 @click="
                   SET_ENTITY_DELETE({
                     entityName: entityName,
@@ -107,7 +105,7 @@ export default {
     ...Vuex.mapMutations(["SET_ENTITY_NEW", "SET_ENTITY_EDIT", "SET_ENTITY_DELETE"]),
   },
   computed: {
-    ...Vuex.mapState(["gekEntityObjects"]),
+    ...Vuex.mapState(["gekEntityModels"]),
     ...Vuex.mapGetters(["isAdminUser", "getEntityListByEntityName"]),
   },
 }
