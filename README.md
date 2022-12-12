@@ -38,3 +38,9 @@ vue.js scaffolding project
 `npm install -D style-loader`
 
 `npm install @mdi/font -D`
+
+# Building
+`npx webpack` runs webpack-build to build **/dist/gekvueentity-bundle.js**
+
+# Running
+`npx http-server ./dist` runs dev-http-server on ./dist

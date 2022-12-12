@@ -8,7 +8,7 @@ import newEntityObjectContactAddress from './gekEntityStoreContactAddress.js'
 
 import {GekEntityApiService} from './services/gekEntityApiService.js'
 
-const apiBaseUrl = "http://localhost:8080";
+const apiBaseUrl = "http://localhost:8082";
 const logConsole = true;
 GekEntityApiService.init(apiBaseUrl, logConsole);
 
